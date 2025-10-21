@@ -25,11 +25,11 @@
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.2",
+    "@axe-core/playwright": "^4.11.0",
     "@biomejs/biome": "^2.2.6",
     "@playwright/test": "^1.55.1",
     "@tailwindcss/vite": "^4.1.15",
-    "@types/node": "^24.9.0",
+    "@types/node": "^24.9.1",
     "get-port": "^7.1.0",
     "lighthouse": "^13.0.0",
     "prettier": "^3.6.2",
