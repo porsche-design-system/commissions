@@ -22,14 +22,14 @@
   },
   "dependencies": {
     "@porsche-design-system/components-js": "^3.30.0-rc.0",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
     "@biomejs/biome": "^2.2.6",
     "@playwright/test": "^1.55.1",
-    "@tailwindcss/vite": "^4.1.14",
-    "@types/node": "^24.8.1",
+    "@tailwindcss/vite": "^4.1.15",
+    "@types/node": "^24.9.0",
     "get-port": "^7.1.0",
     "lighthouse": "^13.0.0",
     "prettier": "^3.6.2",
