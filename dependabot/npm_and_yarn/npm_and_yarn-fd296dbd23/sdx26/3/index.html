@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frosted Glass (Demo)</title>
+
+  <style>
+    html, body {
+      --accent: red;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 200px;
+      height: 300px;
+      padding: 50px;
+
+      & img {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin: -50px;
+      }
+    }
+
+    .card {
+      position: relative;
+      width: 200px;
+      height:200px;
+      border-radius: 32px;
+
+      & .card {
+        position: relative;
+        margin-left: 100px;
+        margin-top: 100px;
+      }
+
+      &::before {
+        content: attr(data-note);
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+
+    .frosted {
+      backdrop-filter: blur(32px);
+    }
+
+    .contrast-100 {
+      background-color: rgba(1, 2, 5, 0.08);
+    }
+
+    .contrast-100-accent {
+      background-color: color-mix(in oklab, rgba(1, 2, 5, 0.08), var(--accent, rgba(1, 2, 5, 0.08)) 4%)
+    }
+
+    .contrast-100-dark {
+      background-color: rgba(251, 252, 255, 0.08);
+    }
+
+    .contrast-100-accent-dark {
+      background-color: color-mix(in oklab, rgba(251, 252, 255, 0.08), var(--accent, rgba(251, 252, 255, 0.08)) 4%)
+    }
+  </style>
+
+<style data-pds-initial-styles>html,body{margin:0;padding:0;font-family:'Porsche Next','Arial Narrow',Arial,'Heiti SC',SimHei,sans-serif;line-height:calc(6px + 2.125ex);letter-spacing:normal;text-size-adjust:none;-webkit-text-size-adjust:none}:is(p-accordion,p-banner,p-button,p-button-group,p-button-pure,p-button-tile,p-canvas,p-carousel,p-checkbox,p-checkbox-wrapper,p-content-wrapper,p-crest,p-display,p-divider,p-drilldown,p-drilldown-item,p-drilldown-link,p-fieldset,p-fieldset-wrapper,p-flag,p-flex,p-flex-item,p-flyout,p-grid,p-grid-item,p-heading,p-headline,p-icon,p-inline-notification,p-input-date,p-input-email,p-input-number,p-input-password,p-input-search,p-input-tel,p-input-text,p-input-time,p-input-url,p-link,p-link-pure,p-link-social,p-link-tile,p-link-tile-model-signature,p-link-tile-product,p-marque,p-modal,p-model-signature,p-multi-select,p-multi-select-option,p-optgroup,p-pagination,p-pin-code,p-popover,p-radio-button-wrapper,p-scroller,p-segmented-control,p-segmented-control-item,p-select,p-select-option,p-select-wrapper,p-sheet,p-spinner,p-stepper-horizontal,p-stepper-horizontal-item,p-switch,p-table,p-table-body,p-table-cell,p-table-head,p-table-head-cell,p-table-head-row,p-table-row,p-tabs,p-tabs-bar,p-tabs-item,p-tag,p-tag-dismissible,p-text,p-text-field-wrapper,p-text-list,p-text-list-item,p-textarea,p-textarea-wrapper,p-toast,p-wordmark):not(:defined,.ssr,[data-ssr]){visibility:hidden}</style><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.v3.30.0-rc.0.38caeac62942af00d179.js as=script crossorigin><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.display.92a866e01ab062623aa3.js as=script><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.text.8bff802794473a97b818.js as=script><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.carousel.4a20f7bd30d1fa100dea.js as=script><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.link-tile.493456372c097068b968.js as=script><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.link-pure.11a3fca88d0dde132f9b.js as=script><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/components/porsche-design-system.link.b326bb48b803e26f3f90.js as=script><style data-pds-font-face-styles>@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-arabic-bold.1796b39.woff2') format('woff2');unicode-range:U+0600-0671,U+06A1,U+06A4,U+06BA,U+06CC,U+06D5,U+06F8,U+06F9;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-arabic-regular.413b375.woff2') format('woff2');unicode-range:U+0600-0671,U+06A1,U+06A4,U+06BA,U+06CC,U+06D5,U+06F8,U+06F9;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-cyril-bold.4cb90bb.woff2') format('woff2');unicode-range:U+0400-04FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-cyril-regular.b845952.woff2') format('woff2');unicode-range:U+0400-04FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:600;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-cyril-semi-bold.378f7d5.woff2') format('woff2');unicode-range:U+0400-04FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-greek-bold.d2546b1.woff2') format('woff2');unicode-range:U+0370-03FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-greek-regular.0b3d9b3.woff2') format('woff2');unicode-range:U+0370-03FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:600;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-greek-semi-bold.f3a9ae0.woff2') format('woff2');unicode-range:U+0370-03FF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-latin-bold.0fbdc6d.woff2') format('woff2');unicode-range:U+0020-007F,U+0080-00FF,U+0100-017F,U+0180-024F,U+0250-02AF,U+02B0-02FF,U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2070-209F,U+20A0-20CF,U+2100-214F,U+2150-218F,U+2190-21FF,U+2200-22FF,U+25A0-25FF,U+2600-26FF,U+FB00-FB4F,U+FE70-FEFF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-latin-regular.b8f1c20.woff2') format('woff2');unicode-range:U+0020-007F,U+0080-00FF,U+0100-017F,U+0180-024F,U+0250-02AF,U+02B0-02FF,U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2070-209F,U+20A0-20CF,U+2100-214F,U+2150-218F,U+2190-21FF,U+2200-22FF,U+25A0-25FF,U+2600-26FF,U+FB00-FB4F,U+FE70-FEFF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:600;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-latin-semi-bold.b5f6fca.woff2') format('woff2');unicode-range:U+0020-007F,U+0080-00FF,U+0100-017F,U+0180-024F,U+0250-02AF,U+02B0-02FF,U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2070-209F,U+20A0-20CF,U+2100-214F,U+2150-218F,U+2190-21FF,U+2200-22FF,U+25A0-25FF,U+2600-26FF,U+FB00-FB4F,U+FE70-FEFF;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-pashto-bold.f30f194.woff2') format('woff2');unicode-range:U+067C,U+067E,U+0681,U+0682,U+0685,U+0686,U+0689,U+067C,U+0693,U+0696,U+0698,U+069A,U+06A9,U+06AB,U+06AF,U+06BC,U+06CD,U+06D0;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-pashto-regular.3989814.woff2') format('woff2');unicode-range:U+067C,U+067E,U+0681,U+0682,U+0685,U+0686,U+0689,U+067C,U+0693,U+0696,U+0698,U+069A,U+06A9,U+06AB,U+06AF,U+06BC,U+06CD,U+06D0;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-thai-bold.b9e9f23.woff2') format('woff2');unicode-range:U+0E00-0E7F;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-thai-regular.ac04c30.woff2') format('woff2');unicode-range:U+0E00-0E7F;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:600;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-thai-semi-bold.8d53572.woff2') format('woff2');unicode-range:U+0E00-0E7F;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:700;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-urdu-bold.49a86a4.woff2') format('woff2');unicode-range:U+0679,U+0688,U+0691,U+06BE,U+06C0-06C3,U+06D2-06D5,U+06F0-06F9;font-display:swap}@font-face{font-family:Porsche Next;font-style:normal;font-weight:400;src:url('https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-urdu-regular.ad23819.woff2') format('woff2');unicode-range:U+0679,U+0688,U+0691,U+06BE,U+06C0-06C3,U+06D2-06D5,U+06F0-06F9;font-display:swap}</style><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-latin-regular.b8f1c20.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=https://cdn.ui.porsche.com/porsche-design-system/fonts/porsche-next-latin-semi-bold.b5f6fca.woff2 as=font type=font/woff2 crossorigin><link rel=prefetch href=https://cdn.ui.porsche.com/porsche-design-system/icons/arrow-right.872716b.svg as=image type=image/svg+xml crossorigin><meta property=og:title content="Commissions by Porsche Design System"><meta property=og:image content=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/og-image.c880d39.png><meta name=twitter:title content="Commissions by Porsche Design System"><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/og-image.c880d39.png><meta name=theme-color content=#FFF media=(prefers-color-scheme:light)><meta name=theme-color content=#0E1418 media=(prefers-color-scheme:dark)><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content="Commissions by Porsche Design System"><meta name=msapplication-TileImage content=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/mstile-270x270.f58081f.png><meta name=msapplication-TileColor content=#FFF><link rel=icon sizes=any href=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/favicon.ed9a926.ico><link rel=icon type=image/png sizes=32x32 href=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/favicon-32x32.d42ac28.png><link rel=apple-touch-icon href=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/apple-touch-icon-180x180.bdf11cc.png><link rel=manifest href=https://cdn.ui.porsche.com/porsche-design-system/meta-icons/manifest.b904b15.webmanifest></head>
+<body>
+
+<div class="wrapper">
+  <div class="card frosted contrast-100" data-note="frosted contrast-100">
+    <div class="card frosted contrast-100" data-note="frosted contrast-100">
+
+    </div>
+  </div>
+
+  <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent">
+    <div class="card frosted contrast-100-accent"  data-note="frosted contrast-100-accent">
+
+    </div>
+  </div>
+
+  <div class="card contrast-100" data-note="contrast-100">
+    <div class="card frosted contrast-100" data-note="frosted contrast-100">
+
+    </div>
+  </div>
+
+  <div class="card contrast-100-accent" data-note="contrast-100-accent">
+    <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent">
+
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <img src="https://porsche-design-system.github.io/commissions/assets/coast.png" alt="">
+
+  <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
+    <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
+
+    </div>
+  </div>
+
+  <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark">
+    <div class="card frosted contrast-100-accent-dark"  data-note="frosted contrast-100-accent-dark">
+
+    </div>
+  </div>
+
+  <div class="card contrast-100-dark" data-note="contrast-100-dark">
+    <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
+
+    </div>
+  </div>
+
+  <div class="card contrast-100-accent-dark" data-note="contrast-100-accent-dark">
+    <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark">
+
+    </div>
+  </div>
+</div>
+
+<script data-pds-loader-script>var porscheDesignSystem;(()=>{"use strict";var e={d:(t,n)=>{for(var o in n)e.o(n,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:n[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{load:()=>r});const n="porscheDesignSystem";function o(){return document[n]||(document[n]={}),document[n]}function s({script:e,version:t,prefix:s}){const r=function(e){const t=o(),{[e]:n}=t;if(!n){let n=()=>{};const o=new Promise((e=>n=e));t[e]={isInjected:!1,isReady:()=>o,readyResolve:n,prefixes:[],registerCustomElements:null}}return t[e]}(t),{isInjected:c,prefixes:i=[],registerCustomElements:d}=r,[u]=Object.entries(o()).filter((([e,n])=>e!==t&&"object"==typeof n&&n.prefixes.includes(s)));if(u)throw new Error(`[Porsche Design System v${t}] prefix '${s}' is already registered with version '${u[0]}' of the Porsche Design System. Please use a different one.\nTake a look at document.${n} for more details.`);c||(function(e){const t=document.createElement("script");t.src=e,t.setAttribute("crossorigin",""),document.body.appendChild(t)}(e),r.isInjected=!0),i.includes(s)||(i.push(s),d&&d(s))}const r=(e={})=>{const t="PORSCHE_DESIGN_SYSTEM_CDN";window[t]=e.cdn||window[t]||(window.location.origin.match(/\.cn$/)?"cn":"auto");const n="porscheDesignSystem";document[n]||(document[n]={}),document[n].cdn={url:"https://cdn.ui.porsche."+("cn"===window[t]?"cn":"com"),prefixes:[]},s({version:"3.30.0-rc.0",script:document[n].cdn.url+"/porsche-design-system/components/porsche-design-system.v3.30.0-rc.0.38caeac62942af00d179.js",prefix:e.prefix||""})};porscheDesignSystem=t})();porscheDesignSystem.load()</script></body>
+</html>
