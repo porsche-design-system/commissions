@@ -97,12 +97,12 @@ This approach is generally preferred because:
 
 @layer components {
   .ai-button {
-    @apply fixed end-fluid-md bottom-fluid-md cursor-pointer shadow-medium p-[15px] rounded-full bg-base transition-colors
+    @apply fixed end-fluid-md bottom-fluid-md cursor-pointer shadow-medium p-[15px] rounded-full bg-canvas transition-colors
     hover:bg-hover focus-visible:outline outline-focus outline-offset-2 forced-colors:border;
   }
 
   .ai-popover {
-    @apply fixed inset-0 w-full h-full overflow-hidden bg-base prose-text-sm animate-ai-fade-in forced-colors:border
+    @apply fixed inset-0 w-full h-full overflow-hidden bg-canvas prose-text-sm animate-ai-fade-in forced-colors:border
     sm:inset-auto sm:bottom-[calc(var(--spacing-static-md)+var(--spacing-fluid-md)+15px*2+1.5rem)]
     sm:end-fluid-md sm:w-[min(25rem,480px)] sm:h-[min(75vh,800px)]
     sm:rounded-4xl sm:shadow-medium;
@@ -128,7 +128,7 @@ This approach is generally preferred because:
   .ai-footer {
     @apply [box-shadow:0_-15px_50px_-2px_rgba(0,0,0,.52)] bg-surface sticky -bottom-static-md -mx-static-md
     -mb-static-md p-static-md z-2 grid gap-fluid-sm justify-items-center rounded-t-3xl sm:rounded-3xl
-    forced-colors:bg-base forced-colors:border-t;
+    forced-colors:bg-canvas forced-colors:border-t;
   }
 
   .ai-form {
