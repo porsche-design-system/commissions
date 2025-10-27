@@ -24,7 +24,7 @@ jobs:
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: commissions
           path: ./dist
@@ -43,7 +43,7 @@ jobs:
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: commissions
           path: ./dist
@@ -67,7 +67,7 @@ jobs:
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: commissions
           path: ./dist
@@ -76,7 +76,7 @@ jobs:
         shell: bash
       - name: 'VRT Regression'
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: vrt-regression-${{ matrix.shardIndex }}
           path: ./tests/vrt/test-results
@@ -97,7 +97,7 @@ jobs:
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: commissions
           path: ./dist
@@ -106,7 +106,7 @@ jobs:
         shell: bash
       - name: 'LH Regression'
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: lh-regression-${{ matrix.shardIndex }}
           path: ./tests/lh/test-results

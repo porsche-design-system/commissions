@@ -48,7 +48,7 @@ jobs:
             -f StaticHtml
         shell: bash
       - name: 'Upload'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ort-analysis
           path: ./ort

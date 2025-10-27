@@ -41,7 +41,7 @@ jobs:
         run: npm run build
         shell: bash
       - name: 'Upload'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: commissions
           path: ./dist
@@ -60,7 +60,7 @@ jobs:
         run: BASE_PATH=/commissions/${{ github.ref_name }}/ npm run build
         shell: bash
       - name: 'Upload'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: commissions-prod
           path: ./dist

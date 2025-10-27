@@ -20,7 +20,7 @@ jobs:
           rm -rf "./${{ github.ref_name }}"
         shell: bash
       - name: 'Download'
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: commissions-prod
           path: "./${{ github.ref_name }}"
