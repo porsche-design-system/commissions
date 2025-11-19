@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import "@porsche-design-system/components-js/tailwindcss";
+
+.grid-template-hero {
+  @apply grid-template;
+  grid-template-rows: minmax(120px, 1fr) repeat(3, auto);
+  grid-row-gap: 0;
+}
