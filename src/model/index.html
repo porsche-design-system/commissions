@@ -119,29 +119,46 @@
 
       <section
         aria-label="content section"
-        class="col-full grid grid-cols-subgrid mt-fluid-xl bg-canvas-dark"
+        class="relative col-full grid grid-cols-subgrid grid-rows-subgrid mt-fluid-xl bg-canvas-dark row-span-3 before:content-[''] before:absolute before:inset-0 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:z-1 before:bg-canvas after:content-[''] after:absolute after:bottom-0 after:row-start-3 after:row-end-4 after:h-[30%] after:w-full after:z-1 after:bg-canvas mb-fluid-xl"
       >
         <div
-          class="col-extended place-self-stretch aspect-16/9 rounded-md "
+          class="z-3 col-extended w-full place-self-stretch aspect-16/9 mb-fluid-md"
         >
           <img
             src="/assets/model-cayenne-1.jpg"
             alt="model image 1"
-            class="w-full h-full object-cover"
+            class="h-full object-cover rounded-xl"
           />
         </div>
-        <div
-          class="col-basic grid grid-cols-subgrid mt-fluid-lg gap-y-static-sm"
-        >
-<!--          <div class="col-span-one-third p-fluid-sm rounded-lg bg-[rgba(255,0,255,.25)]">-->
-<!--            .col-span-one-half-->
-<!--          </div>-->
-          <h2 class="col-span-5 rounded-lg prose-display-sm text-canvas">
+
+        <div class="col-start-basic col-span-5">
+          <h2 class="rounded-lg prose-display-sm text-canvas">
             When it comes to equipment, the defining colour is Black.
           </h2>
-          <p class="col-span-5 col-start-1 rounded-lg prose-text-md hyphens-auto text-canvas">
-            The Cayenne Black Edition models express sportiness and dynamism primarily through their attractive equipment. When choosing exterior and interior colours, there are of course many other options besides Black.
+          <p
+            class="rounded-lg prose-text-md hyphens-auto text-canvas mt-fluid-md"
+          >
+            The Cayenne Black Edition models express sportiness and dynamism
+            primarily through their attractive equipment. When choosing exterior
+            and interior colours, there are of course many other options besides
+            Black.
           </p>
+        </div>
+
+        <div class="z-3 -col-end-2 -col-start-9 -mt-fluid-2xl">
+          <img
+            src="/assets/model-cayenne-2.png"
+            alt="model image 2"
+            class="h-full object-cover rounded-md"
+          />
+        </div>
+
+        <div class="col-start-5 col-span-8 z-3">
+          <img
+            src="/assets/model-cayenne-3.png"
+            alt="model image 2"
+            class="h-full object-cover rounded-md"
+          />
         </div>
       </section>
     </main>
