@@ -108,12 +108,12 @@
         class="col-full grid grid-cols-subgrid shadow-medium sticky top-0 z-300 bg-canvas"
       >
         <div class="col-basic pb-static-xs pt-static-lg">
-          <p-tabs>
-            <p-tabs-item label="Model selection"></p-tabs-item>
-            <p-tabs-item label="Test drive"></p-tabs-item>
-            <p-tabs-item label="Exterior"></p-tabs-item>
-            <p-tabs-item label="Interior"></p-tabs-item>
-          </p-tabs>
+          <p-tabs-bar active-tab-index="0">
+            <button type="button">Model selection</button>
+            <button type="button">Test drive</button>
+            <button type="button">Exterior</button>
+            <button type="button">Interior</button>
+          </p-tabs-bar>
         </div>
       </section>
 
@@ -173,86 +173,90 @@
           </p>
         </div>
 
-        <p-tabs class="col-basic">
-          <p-tabs-item label="SUV" class="flex flex-row">
-            <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
-              <img
-                src="/assets/model-cayenne-suv-1.png"
-                alt="Cayenne SUV"
-                class="w-full object-cover"
-              />
+        <p-tabs-bar class="col-basic self-center" active-tab-index="0">
+          <button type="button">SUV</button>
+          <button type="button">Coupé</button>
+        </p-tabs-bar>
 
-              <h2 class="prose-heading-md">Cayenne Black Edition</h2>
+        <div class="col-extended flex flex-row">
+          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+            <img
+              src="/assets/model-cayenne-suv-1.png"
+              alt="Cayenne SUV"
+              class="w-full object-cover"
+            />
 
-              <h3 class="prose-text-sm text-contrast-high">
-                Power output: 260 kW/353 PS¹
-              </h3>
+            <h2 class="prose-heading-md">Cayenne Black Edition</h2>
 
-              <p class="prose-text-2xs text-contrast-high">
-                ¹Power output up to (kW)/Power output up to (PS). Combined fuel
-                consumption: 11.7 - 11.0 l/100 km, combined CO₂ emissions: 267 -
-                249 g/km
-              </p>
+            <h3 class="prose-text-sm text-contrast-high">
+              Power output: 260 kW/353 PS¹
+            </h3>
 
-              <div aria-label="button container" class="mt-fluid-sm">
-                <p-button> Configure yours </p-button>
-              </div>
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Combined fuel
+              consumption: 11.7 - 11.0 l/100 km, combined CO₂ emissions: 267 -
+              249 g/km
+            </p>
+
+            <div aria-label="button container" class="mt-fluid-sm">
+              <p-button> Configure yours </p-button>
             </div>
+          </div>
 
-            <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
-              <img
-                src="/assets/model-cayenne-suv-1.png"
-                alt="Cayenne SUV"
-                class="w-full object-cover"
-              />
+          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+            <img
+              src="/assets/model-cayenne-suv-1.png"
+              alt="Cayenne SUV"
+              class="w-full object-cover"
+            />
 
-              <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
+            <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
 
-              <h3 class="prose-text-sm text-contrast-high">
-                Power output: 260 kW/353 PS¹
-              </h3>
+            <h3 class="prose-text-sm text-contrast-high">
+              Power output: 260 kW/353 PS¹
+            </h3>
 
-              <p class="prose-text-2xs text-contrast-high">
-                ¹Power output up to (kW)/Power output up to (PS). Weighted
-                combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
-                energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
-                CO₂ emissions: 101 - 93 g/km combined fuel consumption with
-                depleted battery: 10.5 - 10.0 l/100 km
-              </p>
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Weighted
+              combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
+              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
+              CO₂ emissions: 101 - 93 g/km combined fuel consumption with
+              depleted battery: 10.5 - 10.0 l/100 km
+            </p>
 
-              <div aria-label="button container" class="mt-fluid-sm">
-                <p-button> Configure yours </p-button>
-              </div>
+            <div aria-label="button container" class="mt-fluid-sm">
+              <p-button> Configure yours </p-button>
             </div>
+          </div>
 
-            <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
-              <img
-                src="/assets/model-cayenne-suv-1.png"
-                alt="Cayenne SUV"
-                class="w-full object-cover"
-              />
+          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+            <img
+              src="/assets/model-cayenne-suv-1.png"
+              alt="Cayenne SUV"
+              class="w-full object-cover"
+            />
 
-              <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
+            <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
 
-              <h3 class="prose-text-sm text-contrast-high">
-                Power output: 260 kW/353 PS¹
-              </h3>
+            <h3 class="prose-text-sm text-contrast-high">
+              Power output: 260 kW/353 PS¹
+            </h3>
 
-              <p class="prose-text-2xs text-contrast-high">
-                ¹Power output up to (kW)/Power output up to (PS). Weighted
-                combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
-                energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
-                CO₂ emissions: 101 - 93 g/km combined fuel consumption with
-                depleted battery: 10.5 - 10.0 l/100 km
-              </p>
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Weighted
+              combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
+              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
+              CO₂ emissions: 101 - 93 g/km combined fuel consumption with
+              depleted battery: 10.5 - 10.0 l/100 km
+            </p>
 
-              <div aria-label="button container" class="mt-fluid-sm">
-                <p-button> Configure yours </p-button>
-              </div>
+            <div aria-label="button container" class="mt-fluid-sm">
+              <p-button> Configure yours </p-button>
             </div>
-          </p-tabs-item>
-          <p-tabs-item label="Coupé"> </p-tabs-item>
-        </p-tabs>
+          </div>
+
+        </div>
+
       </section>
 
       <section class="col-full" aria-label="model banner section">
