@@ -21,7 +21,7 @@
     "npm:clean": "npm cache clean --force"
   },
   "dependencies": {
-    "@porsche-design-system/components-js": "^3.30.0-rc.1",
+    "@porsche-design-system/components-js": "^3.31.0",
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
