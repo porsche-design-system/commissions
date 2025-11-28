@@ -38,7 +38,8 @@
   "css": {
     "parser": {
       "cssModules": false,
-      "allowWrongLineComments": false
+      "allowWrongLineComments": false,
+      "tailwindDirectives": true
     },
     "formatter": {
       "enabled": true,
