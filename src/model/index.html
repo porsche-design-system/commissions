@@ -96,7 +96,7 @@
           Cayenne Black<br />Edition models.
         </h1>
         <p
-          class="z-1 row-start-3 row-end-5 col-basic prose-text-lg text-contrast-high text-center pt-[var(--spacing-fluid-md)]"
+          class="dark z-1 row-start-3 row-end-5 col-basic prose-text-lg text-contrast-high text-center pt-[var(--spacing-fluid-md)]"
         >
           Black Edition stands for selected Porsche models with extended<br />standard
           equipment and accentuating details in Black (high-gloss).
@@ -217,9 +217,9 @@
             <p class="prose-text-2xs text-contrast-high">
               ¹Power output up to (kW)/Power output up to (PS). Weighted
               combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
-              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
-              CO₂ emissions: 101 - 93 g/km combined fuel consumption with
-              depleted battery: 10.5 - 10.0 l/100 km
+              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined CO₂
+              emissions: 101 - 93 g/km combined fuel consumption with depleted
+              battery: 10.5 - 10.0 l/100 km
             </p>
 
             <div aria-label="button container" class="mt-fluid-sm">
@@ -243,18 +243,16 @@
             <p class="prose-text-2xs text-contrast-high">
               ¹Power output up to (kW)/Power output up to (PS). Weighted
               combined fuel consumption: 4.4 - 4.1 l/100 km, weighted combined
-              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined
-              CO₂ emissions: 101 - 93 g/km combined fuel consumption with
-              depleted battery: 10.5 - 10.0 l/100 km
+              energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined CO₂
+              emissions: 101 - 93 g/km combined fuel consumption with depleted
+              battery: 10.5 - 10.0 l/100 km
             </p>
 
             <div aria-label="button container" class="mt-fluid-sm">
               <p-button> Configure yours </p-button>
             </div>
           </div>
-
         </div>
-
       </section>
 
       <section class="col-full" aria-label="model banner section">
@@ -267,17 +265,18 @@
 
       <section class="col-full mt-fluid-xl" aria-label="exterior highlights">
         <p-carousel
-          heading="Exterior highlights."
           align-header="center"
           heading-size="xx-large"
+          width="extended"
+          class="mb-fluid-lg"
+          style="--p-hyphens: none"
+          slides-per-page="auto"
         >
-          <!--          TODO: mention this workaround-->
-          <span slot="description" class="contents">
-            <p class="prose-text-md">
-              A perfect match with any exterior colour: Selected accentuating
-              details in Black (high-gloss).
-            </p>
-          </span>
+          <h1 slot="heading">Exterior highlights.</h1>
+          <p slot="description">
+            A perfect match with any exterior colour: Selected accentuating
+            details in Black (high-gloss).
+          </p>
 
           <p-link-tile
             href="https://porsche.com"
@@ -327,9 +326,12 @@
 
       <section class="col-full mt-fluid-xl" aria-label="interior highlights">
         <p-carousel
-          heading="Interior highlights."
           align-header="center"
           heading-size="xx-large"
+          width="extended"
+          class="mb-fluid-lg"
+          style="--p-hyphens: none"
+          slides-per-page="auto"
         >
           <!--          TODO: mention this workaround-->
           <span slot="description" class="contents">
