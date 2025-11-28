@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frosted Glass (Demo)</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosted Glass (Demo)</title>
 
-  <style>
-    html, body {
+    <style>
+    html,
+    body {
       --accent: red;
       margin: 0;
       padding: 0;
@@ -30,7 +31,7 @@
     .card {
       position: relative;
       width: 200px;
-      height:200px;
+      height: 200px;
       border-radius: 32px;
 
       & .card {
@@ -59,7 +60,7 @@
     }
 
     .contrast-100-accent {
-      background-color: color-mix(in oklab, rgba(1, 2, 5, 0.08), var(--accent, rgba(1, 2, 5, 0.08)) 4%)
+      background-color: color-mix(in oklab, rgba(1, 2, 5, 0.08), var(--accent, rgba(1, 2, 5, 0.08)) 4%);
     }
 
     .contrast-100-dark {
@@ -67,66 +68,47 @@
     }
 
     .contrast-100-accent-dark {
-      background-color: color-mix(in oklab, rgba(251, 252, 255, 0.08), var(--accent, rgba(251, 252, 255, 0.08)) 4%)
+      background-color: color-mix(in oklab, rgba(251, 252, 255, 0.08), var(--accent, rgba(251, 252, 255, 0.08)) 4%);
     }
-  </style>
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card frosted contrast-100" data-note="frosted contrast-100">
+        <div class="card frosted contrast-100" data-note="frosted contrast-100"></div>
+      </div>
 
-</head>
-<body>
+      <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent">
+        <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent"></div>
+      </div>
 
-<div class="wrapper">
-  <div class="card frosted contrast-100" data-note="frosted contrast-100">
-    <div class="card frosted contrast-100" data-note="frosted contrast-100">
+      <div class="card contrast-100" data-note="contrast-100">
+        <div class="card frosted contrast-100" data-note="frosted contrast-100"></div>
+      </div>
 
+      <div class="card contrast-100-accent" data-note="contrast-100-accent">
+        <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent"></div>
+      </div>
     </div>
-  </div>
 
-  <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent">
-    <div class="card frosted contrast-100-accent"  data-note="frosted contrast-100-accent">
+    <div class="wrapper">
+      <img src="https://porsche-design-system.github.io/commissions/assets/coast.png" alt="">
 
+      <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
+        <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark"></div>
+      </div>
+
+      <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark">
+        <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark"></div>
+      </div>
+
+      <div class="card contrast-100-dark" data-note="contrast-100-dark">
+        <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark"></div>
+      </div>
+
+      <div class="card contrast-100-accent-dark" data-note="contrast-100-accent-dark">
+        <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark"></div>
+      </div>
     </div>
-  </div>
-
-  <div class="card contrast-100" data-note="contrast-100">
-    <div class="card frosted contrast-100" data-note="frosted contrast-100">
-
-    </div>
-  </div>
-
-  <div class="card contrast-100-accent" data-note="contrast-100-accent">
-    <div class="card frosted contrast-100-accent" data-note="frosted contrast-100-accent">
-
-    </div>
-  </div>
-</div>
-
-<div class="wrapper">
-  <img src="https://porsche-design-system.github.io/commissions/assets/coast.png" alt="">
-
-  <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
-    <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
-
-    </div>
-  </div>
-
-  <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark">
-    <div class="card frosted contrast-100-accent-dark"  data-note="frosted contrast-100-accent-dark">
-
-    </div>
-  </div>
-
-  <div class="card contrast-100-dark" data-note="contrast-100-dark">
-    <div class="card frosted contrast-100-dark" data-note="frosted contrast-100-dark">
-
-    </div>
-  </div>
-
-  <div class="card contrast-100-accent-dark" data-note="contrast-100-accent-dark">
-    <div class="card frosted contrast-100-accent-dark" data-note="frosted contrast-100-accent-dark">
-
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>

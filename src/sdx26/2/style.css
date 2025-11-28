@@ -304,4 +304,4 @@
   @apply bg-[color-mix(in_oklab,var(--color-blue-500)_80%,black)];
 }
 
-@source inline('bg-contrast-100-accent,bg-frosted-accent');
+@source inline("bg-contrast-100-accent,bg-frosted-accent");

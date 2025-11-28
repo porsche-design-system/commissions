@@ -1,179 +1,179 @@
 <!doctype html>
 <html lang="en" style="--my-accent: yellow">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sDX26</title>
-</head>
-<body class="bg-canvas prose-text-sm">
-<header
-  class="grid-template text-white p-fluid-sm absolute inset-x-0 z-1 before:absolute before:inset-[0_0_-60px_0] before:-z-1 before:pointer-events-none before:bg-fade-to-b"
->
-  <div class="col-wide flex flex-wrap gap-static-md justify-center">
-    <label class="flex items-center gap-static-xs">
-      Theme:
-      <select name="theme">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="auto">Auto</option>
-      </select>
-    </label>
-    <label class="flex items-center gap-static-xs">
-      Accent:
-      <input type="color" name="accent" value="#FFFF00" />
-    </label>
-  </div>
-</header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sDX26</title>
+  </head>
+  <body class="bg-canvas prose-text-sm">
+    <header
+      class="grid-template text-white p-fluid-sm absolute inset-x-0 z-1 before:absolute before:inset-[0_0_-60px_0] before:-z-1 before:pointer-events-none before:bg-fade-to-b"
+    >
+      <div class="col-wide flex flex-wrap gap-static-md justify-center">
+        <label class="flex items-center gap-static-xs">
+          Theme:
+          <select name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="auto">Auto</option>
+          </select>
+        </label>
+        <label class="flex items-center gap-static-xs">
+          Accent:
+          <input type="color" name="accent" value="#FFFF00">
+        </label>
+      </div>
+    </header>
 
-<main class="grid-template">
-  <div class="relative col-full grid grid-cols-subgrid gap-y-fluid-xl sm:gap-y-fluid-md py-fluid-xl min-h-screen">
-    <video
-      class="-z-1 absolute inset-0 min-w-full w-full min-h-full h-full object-cover object-center"
-      src="https://porsche-design-system.github.io/examples/assets/mood-porsche-gts.webm"
-      loop
-      muted
-      autoplay
-      playsinline="playsinline"
-      aria-hidden="true"
-    ></video>
+    <main class="grid-template">
+      <div class="relative col-full grid grid-cols-subgrid gap-y-fluid-xl sm:gap-y-fluid-md py-fluid-xl min-h-screen">
+        <video
+          class="-z-1 absolute inset-0 min-w-full w-full min-h-full h-full object-cover object-center"
+          src="https://porsche-design-system.github.io/examples/assets/mood-porsche-gts.webm"
+          loop
+          muted
+          autoplay
+          playsinline="playsinline"
+          aria-hidden="true"
+        ></video>
 
-    <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md">
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
-      >
-        bg-frosted-accent (neutral)
-        <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
-      >
-        bg-contrast-100-accent (neutral)
-        <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
-      >
-        bg-contrast-200-accent (neutral)
-        <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
-      >
-        bg-contrast-300-accent (neutral)
-        <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-    </div>
+        <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md">
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
+          >
+            bg-frosted-accent (neutral)
+            <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
+          >
+            bg-contrast-100-accent (neutral)
+            <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
+          >
+            bg-contrast-200-accent (neutral)
+            <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
+          >
+            bg-contrast-300-accent (neutral)
+            <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+        </div>
 
-    <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--my-accent)]">
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
-      >
-        bg-frosted-accent (custom color)
-        <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
-      >
-        bg-contrast-100-accent (custom color)
-        <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
-      >
-        bg-contrast-200-accent (custom color)
-        <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
-      >
-        bg-contrast-300-accent (custom color)
-        <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-    </div>
+        <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--my-accent)]">
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
+          >
+            bg-frosted-accent (custom color)
+            <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
+          >
+            bg-contrast-100-accent (custom color)
+            <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
+          >
+            bg-contrast-200-accent (custom color)
+            <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
+          >
+            bg-contrast-300-accent (custom color)
+            <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+        </div>
 
-    <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-cosmic-echo)]">
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
-      >
-        bg-frosted-accent (cosmic-echo)
-        <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
-      >
-        bg-contrast-100-accent (cosmic-echo)
-        <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
-      >
-        bg-contrast-200-accent (cosmic-echo)
-        <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
-      >
-        bg-contrast-300-accent (cosmic-echo)
-        <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-    </div>
+        <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-cosmic-echo)]">
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
+          >
+            bg-frosted-accent (cosmic-echo)
+            <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
+          >
+            bg-contrast-100-accent (cosmic-echo)
+            <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
+          >
+            bg-contrast-200-accent (cosmic-echo)
+            <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
+          >
+            bg-contrast-300-accent (cosmic-echo)
+            <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+        </div>
 
-    <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-glade-green)]">
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
-      >
-        bg-frosted-accent (glade-green)
-        <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
-      >
-        bg-contrast-100-accent (glade-green)
-        <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
-      >
-        bg-contrast-200-accent (glade-green)
-        <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
-      >
-        bg-contrast-300-accent (glade-green)
-        <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-    </div>
+        <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-glade-green)]">
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
+          >
+            bg-frosted-accent (glade-green)
+            <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
+          >
+            bg-contrast-100-accent (glade-green)
+            <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
+          >
+            bg-contrast-200-accent (glade-green)
+            <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
+          >
+            bg-contrast-300-accent (glade-green)
+            <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+        </div>
 
-    <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-peak-neon)]">
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
-      >
-        bg-frosted-accent (peak-neon)
-        <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+        <div class="col-basic grid grid-cols-subgrid gap-y-fluid-md [--accent:var(--color-peak-neon)]">
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-frosted-accent backdrop-blur-frosted"
+          >
+            bg-frosted-accent (peak-neon)
+            <button class="bg-frosted-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
+          >
+            bg-contrast-100-accent (peak-neon)
+            <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
+          >
+            bg-contrast-200-accent (peak-neon)
+            <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+          <div
+            class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
+          >
+            bg-contrast-300-accent (peak-neon)
+            <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
+          </div>
+        </div>
       </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-100-accent backdrop-blur-frosted"
-      >
-        bg-contrast-100-accent (peak-neon)
-        <button class="bg-contrast-100-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-200-accent backdrop-blur-frosted"
-      >
-        bg-contrast-200-accent (peak-neon)
-        <button class="bg-contrast-200-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-      <div
-        class="grid gap-fluid-sm col-span-full sm:col-span-3 p-fluid-sm rounded-lg bg-contrast-300-accent backdrop-blur-frosted"
-      >
-        bg-contrast-300-accent (peak-neon)
-        <button class="bg-contrast-300-accent backdrop-blur-frosted border-0 p-fluid-xs rounded-md">Button</button>
-      </div>
-    </div>
-  </div>
-</main>
+    </main>
 
-<script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

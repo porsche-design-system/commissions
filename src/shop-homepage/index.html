@@ -1,414 +1,567 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Porsche Shop – Made by Dreamers, for Dreamers."/>
-  <title>Porsche Shop (Template)</title>
-</head>
-<body>
-<div id="app">
-  <header class="header">
-    <div class="header__nav">
-      <div class="header__part">
-        <p-button-pure id="button-menu" theme="dark" icon="menu-lines"
-                       hide-label="{base: true, xs: false}"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }">Menu
-        </p-button-pure>
-        <p-button-pure id="button-search" theme="dark" icon="search" hide-label="true"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }">Search
-        </p-button-pure>
-      </div>
-      <p-wordmark href="#" theme="dark"></p-wordmark>
-      <p-crest href="#"></p-crest>
-      <div class="header__part">
-        <p-link-pure href="#" theme="dark" icon="user" hide-label="true">Account</p-link-pure>
-        <p-link-pure href="#" theme="dark" icon="heart" hide-label="true">Favorites</p-link-pure>
-        <p-link-pure href="#" theme="dark" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porsche Shop – Made by Dreamers, for Dreamers.">
+    <title>Porsche Shop (Template)</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__nav">
+          <div class="header__part">
+            <p-button-pure
+              id="button-menu"
+              theme="dark"
+              icon="menu-lines"
+              hide-label="{base: true, xs: false}"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }"
+            >
+              Menu
+            </p-button-pure>
+            <p-button-pure
+              id="button-search"
+              theme="dark"
+              icon="search"
+              hide-label="true"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }"
+            >
+              Search
+            </p-button-pure>
+          </div>
+          <p-wordmark href="#" theme="dark"></p-wordmark>
+          <p-crest href="#"></p-crest>
+          <div class="header__part">
+            <p-link-pure href="#" theme="dark" icon="user" hide-label="true">Account</p-link-pure>
+            <p-link-pure href="#" theme="dark" icon="heart" hide-label="true">Favorites</p-link-pure>
+            <p-link-pure href="#" theme="dark" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
+          </div>
+        </div>
+        <nav class="header__categories" aria-label="Category navigation">
+          <p-tabs-bar theme="dark">
+            <a href="#">Women</a>
+            <a href="#">Men</a>
+            <a href="#">Accessories</a>
+            <a href="#">Model Cars</a>
+            <a href="#">Porsche Originals</a>
+            <a href="#">Porsche Design</a>
+          </p-tabs-bar>
+        </nav>
+      </header>
+      <main>
+        <section class="teaser">
+          <div class="teaser__media">
+            <picture>
+              <source media="(max-width:480px)" srcset="assets/header-mobile@2x.webp 2x, assets/header-mobile.webp 1x">
+              <img
+                srcset="assets/header@2x.webp 2x"
+                src="assets/header.webp"
+                width="1920"
+                height="1200"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </picture>
+          </div>
+          <div class="teaser__header">
+            <p-display theme="dark" align="center" size="small" tag="h1">
+              Made by Dreamers,
+              <br>
+              for Dreamers
+            </p-display>
+            <p-link href="#" theme="dark" variant="secondary">Shop Collection</p-link>
+          </div>
+          <div class="teaser__content">
+            <p-link-tile
+              href="#"
+              label="Shop Collection"
+              description="Iconic Racing Design Taken To Perfection"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/martini-teaser@2x.webp 2x"
+                src="assets/martini-teaser.webp"
+                width="1308"
+                height="736"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+            <p-link-tile
+              href="#"
+              label="Shop Collection"
+              description="Transformers: Rise Of The Beasts X Porsche"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/transformers-teaser@2x.webp 2x"
+                src="assets/transformers-teaser.webp"
+                width="1308"
+                height="736"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+          </div>
+        </section>
+        <section class="trending-products">
+          <p-carousel slides-per-page="{ base: 2, s: 3 }" align-header="center" width="basic">
+            <div slot="heading" class="trending-products__header">
+              <p-display size="small" align="center" tag="h2">Trending Products</p-display>
+              <p-link-pure href="#">Discover all trending products</p-link-pure>
+            </div>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Weekender"
+              price="911,00 €"
+              like-button="false"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Backpack"
+              price="911,00 €"
+              like-button="false"
+              href="#"
+            >
+              <img
+                srcset="/assets/backpack@2x.webp 2x"
+                src="/assets/backpack.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Sneaker"
+              price="911,00 €"
+              like-button="false"
+              href="#"
+            >
+              <img
+                srcset="/assets/sneaker@2x.webp 2x"
+                src="/assets/sneaker.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+          </p-carousel>
+        </section>
+        <section class="shop-the-look">
+          <p-carousel slides-per-page="{ base: 1, xs: 2 }" align-header="center" width="basic">
+            <div slot="heading" class="shop-the-look__header">
+              <p-text size="x-large" align="center">
+                Put a spring in your step and refresh your wardrobe with inspired looks from the Porsche catalogue.
+              </p-text>
+              <p-link href="#">Shop the Look</p-link>
+            </div>
+            <p-link-tile
+              href="#"
+              label="Timeless Enthusiast"
+              description="Timeless Enthusiast"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '3:4'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/timeless-enthusiastt-teaser@2x.webp 2x"
+                src="assets/timeless-enthusiastt-teaser.webp"
+                width="636"
+                height="848"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+            <p-link-tile
+              href="#"
+              label="The Loyalist"
+              description="The Loyalist"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '3:4'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/loyalist-teaser@2x.webp 2x"
+                src="assets/loyalist-teaser.webp"
+                width="636"
+                height="848"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+            <p-link-tile
+              href="#"
+              label="Urbanist"
+              description="Urbanist"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '3:4'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/urbanist-teaser@2x.webp 2x"
+                src="assets/urbanist-teaser.webp"
+                width="636"
+                height="848"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+          </p-carousel>
+        </section>
+        <section class="collection">
+          <div class="collection__media">
+            <img
+              srcset="assets/collection-header@2x.webp 2x"
+              src="assets/collection-header.webp"
+              width="1920"
+              height="1600"
+              alt="Some alternative text for screen readers describing the image"
+            >
+          </div>
+          <div class="collection__header">
+            <p-display theme="dark" size="small" align="center" tag="h2">FIN Crafted Goods X Porsche</p-display>
+            <p-text theme="dark" align="center">
+              In collaboration with local workshop and creative studio FIN Crafted, Porsche presents a limited
+              collection with artistically upcycled apparels to carry-all pieces.
+            </p-text>
+          </div>
+          <div class="collection__content">
+            <p-link-tile
+              href="#"
+              label="FIN Crafted Goods X Porsche Collection"
+              description="FIN Crafted Goods X Porsche Collection"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/collection-teaser@2x.webp 2x"
+                src="assets/collection-teaser.webp"
+                width="1308"
+                height="847"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+          </div>
+          <div class="collection__footer">
+            <p-link-pure href="#" theme="dark" underline="true" icon="none">see other collections</p-link-pure>
+          </div>
+        </section>
+        <section class="stories">
+          <div class="stories__header">
+            <p-display size="small" align="center" tag="h2">Stories</p-display>
+          </div>
+          <div class="stories__content">
+            <p-link-tile
+              href="#"
+              label="Porsche Mission X: yet another dream takes shape."
+              description="Porsche Mission X: yet another dream takes shape."
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/mission-x-story@2x.webp 2x"
+                src="assets/mission-x-story.webp"
+                width="1308"
+                height="847"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+            <p-link-tile
+              href="#"
+              label="Speed meets style: the design of the Porsche 963"
+              description="Speed meets style: the design of the Porsche 963"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '3:4'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/porsche-963-story@2x.webp 2x"
+                src="assets/porsche-963-story.webp"
+                width="636"
+                height="847"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+            <p-link-tile
+              href="#"
+              label="Unique specimen under the hammer: 911 Classic Club Coupe sold for record price"
+              description="Unique specimen under the hammer: 911 Classic Club Coupe sold for record price"
+              compact="true"
+              aspect-ratio="{base: '1:1', xs: '4:3', s: '3:4'}"
+              weight="regular"
+            >
+              <img
+                srcset="assets/club-sport-story@2x.webp 2x"
+                src="assets/club-sport-story.webp"
+                width="636"
+                height="847"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"></footer>
     </div>
-    <nav class="header__categories" aria-label="Category navigation">
-      <p-tabs-bar theme="dark">
-        <a href="#">Women</a>
-        <a href="#">Men</a>
-        <a href="#">Accessories</a>
-        <a href="#">Model Cars</a>
-        <a href="#">Porsche Originals</a>
-        <a href="#">Porsche Design</a>
-      </p-tabs-bar>
-    </nav>
-  </header>
-  <main>
-    <section class="teaser">
-      <div class="teaser__media">
-        <picture>
-          <source media="(max-width:480px)" srcset="assets/header-mobile@2x.webp 2x, assets/header-mobile.webp 1x"/>
-          <img srcset="assets/header@2x.webp 2x" src="assets/header.webp" width="1920" height="1200"
-               alt="Some alternative text for screen readers describing the image"/>
-        </picture>
+
+    <p-flyout id="flyout-search" class="flyout-search">
+      <div slot="header">
+        <p-heading tag="h2" size="large">Search products</p-heading>
       </div>
-      <div class="teaser__header">
-        <p-display theme="dark" align="center" size="small" tag="h1">Made by Dreamers,<br>for Dreamers</p-display>
-        <p-link href="#" theme="dark" variant="secondary">Shop Collection</p-link>
+      <p-text-field-wrapper label="Search for products" hide-label="true">
+        <input type="search" name="search" placeholder="e.g. Sneaker, T-Shirt,…">
+      </p-text-field-wrapper>
+      <div class="flyout-search__results">
+        <a href="#">
+          <img srcset="/assets/weekender@2x.webp 2x" src="/assets/weekender.webp" width="960" height="1080" alt="">
+          <b>Weekender</b>
+          911,00 €
+        </a>
+        <a href="#">
+          <img srcset="/assets/sneaker@2x.webp 2x" src="/assets/sneaker.webp" width="960" height="1080" alt="">
+          <b>Sneaker</b>
+          911,00 €
+        </a>
+        <a href="#">
+          <img srcset="/assets/backpack@2x.webp 2x" src="/assets/backpack.webp" width="960" height="1080" alt="">
+          <b>Porsche Wappen-Schlüsselanhänger Charging Service</b>
+          911,00 €
+        </a>
       </div>
-      <div class="teaser__content">
+    </p-flyout>
+
+    <p-drilldown id="flyout-menu" aria="{'aria-label': 'Main navigation'}">
+      <p-drilldown-item identifier="women" label="Women">
         <p-link-tile
           href="#"
-          label="Shop Collection"
-          description="Iconic Racing Design Taken To Perfection"
-          aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
-          weight="regular"
+          label="Martini Racing® Collection"
+          description="Martini Racing® Collection"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
         >
-          <img srcset="assets/martini-teaser@2x.webp 2x" src="assets/martini-teaser.webp" width="1308"
-               height="736" alt="Some alternative text for screen readers describing the image"/>
+          <img
+            srcset="/assets/women@2x.webp 2x"
+            src="/assets/women.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Jacket</p-drilldown-link>
+        <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
+        <p-drilldown-link href="#">Socks</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Caps</p-drilldown-link>
+        <p-drilldown-link href="#">Belts</p-drilldown-link>
+        <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">Transformers</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Dakar</p-drilldown-link>
+        <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Essential</p-drilldown-link>
+        <p-drilldown-link href="#">Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="men" label="Men">
         <p-link-tile
           href="#"
-          label="Shop Collection"
-          description="Transformers: Rise Of The Beasts X Porsche"
-          aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
-          weight="regular"
+          label="Martini Racing® Collection"
+          description="Martini Racing® Collection"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
         >
-          <img srcset="assets/transformers-teaser@2x.webp 2x" src="assets/transformers-teaser.webp"
-               width="1308" height="736"
-               alt="Some alternative text for screen readers describing the image"/>
+          <img
+            srcset="/assets/men@2x.webp 2x"
+            src="/assets/men.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-      </div>
-    </section>
-    <section class="trending-products">
-      <p-carousel slides-per-page="{ base: 2, s: 3 }" align-header="center" width="basic">
-        <div slot="heading" class="trending-products__header">
-          <p-display size="small" align="center" tag="h2">Trending Products</p-display>
-          <p-link-pure href="#">Discover all trending products</p-link-pure>
-        </div>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Weekender" price="911,00 €"
-                             like-button="false" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Backpack" price="911,00 €"
-                             like-button="false" href="#">
-          <img srcset="/assets/backpack@2x.webp 2x"
-               src="/assets/backpack.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Sneaker" price="911,00 €"
-                             like-button="false" href="#">
-          <img srcset="/assets/sneaker@2x.webp 2x"
-               src="/assets/sneaker.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-      </p-carousel>
-    </section>
-    <section class="shop-the-look">
-      <p-carousel slides-per-page="{ base: 1, xs: 2 }" align-header="center" width="basic">
-        <div slot="heading" class="shop-the-look__header">
-          <p-text size="x-large" align="center">Put a spring in your step and refresh your wardrobe with inspired looks
-            from the Porsche catalogue.
-          </p-text>
-          <p-link href="#">Shop the Look</p-link>
-        </div>
-        <p-link-tile href="#" label="Timeless Enthusiast" description="Timeless Enthusiast" compact="true"
-                     aspect-ratio="{base: '1:1', xs: '3:4'}" weight="regular">
-          <img srcset="assets/timeless-enthusiastt-teaser@2x.webp 2x"
-               src="assets/timeless-enthusiastt-teaser.webp" width="636" height="848"
-               alt="Some alternative text for screen readers describing the image"/>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Jacket</p-drilldown-link>
+        <p-drilldown-link href="#">Pants</p-drilldown-link>
+        <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
+        <p-drilldown-link href="#">Socks</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Caps</p-drilldown-link>
+        <p-drilldown-link href="#">Belts</p-drilldown-link>
+        <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Footwear</h3>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">Transformers</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Dakar</p-drilldown-link>
+        <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Essential</p-drilldown-link>
+        <p-drilldown-link href="#">Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="kids" label="Kids">
+        <p-link-tile
+          href="#"
+          label="Playmobil® 911 Carrera RS 2.7"
+          description="Playmobil® 911 Carrera RS 2.7"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/kids@2x.webp 2x"
+            src="/assets/kids.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-        <p-link-tile href="#" label="The Loyalist" description="The Loyalist" compact="true"
-                     aspect-ratio="{base: '1:1', xs: '3:4'}"
-                     weight="regular">
-          <img srcset="assets/loyalist-teaser@2x.webp 2x" src="assets/loyalist-teaser.webp" width="636"
-               height="848" alt="Some alternative text for screen readers describing the image"/>
+        <h3>Kids</h3>
+        <p-drilldown-link href="#">Apparel</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Toys</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="accessories" label="Accessories">
+        <p-link-tile
+          href="#"
+          label="Umbrella Martini Racing®"
+          description="Umbrella Martini Racing®"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/accessories@2x.webp 2x"
+            src="/assets/accessories.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-        <p-link-tile href="#" label="Urbanist" description="Urbanist" compact="true"
-                     aspect-ratio="{base: '1:1', xs: '3:4'}" weight="regular">
-          <img srcset="assets/urbanist-teaser@2x.webp 2x" src="assets/urbanist-teaser.webp" width="636"
-               height="848" alt="Some alternative text for screen readers describing the image"/>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
+        <p-drilldown-link href="#">Eyewear</p-drilldown-link>
+        <p-drilldown-link href="#">Calendar & Books</p-drilldown-link>
+        <p-drilldown-link href="#">Golf</p-drilldown-link>
+        <p-drilldown-link href="#">Home & Office</p-drilldown-link>
+        <p-drilldown-link href="#">Key Rings & Others</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">75 Years</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Heritage 2.0</p-drilldown-link>
+        <p-drilldown-link href="#">Sports</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="model-cars" label="Model Cars">
+        <p-link-tile
+          href="#"
+          label="911 Targa S 2.4 (1972)"
+          description="911 Targa S 2.4 (1972)"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/model-cars@2x.webp 2x"
+            src="/assets/model-cars.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-      </p-carousel>
-    </section>
-    <section class="collection">
-      <div class="collection__media">
-        <img srcset="assets/collection-header@2x.webp 2x" src="assets/collection-header.webp" width="1920"
-             height="1600" alt="Some alternative text for screen readers describing the image"/>
-      </div>
-      <div class="collection__header">
-        <p-display theme="dark" size="small" align="center" tag="h2">FIN Crafted Goods X Porsche</p-display>
-        <p-text theme="dark" align="center">In collaboration with local workshop and creative studio FIN Crafted,
-          Porsche
-          presents a limited collection with artistically upcycled apparels to carry-all pieces.
-        </p-text>
-      </div>
-      <div class="collection__content">
-        <p-link-tile href="#" label="FIN Crafted Goods X Porsche Collection"
-                     description="FIN Crafted Goods X Porsche Collection" compact="true"
-                     aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
-                     weight="regular">
-          <img srcset="assets/collection-teaser@2x.webp 2x" src="assets/collection-teaser.webp"
-               width="1308" height="847" alt="Some alternative text for screen readers describing the image"/>
+        <h3>Model Cars</h3>
+        <p-drilldown-link href="#">718</p-drilldown-link>
+        <p-drilldown-link href="#">911</p-drilldown-link>
+        <p-drilldown-link href="#">Taycan</p-drilldown-link>
+        <p-drilldown-link href="#">Macan</p-drilldown-link>
+        <p-drilldown-link href="#">Others</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="porsche-design" label="Porsche Design">
+        <p-link-tile
+          href="#"
+          label="Sunglasses P´8508"
+          description="Sunglasses P´8508"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/porsche-design@2x.webp 2x"
+            src="/assets/porsche-design.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-      </div>
-      <div class="collection__footer">
-        <p-link-pure href="#" theme="dark" underline="true" icon="none">see other collections</p-link-pure>
-      </div>
-    </section>
-    <section class="stories">
-      <div class="stories__header">
-        <p-display size="small" align="center" tag="h2">Stories</p-display>
-      </div>
-      <div class="stories__content">
-        <p-link-tile href="#" label="Porsche Mission X: yet another dream takes shape."
-                     description="Porsche Mission X: yet another dream takes shape." compact="true"
-                     aspect-ratio="{base: '1:1', xs: '4:3', s: '16:9'}"
-                     weight="regular">
-          <img srcset="assets/mission-x-story@2x.webp 2x" src="assets/mission-x-story.webp" width="1308"
-               height="847" alt="Some alternative text for screen readers describing the image"/>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Bottoms</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
+        <p-drilldown-link href="#">Fragrances</p-drilldown-link>
+        <p-drilldown-link href="#">Sunglasses</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Footwear</h3>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="christmas" label="Christmas">
+        <p-link-tile
+          href="#"
+          label="911 Dakar 992 Xmas Ltd. Edition"
+          description="911 Dakar 992 Xmas Ltd. Edition"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/christmas@2x.webp 2x"
+            src="/assets/christmas.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
         </p-link-tile>
-        <p-link-tile href="#" label="Speed meets style: the design of the Porsche 963"
-                     description="Speed meets style: the design of the Porsche 963" compact="true"
-                     aspect-ratio="{base: '1:1', xs: '4:3', s: '3:4'}"
-                     weight="regular">
-          <img srcset="assets/porsche-963-story@2x.webp 2x" src="assets/porsche-963-story.webp"
-               width="636" height="847" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile>
-        <p-link-tile href="#" label="Unique specimen under the hammer: 911 Classic Club Coupe sold for record price"
-                     description="Unique specimen under the hammer: 911 Classic Club Coupe sold for record price"
-                     compact="true" aspect-ratio="{base: '1:1', xs: '4:3', s: '3:4'}" weight="regular">
-          <img srcset="assets/club-sport-story@2x.webp 2x" src="assets/club-sport-story.webp" width="636"
-               height="847" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"></footer>
-</div>
+        <h3>Gifts</h3>
+        <p-drilldown-link href="#">For Him</p-drilldown-link>
+        <p-drilldown-link href="#">For Her</p-drilldown-link>
+        <p-drilldown-link href="#">For Kids</p-drilldown-link>
+      </p-drilldown-item>
+    </p-drilldown>
 
-<p-flyout id="flyout-search" class="flyout-search">
-  <div slot="header">
-    <p-heading tag="h2" size="large">Search products</p-heading>
-  </div>
-  <p-text-field-wrapper label="Search for products" hide-label="true">
-    <input type="search" name="search" placeholder="e.g. Sneaker, T-Shirt,…"/>
-  </p-text-field-wrapper>
-  <div class="flyout-search__results">
-    <a href="#">
-      <img srcset="/assets/weekender@2x.webp 2x"
-           src="/assets/weekender.webp" width="960"
-           height="1080" alt=""/>
-      <b>Weekender</b>
-      911,00 €
-    </a>
-    <a href="#">
-      <img srcset="/assets/sneaker@2x.webp 2x"
-           src="/assets/sneaker.webp" width="960"
-           height="1080" alt=""/>
-      <b>Sneaker</b>
-      911,00 €
-    </a>
-    <a href="#">
-      <img srcset="/assets/backpack@2x.webp 2x"
-           src="/assets/backpack.webp" width="960"
-           height="1080" alt=""/>
-      <b>Porsche Wappen-Schlüsselanhänger Charging Service</b>
-      911,00 €
-    </a>
-  </div>
-</p-flyout>
-
-<p-drilldown id="flyout-menu" aria="{'aria-label': 'Main navigation'}">
-  <p-drilldown-item identifier="women" label="Women">
-    <p-link-tile
-      href="#"
-      label="Martini Racing® Collection"
-      description="Martini Racing® Collection"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/women@2x.webp 2x"
-           src="/assets/women.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Jacket</p-drilldown-link>
-    <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
-    <p-drilldown-link href="#">Socks</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Caps</p-drilldown-link>
-    <p-drilldown-link href="#">Belts</p-drilldown-link>
-    <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">Transformers</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Dakar</p-drilldown-link>
-    <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Essential</p-drilldown-link>
-    <p-drilldown-link href="#">Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="men" label="Men">
-    <p-link-tile
-      href="#"
-      label="Martini Racing® Collection"
-      description="Martini Racing® Collection"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/men@2x.webp 2x"
-           src="/assets/men.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Jacket</p-drilldown-link>
-    <p-drilldown-link href="#">Pants</p-drilldown-link>
-    <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
-    <p-drilldown-link href="#">Socks</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Caps</p-drilldown-link>
-    <p-drilldown-link href="#">Belts</p-drilldown-link>
-    <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Footwear</h3>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">Transformers</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Dakar</p-drilldown-link>
-    <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Essential</p-drilldown-link>
-    <p-drilldown-link href="#">Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="kids" label="Kids">
-    <p-link-tile
-      href="#"
-      label="Playmobil® 911 Carrera RS 2.7"
-      description="Playmobil® 911 Carrera RS 2.7"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/kids@2x.webp 2x"
-           src="/assets/kids.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Kids</h3>
-    <p-drilldown-link href="#">Apparel</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Toys</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="accessories" label="Accessories">
-    <p-link-tile
-      href="#"
-      label="Umbrella Martini Racing®"
-      description="Umbrella Martini Racing®"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/accessories@2x.webp 2x"
-           src="/assets/accessories.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
-    <p-drilldown-link href="#">Eyewear</p-drilldown-link>
-    <p-drilldown-link href="#">Calendar & Books</p-drilldown-link>
-    <p-drilldown-link href="#">Golf</p-drilldown-link>
-    <p-drilldown-link href="#">Home & Office</p-drilldown-link>
-    <p-drilldown-link href="#">Key Rings & Others</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">75 Years</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Heritage 2.0</p-drilldown-link>
-    <p-drilldown-link href="#">Sports</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="model-cars" label="Model Cars">
-    <p-link-tile
-      href="#"
-      label="911 Targa S 2.4 (1972)"
-      description="911 Targa S 2.4 (1972)"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/model-cars@2x.webp 2x"
-           src="/assets/model-cars.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Model Cars</h3>
-    <p-drilldown-link href="#">718</p-drilldown-link>
-    <p-drilldown-link href="#">911</p-drilldown-link>
-    <p-drilldown-link href="#">Taycan</p-drilldown-link>
-    <p-drilldown-link href="#">Macan</p-drilldown-link>
-    <p-drilldown-link href="#">Others</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="porsche-design" label="Porsche Design">
-    <p-link-tile
-      href="#"
-      label="Sunglasses P´8508"
-      description="Sunglasses P´8508"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/porsche-design@2x.webp 2x"
-           src="/assets/porsche-design.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Bottoms</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
-    <p-drilldown-link href="#">Fragrances</p-drilldown-link>
-    <p-drilldown-link href="#">Sunglasses</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Footwear</h3>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="christmas" label="Christmas">
-    <p-link-tile
-      href="#"
-      label="911 Dakar 992 Xmas Ltd. Edition"
-      description="911 Dakar 992 Xmas Ltd. Edition"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/christmas@2x.webp 2x"
-           src="/assets/christmas.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Gifts</h3>
-    <p-drilldown-link href="#">For Him</p-drilldown-link>
-    <p-drilldown-link href="#">For Her</p-drilldown-link>
-    <p-drilldown-link href="#">For Kids</p-drilldown-link>
-  </p-drilldown-item>
-</p-drilldown>
-
-<script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

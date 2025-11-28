@@ -1,259 +1,459 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Porsche Shop (Template)</title>
-</head>
-<body>
-<div id="app">
-  <header class="header">
-    <div class="header__nav">
-      <div class="header__part">
-        <p-button-pure id="button-menu" icon="menu-lines"
-                       hide-label="{base: true, xs: false}"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }">Menu
-        </p-button-pure>
-        <p-button-pure id="button-search" icon="search" hide-label="true"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }">Search
-        </p-button-pure>
-      </div>
-      <p-wordmark href="#"></p-wordmark>
-      <p-crest href="#"></p-crest>
-      <div class="header__part">
-        <p-link-pure href="#" icon="user" hide-label="true">Account</p-link-pure>
-        <p-link-pure href="#" icon="heart" hide-label="true">Favorites</p-link-pure>
-        <p-link-pure href="#" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Shop (Template)</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__nav">
+          <div class="header__part">
+            <p-button-pure
+              id="button-menu"
+              icon="menu-lines"
+              hide-label="{base: true, xs: false}"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }"
+            >
+              Menu
+            </p-button-pure>
+            <p-button-pure
+              id="button-search"
+              icon="search"
+              hide-label="true"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }"
+            >
+              Search
+            </p-button-pure>
+          </div>
+          <p-wordmark href="#"></p-wordmark>
+          <p-crest href="#"></p-crest>
+          <div class="header__part">
+            <p-link-pure href="#" icon="user" hide-label="true">Account</p-link-pure>
+            <p-link-pure href="#" icon="heart" hide-label="true">Favorites</p-link-pure>
+            <p-link-pure href="#" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
+          </div>
+        </div>
+      </header>
+      <main>
+        <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li>
+              <p-link-pure href="#" size="x-small" underline="true" icon="none">Home</p-link-pure>
+            </li>
+            <li role="presentation" aria-hidden="true">/</li>
+            <li>
+              <p-link-pure href="#" size="x-small" underline="true" icon="none">Women</p-link-pure>
+            </li>
+            <li role="presentation" aria-hidden="true">/</li>
+            <li>
+              <p-link-pure href="#" size="x-small" icon="none" aria="{ 'aria-current': 'page' }">Shoes</p-link-pure>
+            </li>
+          </ol>
+        </nav>
+        <section class="product-detail" aria-label="Product details of Evi Knit Trainers II">
+          <div class="product-detail__gallery"></div>
+          <article class="product-detail__article">
+            <div class="product-detail__header">
+              <p-display size="medium" tag="h1">EvoKNIT® Trainers II</p-display>
+              <p-text weight="semi-bold">SGD 680</p-text>
+              <p-text>
+                Tongueless sports shoe in a modern sock-shoe style. Exclusive design using PUMA EvoKNIT® knit with a
+                NITRO FOAM® sole for dynamism, cushioning and stability.
+              </p-text>
+            </div>
+            <div class="product-detail__color">
+              <h2>
+                Color: <span>Black</span>
+              </h2>
+              <div class="product-detail__color-swatch"></div>
+            </div>
+            <div class="product-detail__size">
+              <h2>
+                Size: <span>-</span>
+              </h2>
+              <p-segmented-control columns="{base: 3, xs: 4, s: 2, m: 3}" aria-label="Choose a product size">
+                <p-segmented-control-item value="xs">XS</p-segmented-control-item>
+                <p-segmented-control-item value="s">S</p-segmented-control-item>
+                <p-segmented-control-item value="m">M</p-segmented-control-item>
+                <p-segmented-control-item value="l">L</p-segmented-control-item>
+                <p-segmented-control-item value="xl">XL</p-segmented-control-item>
+                <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
+                <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
+                <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
+                <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
+                <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
+                <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
+                <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
+                <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
+                <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
+              </p-segmented-control>
+              <p-button-pure icon="information" aria="{ 'aria-haspopup': 'dialog' }" id="button-size-chart">
+                View size chart
+              </p-button-pure>
+            </div>
+            <div class="product-detail__footer">
+              <p-button type="button" id="button-add-to-cart" aria="{ 'aria-haspopup': 'dialog' }">
+                Add to shopping cart
+              </p-button>
+            </div>
+            <div class="product-detail__actions">
+              <p-button-pure icon="bookmark">Wishlist</p-button-pure>
+              <p-button-pure icon="logo-whatsapp">WhatsApp</p-button-pure>
+              <p-link-pure href="#" icon="email">Mail</p-link-pure>
+            </div>
+            <ul class="product-detail__benefits">
+              <li>
+                <p-icon name="check" aria-hidden="true"></p-icon>
+                <span>Free Shipping when Purchasing over SGD 250</span>
+              </li>
+              <li>
+                <p-icon name="check" aria-hidden="true"></p-icon>
+                <span>Free Return within 14 Days</span>
+              </li>
+            </ul>
+            <div class="product-detail__about">
+              <p-heading size="medium" tag="h2">About the Product</p-heading>
+              <p-text>
+                Clean, exclusive, modern and timeless at the same time: the Porsche Design Cupsole Sneaker with its
+                clean design made from the finest of Italian smooth leather.
+                <br>
+                <br>
+                The new version of this classic sneaker deliberately foregoes the superfluous seams and instead places
+                the focus firmly on the quality of the materials and the workmanship. The soft padded shaft edge and the
+                light Porsche Design rubber sole ensure that wearing comfort is on a par with the high design standard
+                of the shoe.
+              </p-text>
+            </div>
+            <div class="product-detail__reviews">
+              <p-heading size="medium" tag="h2">Reviews</p-heading>
+              <div></div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer"></footer>
     </div>
-  </header>
-  <main>
-    <nav class="breadcrumb" aria-label="Breadcrumb navigation">
-      <ol>
-        <li>
-          <p-link-pure href="#" size="x-small" underline="true" icon="none">Home</p-link-pure>
-        </li>
-        <li role="presentation" aria-hidden="true">/</li>
-        <li>
-          <p-link-pure href="#" size="x-small" underline="true" icon="none">Women</p-link-pure>
-        </li>
-        <li role="presentation" aria-hidden="true">/</li>
-        <li>
-          <p-link-pure href="#" size="x-small" icon="none" aria="{ 'aria-current': 'page' }">Shoes</p-link-pure>
-        </li>
-      </ol>
-    </nav>
-    <section class="product-detail" aria-label="Product details of Evi Knit Trainers II">
-      <div class="product-detail__gallery"></div>
-      <article class="product-detail__article">
-        <div class="product-detail__header">
-          <p-display size="medium" tag="h1">EvoKNIT® Trainers II</p-display>
-          <p-text weight="semi-bold">SGD 680</p-text>
-          <p-text>
-            Tongueless sports shoe in a modern sock-shoe style. Exclusive design using PUMA EvoKNIT® knit with a NITRO
-            FOAM® sole for dynamism, cushioning and stability.
-          </p-text>
-        </div>
-        <div class="product-detail__color">
-          <h2>Color: <span>Black</span></h2>
-          <div class="product-detail__color-swatch"></div>
-        </div>
-        <div class="product-detail__size">
-          <h2>Size: <span>-</span></h2>
-          <p-segmented-control columns="{base: 3, xs: 4, s: 2, m: 3}" aria-label="Choose a product size">
-            <p-segmented-control-item value="xs">XS</p-segmented-control-item>
-            <p-segmented-control-item value="s">S</p-segmented-control-item>
-            <p-segmented-control-item value="m">M</p-segmented-control-item>
-            <p-segmented-control-item value="l">L</p-segmented-control-item>
-            <p-segmented-control-item value="xl">XL</p-segmented-control-item>
-            <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
-            <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
-            <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
-            <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
-            <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
-            <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
-            <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
-            <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
-            <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
-          </p-segmented-control>
-          <p-button-pure icon="information" aria="{ 'aria-haspopup': 'dialog' }" id="button-size-chart">View size
-            chart
-          </p-button-pure>
-        </div>
-        <div class="product-detail__footer">
-          <p-button type="button" id="button-add-to-cart" aria="{ 'aria-haspopup': 'dialog' }">Add to shopping cart
-          </p-button>
-        </div>
-        <div class="product-detail__actions">
-          <p-button-pure icon="bookmark">Wishlist</p-button-pure>
-          <p-button-pure icon="logo-whatsapp">WhatsApp</p-button-pure>
-          <p-link-pure href="#" icon="email">Mail</p-link-pure>
-        </div>
-        <ul class="product-detail__benefits">
-          <li>
-            <p-icon name="check" aria-hidden="true"></p-icon>
-            <span>Free Shipping when Purchasing over SGD 250</span>
-          </li>
-          <li>
-            <p-icon name="check" aria-hidden="true"></p-icon>
-            <span>Free Return within 14 Days</span>
-          </li>
-        </ul>
-        <div class="product-detail__about">
-          <p-heading size="medium" tag="h2">About the Product</p-heading>
-          <p-text>
-            Clean, exclusive, modern and timeless at the same time: the Porsche Design Cupsole Sneaker with its clean
-            design made from the finest of Italian smooth leather.
-            <br/>
-            <br/>
-            The new version of this classic sneaker deliberately foregoes the superfluous seams and instead places the
-            focus firmly on the quality of the materials and the workmanship. The soft padded shaft edge and the light
-            Porsche Design rubber sole ensure that wearing comfort is on a par with the high design standard of the
-            shoe.
-          </p-text>
-        </div>
-        <div class="product-detail__reviews">
-          <p-heading size="medium" tag="h2">Reviews</p-heading>
-          <div></div>
-        </div>
-      </article>
-    </section>
-  </main>
-  <footer class="footer"></footer>
-</div>
 
-<p-flyout id="flyout-add-to-cart" class="flyout-add-to-cart">
-  <div slot="header">
-    <p-heading tag="h2" size="large">Added to Cart</p-heading>
-  </div>
-  <img srcset="/assets/weekender@2x.webp 2x"
-       src="/assets/weekender.webp" width="960"
-       height="1080" alt="Some alternative text for screen readers describing the image"/>
-  <div class="flyout-add-to-cart__header">
-    <p-heading tag="h3" size="large">EviKnit® Trainers II</p-heading>
-    <p-text weight="semi-bold">SGD 680</p-text>
-  </div>
-  <div class="flyout-add-to-cart__specs">
-    <p-text><strong>Color:</strong> Black</p-text>
-    <p-text><strong>Size:</strong> 12</p-text>
-    <p-text><strong>Quantity:</strong> 1</p-text>
-  </div>
-  <p-button-group direction="column">
-    <p-button type="button">Continue Shopping</p-button>
-    <p-button type="button" variant="secondary">Open Cart</p-button>
-  </p-button-group>
-</p-flyout>
+    <p-flyout id="flyout-add-to-cart" class="flyout-add-to-cart">
+      <div slot="header">
+        <p-heading tag="h2" size="large">Added to Cart</p-heading>
+      </div>
+      <img
+        srcset="/assets/weekender@2x.webp 2x"
+        src="/assets/weekender.webp"
+        width="960"
+        height="1080"
+        alt="Some alternative text for screen readers describing the image"
+      >
+      <div class="flyout-add-to-cart__header">
+        <p-heading tag="h3" size="large">EviKnit® Trainers II</p-heading>
+        <p-text weight="semi-bold">SGD 680</p-text>
+      </div>
+      <div class="flyout-add-to-cart__specs">
+        <p-text>
+          <strong>Color:</strong>Black
+        </p-text>
+        <p-text>
+          <strong>Size:</strong>12
+        </p-text>
+        <p-text>
+          <strong>Quantity:</strong>1
+        </p-text>
+      </div>
+      <p-button-group direction="column">
+        <p-button type="button">Continue Shopping</p-button>
+        <p-button type="button" variant="secondary">Open Cart</p-button>
+      </p-button-group>
+    </p-flyout>
 
-<p-modal heading="Size Chart" id="modal-size-chart">
-  <!-- Use only one modal for size-chart and replace its content dynamically -->
-  <p-table caption="Size Chart for men" class="table-size-chart">
-    <p-table-head>
-      <p-table-head-row>
-        <p-table-head-cell>Men</p-table-head-cell>
-        <p-table-head-cell>XS</p-table-head-cell>
-        <p-table-head-cell>S</p-table-head-cell>
-        <p-table-head-cell>M</p-table-head-cell>
-        <p-table-head-cell>L</p-table-head-cell>
-        <p-table-head-cell>XL</p-table-head-cell>
-        <p-table-head-cell>XXL</p-table-head-cell>
-        <p-table-head-cell>3XL</p-table-head-cell>
-      </p-table-head-row>
-    </p-table-head>
-    <p-table-body>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Germany / France / Italy</p-table-cell>
-        <p-table-cell>40-42</p-table-cell>
-        <p-table-cell>44-46</p-table-cell>
-        <p-table-cell>48-50</p-table-cell>
-        <p-table-cell>52-54</p-table-cell>
-        <p-table-cell>56-58</p-table-cell>
-        <p-table-cell>60-62</p-table-cell>
-        <p-table-cell>64-66</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">United Kingdom</p-table-cell>
-        <p-table-cell>32-34</p-table-cell>
-        <p-table-cell>36-38</p-table-cell>
-        <p-table-cell>40-42</p-table-cell>
-        <p-table-cell>44-46</p-table-cell>
-        <p-table-cell>48-50</p-table-cell>
-        <p-table-cell>52-54</p-table-cell>
-        <p-table-cell>56-58</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">USA</p-table-cell>
-        <p-table-cell>34</p-table-cell>
-        <p-table-cell>36</p-table-cell>
-        <p-table-cell>38-40</p-table-cell>
-        <p-table-cell>42-44</p-table-cell>
-        <p-table-cell>46-48</p-table-cell>
-        <p-table-cell>50</p-table-cell>
-        <p-table-cell>52</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">China - upper clothing <br>[height/chest]</p-table-cell>
-        <p-table-cell>175/80A-<br>175/84A</p-table-cell>
-        <p-table-cell>175/88A-<br>180/92A</p-table-cell>
-        <p-table-cell>180/96A-<br>180/100A</p-table-cell>
-        <p-table-cell>180/104B-<br>180/108B</p-table-cell>
-        <p-table-cell>185/112B-<br>185/116B</p-table-cell>
-        <p-table-cell>185/120B-<br>185/124B</p-table-cell>
-        <p-table-cell>185/128B-<br>190/132B</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">China - lower clothing <br>[height/waist]</p-table-cell>
-        <p-table-cell>175/66A-<br>175/70A</p-table-cell>
-        <p-table-cell>175/74A-<br>180/78A</p-table-cell>
-        <p-table-cell>180/84A-<br>180/88A</p-table-cell>
-        <p-table-cell>180/94B-<br>180/98B</p-table-cell>
-        <p-table-cell>185/102B-<br>185/108B</p-table-cell>
-        <p-table-cell>185/112B-<br>185/116B</p-table-cell>
-        <p-table-cell>185/120B-<br>190/124B</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Chest size</p-table-cell>
-        <p-table-cell>84.0cm<br>33"</p-table-cell>
-        <p-table-cell>88.0-92.0cm<br>34 1/2-36 1/4"</p-table-cell>
-        <p-table-cell>96.0-100.0cm<br>37 3/4-39 1/2"</p-table-cell>
-        <p-table-cell>104.0-108.0cm<br>41-42 1/2"</p-table-cell>
-        <p-table-cell>112.0-116.0cm<br>44-45 3/4"</p-table-cell>
-        <p-table-cell>120.0-124.0cm<br>47 1/4-48 3/4"</p-table-cell>
-        <p-table-cell>128.0-132.0cm<br>50 1/2-52"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Waist size</p-table-cell>
-        <p-table-cell>70.0cm<br>27 1/2"</p-table-cell>
-        <p-table-cell>74.0-78.0cm<br>29-30 3/4"</p-table-cell>
-        <p-table-cell>83.0-88.0cm<br>32 3/4-34 1/2"</p-table-cell>
-        <p-table-cell>93.0-98.0cm<br>36 1/2-38 1/2"</p-table-cell>
-        <p-table-cell>102.0-107.0cm<br>40 1/4-42"</p-table-cell>
-        <p-table-cell>111.0-116.0cm<br>43 3/4-45 3/4"</p-table-cell>
-        <p-table-cell>120.0-124.0cm<br>47 1/4-48 3/4"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Hip Size</p-table-cell>
-        <p-table-cell>90.0cm<br>35 1/2"</p-table-cell>
-        <p-table-cell>93.0-96.0cm<br>36 1/2-37 3/4"</p-table-cell>
-        <p-table-cell>99.0-102.0cm<br>39-40 1/4"</p-table-cell>
-        <p-table-cell>105.0-108.0cm<br>41 1/4-42 1/2"</p-table-cell>
-        <p-table-cell>111.0-114.0cm<br>43 3/4-45"</p-table-cell>
-        <p-table-cell>117.0-120.0cm<br>46-47 1/4"</p-table-cell>
-        <p-table-cell>123.0-126.0cm<br>48 1/2-49 1/2"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Inside leg length</p-table-cell>
-        <p-table-cell>81.0cm<br>32"</p-table-cell>
-        <p-table-cell>81.5-82.0cm<br>32-32 1/4"</p-table-cell>
-        <p-table-cell>82.5-83.0cm<br>32 1/2-32 3/4"</p-table-cell>
-        <p-table-cell>83.5-84.0cm<br>33"</p-table-cell>
-        <p-table-cell>84.5-85.0cm<br>33 1/4-33 1/2"</p-table-cell>
-        <p-table-cell>85.5-86.0cm<br>33 3/4-34"</p-table-cell>
-        <p-table-cell>86.5-87.0cm<br>34-34 1/4"</p-table-cell>
-      </p-table-row>
-    </p-table-body>
-  </p-table>
-</p-modal>
+    <p-modal heading="Size Chart" id="modal-size-chart">
+      <!-- Use only one modal for size-chart and replace its content dynamically -->
+      <p-table caption="Size Chart for men" class="table-size-chart">
+        <p-table-head>
+          <p-table-head-row>
+            <p-table-head-cell>Men</p-table-head-cell>
+            <p-table-head-cell>XS</p-table-head-cell>
+            <p-table-head-cell>S</p-table-head-cell>
+            <p-table-head-cell>M</p-table-head-cell>
+            <p-table-head-cell>L</p-table-head-cell>
+            <p-table-head-cell>XL</p-table-head-cell>
+            <p-table-head-cell>XXL</p-table-head-cell>
+            <p-table-head-cell>3XL</p-table-head-cell>
+          </p-table-head-row>
+        </p-table-head>
+        <p-table-body>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">Germany / France / Italy</p-table-cell>
+            <p-table-cell>40-42</p-table-cell>
+            <p-table-cell>44-46</p-table-cell>
+            <p-table-cell>48-50</p-table-cell>
+            <p-table-cell>52-54</p-table-cell>
+            <p-table-cell>56-58</p-table-cell>
+            <p-table-cell>60-62</p-table-cell>
+            <p-table-cell>64-66</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">United Kingdom</p-table-cell>
+            <p-table-cell>32-34</p-table-cell>
+            <p-table-cell>36-38</p-table-cell>
+            <p-table-cell>40-42</p-table-cell>
+            <p-table-cell>44-46</p-table-cell>
+            <p-table-cell>48-50</p-table-cell>
+            <p-table-cell>52-54</p-table-cell>
+            <p-table-cell>56-58</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">USA</p-table-cell>
+            <p-table-cell>34</p-table-cell>
+            <p-table-cell>36</p-table-cell>
+            <p-table-cell>38-40</p-table-cell>
+            <p-table-cell>42-44</p-table-cell>
+            <p-table-cell>46-48</p-table-cell>
+            <p-table-cell>50</p-table-cell>
+            <p-table-cell>52</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">
+              China - upper clothing <br>
+              [height/chest]
+            </p-table-cell>
+            <p-table-cell>
+              175/80A-
+              <br>
+              175/84A
+            </p-table-cell>
+            <p-table-cell>
+              175/88A-
+              <br>
+              180/92A
+            </p-table-cell>
+            <p-table-cell>
+              180/96A-
+              <br>
+              180/100A
+            </p-table-cell>
+            <p-table-cell>
+              180/104B-
+              <br>
+              180/108B
+            </p-table-cell>
+            <p-table-cell>
+              185/112B-
+              <br>
+              185/116B
+            </p-table-cell>
+            <p-table-cell>
+              185/120B-
+              <br>
+              185/124B
+            </p-table-cell>
+            <p-table-cell>
+              185/128B-
+              <br>
+              190/132B
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">
+              China - lower clothing <br>
+              [height/waist]
+            </p-table-cell>
+            <p-table-cell>
+              175/66A-
+              <br>
+              175/70A
+            </p-table-cell>
+            <p-table-cell>
+              175/74A-
+              <br>
+              180/78A
+            </p-table-cell>
+            <p-table-cell>
+              180/84A-
+              <br>
+              180/88A
+            </p-table-cell>
+            <p-table-cell>
+              180/94B-
+              <br>
+              180/98B
+            </p-table-cell>
+            <p-table-cell>
+              185/102B-
+              <br>
+              185/108B
+            </p-table-cell>
+            <p-table-cell>
+              185/112B-
+              <br>
+              185/116B
+            </p-table-cell>
+            <p-table-cell>
+              185/120B-
+              <br>
+              190/124B
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">Chest size</p-table-cell>
+            <p-table-cell>
+              84.0cm
+              <br>
+              33"
+            </p-table-cell>
+            <p-table-cell>
+              88.0-92.0cm
+              <br>
+              34 1/2-36 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              96.0-100.0cm
+              <br>
+              37 3/4-39 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              104.0-108.0cm
+              <br>
+              41-42 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              112.0-116.0cm
+              <br>
+              44-45 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              120.0-124.0cm
+              <br>
+              47 1/4-48 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              128.0-132.0cm
+              <br>
+              50 1/2-52"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">Waist size</p-table-cell>
+            <p-table-cell>
+              70.0cm
+              <br>
+              27 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              74.0-78.0cm
+              <br>
+              29-30 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              83.0-88.0cm
+              <br>
+              32 3/4-34 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              93.0-98.0cm
+              <br>
+              36 1/2-38 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              102.0-107.0cm
+              <br>
+              40 1/4-42"
+            </p-table-cell>
+            <p-table-cell>
+              111.0-116.0cm
+              <br>
+              43 3/4-45 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              120.0-124.0cm
+              <br>
+              47 1/4-48 3/4"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">Hip Size</p-table-cell>
+            <p-table-cell>
+              90.0cm
+              <br>
+              35 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              93.0-96.0cm
+              <br>
+              36 1/2-37 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              99.0-102.0cm
+              <br>
+              39-40 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              105.0-108.0cm
+              <br>
+              41 1/4-42 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              111.0-114.0cm
+              <br>
+              43 3/4-45"
+            </p-table-cell>
+            <p-table-cell>
+              117.0-120.0cm
+              <br>
+              46-47 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              123.0-126.0cm
+              <br>
+              48 1/2-49 1/2"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell scope="row" role="rowheader">Inside leg length</p-table-cell>
+            <p-table-cell>
+              81.0cm
+              <br>
+              32"
+            </p-table-cell>
+            <p-table-cell>
+              81.5-82.0cm
+              <br>
+              32-32 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              82.5-83.0cm
+              <br>
+              32 1/2-32 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              83.5-84.0cm
+              <br>
+              33"
+            </p-table-cell>
+            <p-table-cell>
+              84.5-85.0cm
+              <br>
+              33 1/4-33 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              85.5-86.0cm
+              <br>
+              33 3/4-34"
+            </p-table-cell>
+            <p-table-cell>
+              86.5-87.0cm
+              <br>
+              34-34 1/4"
+            </p-table-cell>
+          </p-table-row>
+        </p-table-body>
+      </p-table>
+    </p-modal>
 
-<script type="module" src="./main.js"></script>
-</body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
