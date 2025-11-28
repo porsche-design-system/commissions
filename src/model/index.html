@@ -76,7 +76,7 @@
       </div>
     </header>
 
-    <main class="grid-template gap-y-0">
+    <main class="grid-template gap-y-0 hyphens-none">
       <section
         aria-label="hero section"
         class="grid [grid-template-rows:minmax(120px,1fr)_repeat(3,auto)] auto-rows-auto grid-cols-subgrid col-full row-span-4 gap-y-0 pb-[var(--spacing-fluid-2xl)] bg-canvas-dark after:content-[''] after:block after:col-full after:row-start-2 after:row-end-4 after:h-fill after:bg-fade-to-t max-h-[calc(100svh + var(--spacing-fluid-md))]"
@@ -164,7 +164,7 @@
         aria-label="model section"
         class="col-full grid grid-cols-subgrid gap-fluid-lg mb-fluid-xl"
       >
-        <div class="col-basic flex flex-col gap-y-fluid-sm">
+        <div class="col-basic flex flex-col gap-y-fluid-sm text-center">
           <h1 class="prose-heading-2xl">One edition, many models.</h1>
           <p class="prose-text-sm">
             Which Cayenne Black Edition model are you most excited about?
@@ -282,36 +282,91 @@
             href="https://porsche.com"
             description="More striking appearance"
             compact="true"
+            class="h-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-exterior-highlight-1.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >The SportDesign front end of the Cayenne Black Edition models and
+              the SportDesign package for the Cayenne S models provide even more
+              expressiveness.</p-text
+            >
           </p-link-tile>
 
           <p-link-tile
             href="https://porsche.com"
-            description="More striking appearance"
+            description="RS Spyder Design wheels."
             compact="true"
+            class="h-[40rem] w-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-exterior-highlight-2.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs"
+              >Inspired by motor racing: The 21-inch RS Spyder Design wheels,
+              painted in Black (high-gloss) with polished cross-sectional areas
+              and a Porsche Crest in colour.</p-text
+            >
           </p-link-tile>
 
           <p-link-tile
             href="https://porsche.com"
-            description="More striking appearance"
+            description="Accentuating details in Black."
             compact="true"
+            class="h-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-exterior-highlight-3.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs"
+              >Accentuating details in Black (high-gloss) including the exterior
+              mirrors, the side window trim and the lettering lend the exterior
+              even more dynamism.</p-text
+            >
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="HD-Matrix LED main headlights."
+            compact="true"
+            class="h-[40rem]"
+            size="large"
+          >
+            <img
+              src="/assets/model-exterior-highlight-4.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs"
+              >Accentuating details in Black (high-gloss) including the exterior
+              mirrors, the side window trim and the lettering lend the exterior
+              even more dynamism.</p-text
+            >
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Panorama Roof System."
+            compact="true"
+            class="h-[40rem]"
+            size="large"
+          >
+            <img
+              src="/assets/model-exterior-highlight-5.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs"
+              >The Panorama Roof System, with its large glass panels, creates a
+              pleasant light ambiance inside the Cayenne Black Edition SUV
+              models. The privacy glazing of the rear windows protects against
+              unwanted views.</p-text
+            >
           </p-link-tile>
         </p-carousel>
       </section>
@@ -333,48 +388,102 @@
           style="--p-hyphens: none"
           slides-per-page="auto"
         >
-          <!--          TODO: mention this workaround-->
-          <span slot="description" class="contents">
-            <p class="prose-text-md">
-              The equipment in the Cayenne Black Edition models offers not only
-              a sporty atmosphere but also a high level of comfort.
-            </p>
-          </span>
+          <h1 slot="heading">Interior highlights.</h1>
+          <p slot="description">
+            The equipment in the Cayenne Black Edition models offers not only a
+            sporty atmosphere but also a high level of comfort.
+          </p>
 
           <p-link-tile
             href="https://porsche.com"
-            description="More striking appearance"
+            description="Sporty elegance."
             compact="true"
+            class="h-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-interior-highlight-1.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >A clear statement of comfort and style: Comfort seats in the
+              front (14-way, electric) with memory package and embossed Porsche
+              Crest on the headrests.</p-text
+            >
           </p-link-tile>
 
           <p-link-tile
             href="https://porsche.com"
-            description="More striking appearance"
+            description="Comfort seats."
             compact="true"
+            class="h-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-interior-highlight-2.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >A clear statement of comfort and style: Comfort seats in the
+              front (14-way, electric) with memory package and embossed Porsche
+              Crest on the headrests.</p-text
+            >
           </p-link-tile>
 
           <p-link-tile
             href="https://porsche.com"
-            description="More striking appearance"
+            description="GT sports steering wheel."
             compact="true"
+            class="h-[40rem]"
+            size="large"
           >
-            <img src="/assets/lights.jpg" alt="Some image description" />
-            <p-text slot="footer" theme="dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </p-text>
+            <img
+              src="/assets/model-interior-highlight-3.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >Optimised for sporty driving: The heated multifunction sports
+              steering wheel in GT design with a smooth Black leather steering
+              wheel rim.</p-text
+            >
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="BOSE® Surround Sound System."
+            compact="true"
+            class="h-[40rem]"
+            size="large"
+          >
+            <img
+              src="/assets/model-interior-highlight-4.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >The BOSE® Surround Sound System features 14 amplifier channels.
+              The total output: 710 watts. 14 loudspeakers including a separate
+              subwoofer ensure a balanced, faithfully reproduced acoustic
+              pattern.</p-text
+            >
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Driving comfort."
+            compact="true"
+            class="h-[40rem]"
+            size="large"
+          >
+            <img
+              src="/assets/model-interior-highlight-5.png"
+              alt="Some image description"
+            />
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm"
+              >Sporty or comfortable: The adaptive air suspension adapts to your
+              preference and driving mode. Adaptive cruise control and Lane
+              Change Assist help you reach your destination with greater ease
+              and comfort.</p-text
+            >
           </p-link-tile>
         </p-carousel>
       </section>
@@ -392,18 +501,16 @@
         aria-label="black edition extended package"
       >
         <p-carousel
-          heading="Black Edition Extended Package.
-"
           align-header="center"
           heading-size="xx-large"
+          width="extended"
+          class="mb-fluid-lg hyphens-note"
         >
-          <!--          TODO: mention this workaround-->
-          <span slot="description" class="contents">
-            <p class="prose-text-md">
-              Customise your Black Edition model even further with the optional
-              package from Porsche Exclusive<br />Manufaktur.
-            </p>
-          </span>
+          <h1 slot="heading">Black Edition Extended Package.</h1>
+          <p slot="description">
+            Customise your Black Edition model even further with the optional
+            package from Porsche Exclusive Manufaktur.
+          </p>
 
           <div class="grid grid-cols-2">
             <img
