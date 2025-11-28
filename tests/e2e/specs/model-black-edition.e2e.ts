@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('/model/');
+  await page.goto('/model-black-edition/');
 
   await expect(page).toHaveTitle('Porsche Shop (Template)');
 });

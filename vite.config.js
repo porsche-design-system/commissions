@@ -64,7 +64,7 @@ export default defineConfig({
         'shop-product-list': resolve(__dirname, 'src/shop-product-list/index.html'),
         'shop-product-detail': resolve(__dirname, 'src/shop-product-detail/index.html'),
         'shop-shopping-cart': resolve(__dirname, 'src/shop-shopping-cart/index.html'),
-        model: resolve(__dirname, 'src/model/index.html'),
+        'model-black-edition': resolve(__dirname, 'src/model-black-edition/index.html'),
       },
     },
   },
