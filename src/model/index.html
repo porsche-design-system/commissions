@@ -101,7 +101,7 @@
         aria-label="tab section"
         class="col-full grid grid-cols-subgrid shadow-medium sticky top-0 z-300 bg-canvas"
       >
-        <div class="col-basic pb-static-xs pt-static-lg">
+        <div class="col-basic pb-fluid-sm pt-fluid-md">
           <p-tabs-bar active-tab-index="0">
             <button type="button">Model selection</button>
             <button type="button">Test drive</button>
@@ -113,7 +113,7 @@
 
       <section
         aria-label="content section"
-        class="relative col-full grid grid-cols-subgrid grid-rows-subgrid mt-fluid-xl bg-canvas-dark row-span-4 before:content-[''] before:absolute before:inset-0 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:z-1 before:bg-canvas after:content-[''] after:absolute after:bottom-0 after:row-start-4 after:row-end-5 after:h-[30%] after:w-full after:z-1 after:bg-canvas mb-fluid-xl"
+        class="relative col-full grid grid-cols-subgrid grid-rows-subgrid mt-fluid-xl mb-fluid-2xl bg-canvas-dark row-span-4 before:content-[''] before:absolute before:inset-0 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:z-1 before:bg-canvas after:content-[''] after:absolute after:bottom-0 after:row-start-4 after:row-end-5 after:h-[30%] after:w-full after:z-1 after:bg-canvas"
       >
         <div class="z-3 col-basic w-full row-span-2 place-self-stretch aspect-16/9">
           <img src="/assets/model-cayenne-1.jpg" alt="model image 1" class="h-full object-cover rounded-xl">
@@ -139,13 +139,13 @@
         </div>
       </section>
 
-      <section aria-label="model section" class="col-full grid grid-cols-subgrid gap-fluid-lg mb-fluid-xl">
-        <div class="col-basic flex flex-col gap-y-fluid-sm text-center">
+      <section aria-label="model section" class="col-full grid grid-cols-subgrid pt-[100px] pb-[150px]">
+        <div class="col-basic flex flex-col text-center py-fluid-lg gap-fluid-md">
           <h1 class="prose-heading-2xl">One edition, many models.</h1>
           <p class="prose-text-sm">Which Cayenne Black Edition model are you most excited about?</p>
         </div>
 
-        <p-tabs-bar class="col-basic self-center" active-tab-index="0">
+        <p-tabs-bar class="col-basic self-center pb-fluid-md" active-tab-index="0">
           <button type="button">SUV</button>
           <button type="button">Coupé</button>
         </p-tabs-bar>
@@ -210,12 +210,12 @@
         <img src="/assets/model-cayenne-4.png" alt="model cta image" class="w-full h-full object-cover rounded-xl">
       </section>
 
-      <section class="col-full mt-fluid-xl" aria-label="exterior highlights">
+      <section class="col-full py-[150px]" aria-label="exterior highlights">
         <p-carousel
           align-header="center"
           heading-size="xx-large"
           width="extended"
-          class="mb-fluid-lg"
+          class="mt-fluid-md mb-fluid-lg"
           style="--p-hyphens: none"
           slides-per-page="auto"
         >
@@ -324,16 +324,16 @@
         </p-carousel>
       </section>
 
-      <section class="col-full mt-fluid-xl" aria-label="model banner section">
+      <section class="col-full" aria-label="model banner section">
         <img src="/assets/model-cayenne-5.png" alt="model cta image" class="w-full h-full object-cover rounded-xl">
       </section>
 
-      <section class="col-full mt-fluid-xl" aria-label="interior highlights">
+      <section class="col-full py-[150px]" aria-label="interior highlights">
         <p-carousel
           align-header="center"
           heading-size="xx-large"
           width="extended"
-          class="mb-fluid-lg"
+          class="mt-fluid-md mb-fluid-lg"
           style="--p-hyphens: none"
           slides-per-page="auto"
         >
@@ -415,12 +415,12 @@
         </p-carousel>
       </section>
 
-      <section class="col-extended mt-fluid-2xl">
+      <section class="col-extended pb-fluid-lg">
         <img src="/assets/model-cayenne-6.png" alt="model cta image" class="w-full h-full object-cover rounded-xl">
       </section>
 
-      <section class="col-full mt-fluid-xl mb-fluid-lg" aria-label="black edition extended package">
-        <p-carousel align-header="center" heading-size="xx-large" width="extended" class="mb-fluid-lg hyphens-note">
+      <section class="col-full pt-[150px] pb-[200px]" aria-label="black edition extended package">
+        <p-carousel align-header="center" heading-size="xx-large" width="extended" class="mb-fluid-lg">
           <h1 slot="heading">Black Edition Extended Package.</h1>
           <p slot="description">
             Customise your Black Edition model even further with the optional package from Porsche Exclusive Manufaktur.
@@ -473,7 +473,7 @@
         </p-carousel>
       </section>
 
-      <section class="col-basic mt-fluid-xl mb-fluid-lg text-center" aria-label="cta banner section">
+      <section class="col-basic pt-fluid-xl pb-fluid-lg mb-xl text-center" aria-label="cta banner section">
         <h2 class="prose-heading-lg">Consumption and Emissions.</h2>
         <p class="hyphens-auto text-contrast-high mt-fluid-sm">
           <span class="font-bold">Cayenne E-Hybrid Coupé Black Edition:</span>
