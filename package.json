@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "biome format",
+    "format:tailwind": "prettier --write --plugin=prettier-plugin-tailwindcss",
     "lint": "biome lint",
     "test:e2e": "playwright test --config=tests/e2e/config/playwright.config.ts",
     "test:a11y": "playwright test --config=tests/a11y/config/playwright.config.ts",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@porsche-design-system/components-js": "^3.31.0",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
