@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "biome format",
-    "format:tailwind": "prettier --write --plugin=prettier-plugin-tailwindcss",
+    "format:tailwind": "prettier --plugin=prettier-plugin-tailwindcss",
     "lint": "biome lint",
     "test:e2e": "playwright test --config=tests/e2e/config/playwright.config.ts",
     "test:a11y": "playwright test --config=tests/a11y/config/playwright.config.ts",
