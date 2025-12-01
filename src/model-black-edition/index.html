@@ -8,10 +8,10 @@
   </head>
   <body class="bg-canvas">
     <header
-      class="grid-template absolute inset-x-0 z-1 before:absolute before:inset-[0_0_-60px_0] before:-z-1 before:pointer-events-none before:bg-fade-to-b"
+      class="grid-template before:bg-fade-to-b absolute inset-x-0 z-1 before:pointer-events-none before:absolute before:inset-[0_0_-60px_0] before:-z-1"
     >
-      <div class="col-wide grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-fluid-md items-center min-h-[80px]">
-        <div class="flex flex-wrap gap-static-md items-center justify-start">
+      <div class="col-wide gap-fluid-md grid min-h-[80px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
+        <div class="gap-static-md flex flex-wrap items-center justify-start">
           <nav aria-label="Main">
             <p-button-pure
               id="nav-button"
@@ -48,7 +48,7 @@
         </div>
         <p-crest class="sm:hidden" href="#"></p-crest>
         <p-wordmark class="max-sm:hidden" theme="dark" href="#"></p-wordmark>
-        <div class="flex flex-wrap gap-static-md items-center justify-end">
+        <div class="gap-static-md flex flex-wrap items-center justify-end">
           <p-button-pure
             class="p-static-xs -m-static-xs"
             title="Search"
@@ -76,20 +76,20 @@
     <main class="grid-template gap-y-0 hyphens-none">
       <section
         aria-label="hero section"
-        class="grid [grid-template-rows:minmax(120px,1fr)_repeat(3,auto)] auto-rows-auto grid-cols-subgrid col-full row-span-4 gap-y-0 pb-[var(--spacing-fluid-2xl)] bg-canvas-dark after:content-[''] after:block after:col-full after:row-start-2 after:row-end-4 after:h-fill after:bg-fade-to-t max-h-[calc(100svh + var(--spacing-fluid-md))]"
+        class="col-full bg-canvas-dark after:col-full after:h-fill after:bg-fade-to-t max-h-[calc(100svh + var(--spacing-fluid-md))] row-span-4 grid auto-rows-auto grid-cols-subgrid [grid-template-rows:minmax(120px,1fr)_repeat(3,auto)] gap-y-0 pb-[var(--spacing-fluid-2xl)] after:row-start-2 after:row-end-4 after:block after:content-['']"
       >
-        <div class="w-full col-full row-start-1 row-span-3 place-self-stretch aspect-16/9">
-          <img src="/assets/model-black-edition/model-cayenne-hero.jpg" alt="" class="w-full h-full object-cover">
+        <div class="col-full row-span-3 row-start-1 aspect-16/9 w-full place-self-stretch">
+          <img src="/assets/model-black-edition/model-cayenne-hero.jpg" alt="" class="h-full w-full object-cover">
         </div>
         <h1
-          class="z-1 row-start-2 row-end-3 col-basic prose-display-md place-self-center text-center max-w-[20ch] pt-[var(--spacing-fluid-xl)] text-canvas"
+          class="col-basic prose-display-md text-canvas z-1 row-start-2 row-end-3 max-w-[20ch] place-self-center pt-[var(--spacing-fluid-xl)] text-center"
         >
           Cayenne Black
           <br>
           Edition models.
         </h1>
         <p
-          class="dark z-1 row-start-3 row-end-5 col-basic prose-text-lg text-contrast-high text-center pt-[var(--spacing-fluid-md)]"
+          class="dark col-basic prose-text-lg text-contrast-high z-1 row-start-3 row-end-5 pt-[var(--spacing-fluid-md)] text-center"
         >
           Black Edition stands for selected Porsche models with extended
           <br>
@@ -99,7 +99,7 @@
 
       <section
         aria-label="tab section"
-        class="col-full grid grid-cols-subgrid shadow-medium sticky top-0 z-300 bg-canvas"
+        class="col-full shadow-medium bg-canvas sticky top-0 z-300 grid grid-cols-subgrid"
       >
         <div class="col-basic pb-fluid-sm pt-fluid-md">
           <p-tabs-bar active-tab-index="0">
@@ -113,57 +113,57 @@
 
       <section
         aria-label="content section"
-        class="relative col-full grid grid-cols-subgrid grid-rows-subgrid mt-fluid-xl mb-fluid-2xl bg-canvas-dark row-span-4 before:content-[''] before:absolute before:inset-0 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:z-1 before:bg-canvas after:content-[''] after:absolute after:bottom-0 after:row-start-4 after:row-end-5 after:h-[30%] after:w-full after:z-1 after:bg-canvas"
+        class="col-full mt-fluid-xl mb-fluid-2xl bg-canvas-dark before:bg-canvas after:bg-canvas relative row-span-4 grid grid-cols-subgrid grid-rows-subgrid before:absolute before:inset-0 before:z-1 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:content-[''] after:absolute after:bottom-0 after:z-1 after:row-start-4 after:row-end-5 after:h-[30%] after:w-full after:content-['']"
       >
-        <div class="z-3 col-basic w-full row-span-2 place-self-stretch aspect-16/9">
+        <div class="col-basic z-3 row-span-2 aspect-16/9 w-full place-self-stretch">
           <img
             src="/assets/model-black-edition/model-cayenne-1.jpg"
             alt="model image 1"
-            class="h-full object-cover rounded-xl"
+            class="h-full rounded-xl object-cover"
           >
         </div>
 
         <div class="col-start-basic pt-fluid-lg pb-fluid-2xl col-span-5">
-          <h2 class="rounded-lg prose-display-sm text-canvas">
+          <h2 class="prose-display-sm text-canvas rounded-lg">
             When it comes to equipment, the defining colour is Black.
           </h2>
-          <p class="rounded-lg prose-text-md text-canvas mt-fluid-md">
+          <p class="prose-text-md text-canvas mt-fluid-md rounded-lg">
             The Cayenne Black Edition models express sportiness and dynamism primarily through their attractive
             equipment. When choosing exterior and interior colours, there are of course many other options besides
             Black.
           </p>
         </div>
 
-        <div class="z-3 -col-end-3 -col-start-10 row-start-3 row-end-5">
+        <div class="z-3 -col-start-10 -col-end-3 row-start-3 row-end-5">
           <img
             src="/assets/model-black-edition/model-cayenne-2.png"
             alt="model image 2"
-            class="object-cover rounded-md"
+            class="rounded-md object-cover"
           >
         </div>
 
-        <div class="col-start-5 col-span-8 z-2">
+        <div class="z-2 col-span-8 col-start-5">
           <img
             src="/assets/model-black-edition/model-cayenne-3.png"
             alt="model image 2"
-            class="h-full object-cover rounded-md"
+            class="h-full rounded-md object-cover"
           >
         </div>
       </section>
 
       <section aria-label="model section" class="col-full grid grid-cols-subgrid pt-[100px] pb-[150px]">
-        <div class="col-basic flex flex-col text-center py-fluid-lg gap-fluid-md">
+        <div class="col-basic py-fluid-lg gap-fluid-md flex flex-col text-center">
           <h1 class="prose-heading-2xl">One edition, many models.</h1>
           <p class="prose-text-sm">Which Cayenne Black Edition model are you most excited about?</p>
         </div>
 
-        <p-tabs-bar class="col-basic self-center pb-fluid-md" active-tab-index="0">
+        <p-tabs-bar class="col-basic pb-fluid-md self-center" active-tab-index="0">
           <button type="button">SUV</button>
           <button type="button">Coupé</button>
         </p-tabs-bar>
 
         <div class="col-extended flex flex-row">
-          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -184,7 +184,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -206,7 +206,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col w-1/3 p-fluid-xs gap-fluid-xs">
+          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -234,7 +234,7 @@
         <img
           src="/assets/model-black-edition/model-cayenne-4.png"
           alt="model cta image"
-          class="w-full h-full object-cover rounded-xl"
+          class="h-full w-full rounded-xl object-cover"
         >
       </section>
 
@@ -370,7 +370,7 @@
         <img
           src="/assets/model-black-edition/model-cayenne-5.png"
           alt="model cta image"
-          class="w-full h-full object-cover rounded-xl"
+          class="h-full w-full rounded-xl object-cover"
         >
       </section>
 
@@ -475,7 +475,7 @@
         <img
           src="/assets/model-black-edition/model-cayenne-6.png"
           alt="model cta image"
-          class="w-full h-full object-cover rounded-xl"
+          class="h-full w-full rounded-xl object-cover"
         >
       </section>
 
@@ -490,9 +490,9 @@
             <img
               src="/assets/model-black-edition/model-cayenne-package-3.png"
               alt="model cta image"
-              class="w-full h-full object-cover rounded-xl"
+              class="h-full w-full rounded-xl object-cover"
             >
-            <div class="flex flex-col justify-center px-fluid-lg gap-fluid-sm">
+            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">'Black Edition' lettering.</h1>
               <p class="hyphens-auto">
                 The 'Black Edition' side lettering in Black on the front doors adds a special accentuating detail.
@@ -504,9 +504,9 @@
             <img
               src="/assets/model-black-edition/model-cayenne-package-2.png"
               alt="model cta image"
-              class="w-full h-full object-cover rounded-xl"
+              class="h-full w-full rounded-xl object-cover"
             >
-            <div class="flex flex-col justify-center px-fluid-lg gap-fluid-sm">
+            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">Door sill guards.</h1>
               <p class="hyphens-auto">
                 Making the Black Edition unmistakable even in the dark: Front door sill guards with 'Black Edition'
@@ -519,10 +519,10 @@
             <img
               src="/assets/model-black-edition/model-cayenne-package-1.png"
               alt="model cta image"
-              class="w-full h-full object-cover rounded-xl"
+              class="h-full w-full rounded-xl object-cover"
             >
 
-            <div class="flex flex-col justify-center px-fluid-lg gap-fluid-sm">
+            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">Driver's key with key pouch.</h1>
               <p class="hyphens-auto">
                 Completing the Black Edition: Set of two driver's keys painted in Black (high-gloss) with 'Black
@@ -535,7 +535,7 @@
 
       <section class="col-basic pt-fluid-xl pb-fluid-lg mb-xl text-center" aria-label="cta banner section">
         <h2 class="prose-heading-lg">Consumption and Emissions.</h2>
-        <p class="hyphens-auto text-contrast-high mt-fluid-sm">
+        <p class="text-contrast-high mt-fluid-sm hyphens-auto">
           <span class="font-bold">Cayenne E-Hybrid Coupé Black Edition:</span>
           Fuel consumption (weighted) combined (model range): 4.4 – 4.0 l/100 km, Electric energy consumption (weighted)
           combined (model range): 31.2 – 19.2 kWh/100 km, CO₂-emissions (weighted) combined (model range): 100 – 91
@@ -568,7 +568,7 @@
     <footer class="grid-template py-fluid-lg bg-surface">
       <h2 class="sr-only">Porsche Landingpage Footer</h2>
       <form
-        class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-fluid-md"
+        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-fluid-md grid md:grid-cols-[repeat(3,minmax(0,1fr))]"
         action="#"
         onsubmit="return false;"
         aria-label="Change your delivery country"
@@ -637,11 +637,11 @@
       </form>
       <nav
         aria-label="Footer"
-        class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-x-fluid-md gap-y-fluid-lg mt-fluid-sm mb-fluid-lg"
+        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-x-fluid-md gap-y-fluid-lg mt-fluid-sm mb-fluid-lg grid md:grid-cols-[repeat(3,minmax(0,1fr))]"
       >
-        <div class="flex flex-col gap-fluid-sm">
+        <div class="gap-fluid-sm flex flex-col">
           <h3 id="heading-footer-1" class="prose-text-2xs text-contrast-medium">Legal Services</h3>
-          <ul class="grid gap-fluid-sm">
+          <ul class="gap-fluid-sm grid">
             <li>
               <p-link-pure href="#" icon="none">Terms and Conditions</p-link-pure>
             </li>
@@ -662,9 +662,9 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-fluid-sm">
+        <div class="gap-fluid-sm flex flex-col">
           <h3 class="prose-text-2xs text-contrast-medium">Porsche Design</h3>
-          <ul class="grid gap-fluid-sm">
+          <ul class="gap-fluid-sm grid">
             <li>
               <p-link-pure href="#" icon="none">Press </p-link-pure>
             </li>
@@ -682,9 +682,9 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-fluid-sm">
+        <div class="gap-fluid-sm flex flex-col">
           <h3 class="prose-text-2xs text-contrast-medium">Online Services</h3>
-          <ul class="grid gap-fluid-sm">
+          <ul class="gap-fluid-sm grid">
             <li>
               <p-link-pure href="#" icon="none">My Orders </p-link-pure>
             </li>
@@ -705,9 +705,9 @@
       </nav>
       <article
         aria-label="Social media and payment service providers"
-        class="col-extended grid sm:grid-cols-[auto_minmax(0,1fr)] items-center gap-x-fluid-lg gap-y-static-lg"
+        class="col-extended gap-x-fluid-lg gap-y-static-lg grid items-center sm:grid-cols-[auto_minmax(0,1fr)]"
       >
-        <div class="flex gap-fluid-md">
+        <div class="gap-fluid-md flex">
           <p-link-pure href="#" icon="logo-instagram" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
             Instagram
           </p-link-pure>
@@ -724,20 +724,20 @@
             YouTube
           </p-link-pure>
         </div>
-        <div class="flex gap-fluid-xs">
-          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+        <div class="gap-fluid-xs flex">
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/hskK1tzN0CS8cdGIttugu/883187acee1c66e7d4593141f3e659c3/Visa.svg"
               alt="visa logo"
             >
           </a>
-          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/34g5LXmVhTzseATJL7CLFj/501eba81ff4787357277faff4ea04f4d/Master__1_.svg"
               alt="master card logo"
             >
           </a>
-          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/4NeGQiGeYT5VZ3G591li1k/c12d0cc589f608a6db3d3e7d2aae0255/PayPal.svg"
               alt="paypal logo"
@@ -745,7 +745,7 @@
           </a>
         </div>
       </article>
-      <article aria-label="Consumption and emission information" class="col-extended grid gap-fluid-md mt-fluid-md">
+      <article aria-label="Consumption and emission information" class="col-extended gap-fluid-md mt-fluid-md grid">
         <p class="prose-text-2xs text-contrast-medium">
           The consumption and emission values stated were determined in accordance with the legally prescribed
           measurement procedures. Since September 1, 2017, certain new vehicles have been type-approved in accordance
@@ -776,10 +776,10 @@
           Important information regarding fully electric Porsche models can be found here.
         </p>
       </article>
-      <div class="col-extended grid gap-fluid-md justify-items-center mt-fluid-md">
+      <div class="col-extended gap-fluid-md mt-fluid-md grid justify-items-center">
         <p-wordmark></p-wordmark>
         <p class="prose-text-2xs text-contrast-medium">© 2025 Porsche Sales and Marketplace, Inc.</p>
-        <ul class="flex flex-wrap justify-center gap-fluid-md">
+        <ul class="gap-fluid-md flex flex-wrap justify-center">
           <li>
             <p-link-pure href="#" icon="none" size="x-small" underline="true">Legal notice</p-link-pure>
           </li>
