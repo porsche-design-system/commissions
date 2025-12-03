@@ -118,11 +118,10 @@
       >
         <div class="col-basic pb-fluid-sm pt-fluid-md">
           <p-tabs-bar active-tab-index="0">
-            <!-- use anchor links -->
-            <button type="button">Model selection</button>
-            <button type="button">Test drive</button>
-            <button type="button">Exterior</button>
-            <button type="button">Interior</button>
+            <a>Model selection</a>
+            <a>Test drive</a>
+            <a>Exterior</a>
+            <a>Interior</a>
           </p-tabs-bar>
         </div>
       </section>
@@ -171,8 +170,7 @@
 
       <section aria-label="model section" class="col-full grid grid-cols-subgrid pt-[100px] pb-[150px]">
         <div class="col-basic py-fluid-lg gap-fluid-md flex flex-col text-center">
-          <!-- A11Y: Should be H2 -->
-          <h1 class="prose-heading-2xl">One edition, many models.</h1>
+          <h2 class="prose-heading-2xl">One edition, many models.</h2>
           <p class="prose-text-sm">Which Cayenne Black Edition model are you most excited about?</p>
         </div>
 
@@ -181,13 +179,11 @@
           <button type="button">Coupé</button>
         </p-tabs-bar>
 
-        <div class="col-extended flex flex-row">
-          <!-- A11Y: <article> container with aria-labelledby to the H2? -->
-          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
-            <!-- A11Y: Use same text as heading for alt-attribute -->
+        <p-carousel class="col-full" slides-per-page="auto" pagination="false">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[300px] flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
-              alt="Cayenne SUV"
+              alt="Cayenne Black Edition"
               class="w-full object-cover"
             >
 
@@ -200,13 +196,12 @@
               combined CO₂ emissions: 267 - 249 g/km
             </p>
 
-            <!-- A11Y: Never put aria-label on elements without semantics -->
-            <div aria-label="button container" class="mt-fluid-sm">
+            <div class="mt-fluid-sm">
               <p-button>Configure yours </p-button>
             </div>
           </div>
 
-          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[300px]  flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -223,13 +218,12 @@
               g/km combined fuel consumption with depleted battery: 10.5 - 10.0 l/100 km
             </p>
 
-            <!-- A11Y: Never put aria-label on elements without semantics -->
             <div aria-label="button container" class="mt-fluid-sm">
               <p-button>Configure yours </p-button>
             </div>
           </div>
 
-          <div class="p-fluid-xs gap-fluid-xs flex w-1/3 flex-col">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[300px]  flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -246,12 +240,11 @@
               g/km combined fuel consumption with depleted battery: 10.5 - 10.0 l/100 km
             </p>
 
-            <!-- A11Y: Never put aria-label on elements without semantics -->
-            <div aria-label="button container" class="mt-fluid-sm">
+            <div class="mt-fluid-sm">
               <p-button>Configure yours </p-button>
             </div>
           </div>
-        </div>
+        </p-carousel>
       </section>
 
       <section class="col-full" aria-label="cayenne showcase image">
@@ -271,8 +264,7 @@
           style="--p-hyphens: none"
           slides-per-page="auto"
         >
-          <!-- A11Y: Should be an H2 -->
-          <h1 slot="heading">Exterior highlights.</h1>
+          <h2 slot="heading">Exterior highlights.</h2>
           <p slot="description">
             A perfect match with any exterior colour: Selected accentuating details in Black (high-gloss).
           </p>
@@ -401,7 +393,6 @@
           style="--p-hyphens: none"
           slides-per-page="auto"
         >
-          <!-- A11Y: Should be an H2 -->
           <h1 slot="heading">Interior highlights.</h1>
           <p slot="description">
             The equipment in the Cayenne Black Edition models offers not only a sporty atmosphere but also a high level
@@ -495,8 +486,7 @@
 
       <section class="col-full pt-[150px] pb-[200px]" aria-label="black edition extended package">
         <p-carousel align-header="center" heading-size="xx-large" width="extended" class="mb-fluid-lg">
-          <!-- A11Y: Should be an H2 -->
-          <h1 slot="heading">Black Edition Extended Package.</h1>
+          <h2 slot="heading">Black Edition Extended Package.</h2>
           <p slot="description">
             Customise your Black Edition model even further with the optional package from Porsche Exclusive Manufaktur.
           </p>
@@ -508,8 +498,7 @@
               class="h-full w-full rounded-xl object-cover"
             >
             <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
-              <!-- A11Y: Should be an H3 -->
-              <h1 class="prose-heading-lg">'Black Edition' lettering.</h1>
+              <h2 class="prose-heading-lg">'Black Edition' lettering.</h2>
               <p class="hyphens-auto">
                 The 'Black Edition' side lettering in Black on the front doors adds a special accentuating detail.
               </p>
@@ -523,8 +512,7 @@
               class="h-full w-full rounded-xl object-cover"
             >
             <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
-              <!-- A11Y: Should be an H3 -->
-              <h1 class="prose-heading-lg">Door sill guards.</h1>
+              <h2 class="prose-heading-lg">Door sill guards.</h2>
               <p class="hyphens-auto">
                 Making the Black Edition unmistakable even in the dark: Front door sill guards with 'Black Edition'
                 lettering illuminated in White. The brushed aluminium guards bear the model logo on the back.
@@ -540,8 +528,7 @@
             >
 
             <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
-              <!-- A11Y: Should be an H3 -->
-              <h1 class="prose-heading-lg">Driver's key with key pouch.</h1>
+              <h2 class="prose-heading-lg">Driver's key with key pouch.</h2>
               <p class="hyphens-auto">
                 Completing the Black Edition: Set of two driver's keys painted in Black (high-gloss) with 'Black
                 Edition' lettering and exclusive key pouch.
@@ -584,7 +571,6 @@
     </main>
 
     <footer class="grid-template py-fluid-lg bg-surface">
-      <!-- A11Y: H2 not needed, because the footer tag is enough -->
       <h2 class="sr-only">Porsche Landingpage Footer</h2>
       <form
         class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-fluid-md grid md:grid-cols-[repeat(3,minmax(0,1fr))]"
@@ -747,21 +733,20 @@
           <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/hskK1tzN0CS8cdGIttugu/883187acee1c66e7d4593141f3e659c3/Visa.svg"
-            <!-- A11Y: Skip word "logo" -->
+              <!-- A11Y: Skip word "logo" -->
               alt="visa logo"
             >
           </a>
           <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/34g5LXmVhTzseATJL7CLFj/501eba81ff4787357277faff4ea04f4d/Master__1_.svg"
-            <!-- A11Y: Skip word "logo" -->
+              <!-- A11Y: Skip word "logo" -->
               alt="master card logo"
             >
           </a>
           <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
             <img
               src="https://images.ctfassets.net/1oyzmkwpf3d5/4NeGQiGeYT5VZ3G591li1k/c12d0cc589f608a6db3d3e7d2aae0255/PayPal.svg"
-            <!-- A11Y: Skip word "logo" -->
               alt="paypal logo"
             >
           </a>
