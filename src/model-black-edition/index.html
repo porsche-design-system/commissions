@@ -78,8 +78,24 @@
         aria-label="hero section"
         class="col-full bg-canvas-dark after:col-full after:h-fill after:bg-fade-to-t max-h-[calc(100svh + var(--spacing-fluid-md))] row-span-4 grid auto-rows-auto grid-cols-subgrid [grid-template-rows:minmax(120px,1fr)_repeat(3,auto)] gap-y-0 pb-[var(--spacing-fluid-2xl)] after:row-start-2 after:row-end-4 after:block after:content-['']"
       >
-        <div class="col-full row-span-3 row-start-1 aspect-16/9 w-full place-self-stretch">
-          <img src="/assets/model-black-edition/model-cayenne-hero.jpg" alt="" class="h-full w-full object-cover">
+        <div class="col-full row-span-3 row-start-1">
+          <picture>
+            <source
+              srcset="/assets/model-black-edition/model-cayenne-hero-large.jpg"
+              media="(width >= 700px)"
+              class="h-full w-full object-cover"
+            >
+            <source
+              srcset="/assets/model-black-edition/model-cayenne-hero-small.webp"
+              media="(width < 700px)"
+              class="h-full w-full object-cover"
+            >
+            <img
+              src="/assets/model-black-edition/model-cayenne-hero-large.jpg"
+              alt=""
+              class="h-full w-full object-cover"
+            >
+          </picture>
         </div>
         <h1
           class="col-basic prose-display-md text-canvas z-1 row-start-2 row-end-3 max-w-[20ch] place-self-center pt-[var(--spacing-fluid-xl)] text-center"
@@ -91,9 +107,8 @@
         <p
           class="dark col-basic prose-text-lg text-contrast-high z-1 row-start-3 row-end-5 pt-[var(--spacing-fluid-md)] text-center"
         >
-          Black Edition stands for selected Porsche models with extended
-          <br>
-          standard equipment and accentuating details in Black (high-gloss).
+          Black Edition stands for selected Porsche models with extended standard equipment and accentuating details in
+          Black (high-gloss).
         </p>
       </section>
 
@@ -113,7 +128,7 @@
 
       <section
         aria-label="content section"
-        class="col-full mt-fluid-xl mb-fluid-2xl bg-canvas-dark before:bg-canvas after:bg-canvas relative row-span-4 grid grid-cols-subgrid grid-rows-subgrid before:absolute before:inset-0 before:z-1 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:content-[''] after:absolute after:bottom-0 after:z-1 after:row-start-4 after:row-end-5 after:h-[30%] after:w-full after:content-['']"
+        class="col-full mt-fluid-xl mb-fluid-2xl bg-canvas-dark before:bg-canvas after:bg-canvas relative row-span-4 grid grid-cols-subgrid grid-rows-subgrid before:absolute before:inset-0 before:z-1 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:content-[''] after:absolute after:bottom-0 after:z-1 after:row-start-4 after:row-end-5 after:h-[20%] after:w-full after:content-['']"
       >
         <div class="col-basic z-3 row-span-2 aspect-16/9 w-full place-self-stretch">
           <img
@@ -123,18 +138,20 @@
           >
         </div>
 
-        <div class="col-start-basic pt-fluid-lg pb-fluid-2xl col-span-5">
+        <div class="col-basic pt-fluid-lg pb-fluid-2xl sm:col-start-basic sm:col-span-5">
           <h2 class="prose-display-sm text-canvas rounded-lg">
             When it comes to equipment, the defining colour is Black.
           </h2>
-          <p class="prose-text-md text-canvas mt-fluid-md rounded-lg">
+          <p class="prose-text-md text-canvas mt-fluid-md rounded-lg ">
             The Cayenne Black Edition models express sportiness and dynamism primarily through their attractive
             equipment. When choosing exterior and interior colours, there are of course many other options besides
             Black.
           </p>
         </div>
 
-        <div class="z-3 -col-start-10 -col-end-3 row-start-3 row-end-5">
+        <div
+          class="z-3 col-start-5 col-span-full transform translate-y-[100px] sm:-col-start-10 sm:-col-end-3 sm:row-start-3 sm:row-end-5"
+        >
           <img
             src="/assets/model-black-edition/model-cayenne-2.png"
             alt="model image 2"
@@ -142,11 +159,11 @@
           >
         </div>
 
-        <div class="z-2 col-span-8 col-start-5">
+        <div class="z-2 col-span-5 col-start-1 sm:col-span-8 sm:col-start-5">
           <img
             src="/assets/model-black-edition/model-cayenne-3.png"
             alt="model image 2"
-            class="h-full rounded-md object-cover"
+            class="rounded-md object-cover"
           >
         </div>
       </section>
@@ -474,13 +491,13 @@
             Customise your Black Edition model even further with the optional package from Porsche Exclusive Manufaktur.
           </p>
 
-          <div class="grid grid-cols-2">
+          <div class="grid md:grid-cols-2">
             <img
               src="/assets/model-black-edition/model-cayenne-package-3.png"
               alt="model cta image"
               class="h-full w-full rounded-xl object-cover"
             >
-            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">'Black Edition' lettering.</h1>
               <p class="hyphens-auto">
                 The 'Black Edition' side lettering in Black on the front doors adds a special accentuating detail.
@@ -488,13 +505,13 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2">
+          <div class="grid md:grid-cols-2 ">
             <img
               src="/assets/model-black-edition/model-cayenne-package-2.png"
               alt="model cta image"
               class="h-full w-full rounded-xl object-cover"
             >
-            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">Door sill guards.</h1>
               <p class="hyphens-auto">
                 Making the Black Edition unmistakable even in the dark: Front door sill guards with 'Black Edition'
@@ -503,14 +520,14 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2">
+          <div class="grid md:grid-cols-2 ">
             <img
               src="/assets/model-black-edition/model-cayenne-package-1.png"
               alt="model cta image"
               class="h-full w-full rounded-xl object-cover"
             >
 
-            <div class="px-fluid-lg gap-fluid-sm flex flex-col justify-center">
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
               <h1 class="prose-heading-lg">Driver's key with key pouch.</h1>
               <p class="hyphens-auto">
                 Completing the Black Edition: Set of two driver's keys painted in Black (high-gloss) with 'Black
@@ -523,7 +540,7 @@
 
       <section class="col-basic pt-fluid-xl pb-fluid-lg mb-xl text-center" aria-label="cta banner section">
         <h2 class="prose-heading-lg">Consumption and Emissions.</h2>
-        <p class="text-contrast-high mt-fluid-sm hyphens-auto">
+        <p class="text-contrast-medium mt-fluid-sm hyphens-auto">
           <span class="font-bold">Cayenne E-Hybrid Coupé Black Edition:</span>
           Fuel consumption (weighted) combined (model range): 4.4 – 4.0 l/100 km, Electric energy consumption (weighted)
           combined (model range): 31.2 – 19.2 kWh/100 km, CO₂-emissions (weighted) combined (model range): 100 – 91
