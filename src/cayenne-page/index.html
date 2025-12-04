@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Porsche Admin Panel (Template)"/>
+  <title>Porsche Admin Panel (Template)</title>
+</head>
+<body>
+
+<p-canvas>
+  <a href="#" slot="title">App Name</a>
+
+  <div slot="header-start"></div>
+
+  <p-button
+    slot="header-end"
+    icon="search"
+    variant="ghost"
+    compact="true"
+    hide-label="true"
+    onclick="document.querySelector('p-flyout#search').open = true;"
+  >Open search
+  </p-button>
+
+  <p-button
+    slot="header-end"
+    icon="user"
+    variant="ghost"
+    compact="true"
+    hide-label="true"
+    onclick="document.querySelector('p-canvas').sidebarEndOpen = true;"
+  >Open sidebar
+  </p-button>
+
+  <div class="-p-canvas-grid">
+
+
+    <div class="-col-span-full-1 -flex -items-center -gap-static-medium">
+      <p-heading size="x-large" tag="h1">Porsche Models</p-heading>
+      <p-button type="button" compact="true">Add model</p-button>
+    </div>
+
+    <div class="-col-span-full-1 -mt-fluid-large">
+      <p-tabs-bar active-tab-index="0">
+        <button type="button">Overview</button>
+        <button type="button">Drafts</button>
+      </p-tabs-bar>
+    </div>
+
+    <div class="-col-span-full-1 -mt-fluid-medium">
+      <p-button variant="ghost" type="button" compact="true" icon="filter">Filter</p-button>
+    </div>
+
+    <div class="-col-span-full-1 -mt-fluid-small">
+      <p-table>
+        <p-table-head>
+          <p-table-head-row>
+            <p-table-head-cell>Model</p-table-head-cell>
+            <p-table-head-cell>Interest</p-table-head-cell>
+            <p-table-head-cell>VIN</p-table-head-cell>
+            <p-table-head-cell>Purchase Intention</p-table-head-cell>
+            <p-table-head-cell>Status</p-table-head-cell>
+            <p-table-head-cell>Comment</p-table-head-cell>
+            <p-table-head-cell>Lead ID</p-table-head-cell>
+            <p-table-head-cell>Action</p-table-head-cell>
+          </p-table-head-row>
+        </p-table-head>
+        <p-table-body>
+          <p-table-row>
+            <p-table-cell>
+              <img
+                src="https://porsche-design-system.github.io/dummyasset/718.png"
+                width="80"
+                height="45"
+                alt="Some image description"
+                style="object-fit: contain"
+              />
+            </p-table-cell>
+            <p-table-cell>New Car</p-table-cell>
+            <p-table-cell>
+              <a href="https://porsche.com">1FM5K7F84FGB16304</a>
+            </p-table-cell>
+            <p-table-cell>08/2021</p-table-cell>
+            <p-table-cell>Won</p-table-cell>
+            <p-table-cell multiline="true" style="min-width: 10rem">-</p-table-cell>
+            <p-table-cell>0000824402
+              <p-popover description="Some additional content."></p-popover>
+            </p-table-cell>
+            <p-table-cell>
+              <div class="-flex -gap-static-medium">
+                <p-button-pure icon="edit">Edit</p-button-pure>
+                <p-button-pure icon="delete">Delete</p-button-pure>
+              </div>
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell>
+              <img
+                src="https://porsche-design-system.github.io/dummyasset/911.png"
+                width="80"
+                height="45"
+                alt="Some image description"
+                style="object-fit: contain"
+              />
+            </p-table-cell>
+            <p-table-cell>Used Car</p-table-cell>
+            <p-table-cell>
+              <a href="https://porsche.com">5GAKVCKD8EJ335750</a>
+            </p-table-cell>
+            <p-table-cell>09/2021</p-table-cell>
+            <p-table-cell>Won</p-table-cell>
+            <p-table-cell multiline="true" style="min-width: 10rem">-</p-table-cell>
+            <p-table-cell>0000824408
+              <p-popover description="Some additional content."></p-popover>
+            </p-table-cell>
+            <p-table-cell>
+              <div class="-flex -gap-static-medium">
+                <p-button-pure icon="edit">Edit</p-button-pure>
+                <p-button-pure icon="delete">Delete</p-button-pure>
+              </div>
+            </p-table-cell>
+          </p-table-row>
+        </p-table-body>
+      </p-table>
+    </div>
+
+    <div class="list -col-span-full-1 -mt-fluid-large">
+      <div class="list__item">
+        <p-heading size="medium" tag="h2">Your Favorites</p-heading>
+        <div class="list__anchors">
+          <p-link-pure href="#">New Relic</p-link-pure>
+          <p-link-pure href="#">Bise</p-link-pure>
+          <p-link-pure href="#">AWS</p-link-pure>
+          <p-link-pure href="#">GRBX Integration Manager</p-link-pure>
+          <p-link-pure href="#">Cloud Documentation</p-link-pure>
+        </div>
+      </div>
+      <div class="list__item">
+        <p-heading size="medium" tag="h2">Most Suggested</p-heading>
+        <div class="list__anchors">
+          <p-link-pure href="#">Grafana</p-link-pure>
+          <p-link-pure href="#">New Relic</p-link-pure>
+          <p-link-pure href="#">BISE Scanners</p-link-pure>
+          <p-link-pure href="#">Integration Manager</p-link-pure>
+          <p-link-pure href="#">Prisma Cloud</p-link-pure>
+        </div>
+      </div>
+      <div class="list__item">
+        <p-heading size="medium" tag="h2">Quick Links</p-heading>
+        <div class="list__anchors">
+          <p-link-pure href="#">Tools & Services</p-link-pure>
+          <p-link-pure href="#">Quick Guide</p-link-pure>
+          <p-link-pure href="#">Integration Manager</p-link-pure>
+          <p-link-pure href="#">Confluence</p-link-pure>
+          <p-link-pure href="#">News</p-link-pure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div slot="sidebar-start">
+    <p-accordion heading="Some category" heading-tag="h2" compact="true">
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+    </p-accordion>
+    <p-accordion heading="Some category" heading-tag="h2" compact="true">
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+    </p-accordion>
+    <p-accordion heading="Some category" heading-tag="h2" compact="true">
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+      <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+    </p-accordion>
+    <p-divider></p-divider>
+    <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+    <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+    <p-link-pure class="-mt-fluid-x-small" href="#" icon="none" stretch="true">Some anchor</p-link-pure>
+  </div>
+
+  <div slot="sidebar-end" class="-flex -flex-col">
+    <p-link-pure href="#" icon="none">Profile</p-link-pure>
+    <p-link-pure class="-mt-fluid-x-small" href="#" icon="none">Logout</p-link-pure>
+    <p-divider></p-divider>
+    <p-link-pure href="#" icon="configurate">Settings</p-link-pure>
+    <p-switch class="-mt-fluid-x-small" id="theme-switch" align-label="start" stretch="true">
+      <p-icon name="moon"></p-icon>
+      Dark Mode
+    </p-switch
+    >
+  </div>
+</p-canvas>
+
+<p-flyout
+  id="search"
+  open="false"
+  aria="{ 'aria-label': 'Some Heading' }"
+>
+  <p-display size="small" tag="h2">What are you looking for?</p-display>
+  <p-text-field-wrapper class="-mt-fluid-medium" label="Search" hide-label="true">
+    <input type="search" name="some-name" placeholder="Some placeholder"/>
+  </p-text-field-wrapper>
+</p-flyout>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

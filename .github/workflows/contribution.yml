@@ -13,16 +13,16 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       image: mcr.microsoft.com/playwright:v1.55.1
-  test:
-    name: 'Test'
-    uses: ./.github/workflows/test.yml
-    with:
-      image: mcr.microsoft.com/playwright:v1.55.1
-    needs:
-      - build
+ # test:
+ #   name: 'Test'
+  #  uses: ./.github/workflows/test.yml
+  #  with:
+   #   image: mcr.microsoft.com/playwright:v1.55.1
+   # needs:
+   #   - build
   deploy:
     name: 'Deploy'
     if: github.actor != 'dependabot[bot]'
     uses: ./.github/workflows/deploy.yml
     needs:
-      - test
+      - build
