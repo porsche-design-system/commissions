@@ -17,3 +17,65 @@ navDrilldown.addEventListener('dismiss', (e) => {
 navDrilldown.addEventListener('update', (e) => {
   e.target.activeIdentifier = e.detail.activeIdentifier;
 });
+
+// Scroll-based scaling effect
+// Scales based on vertical position in viewport
+// IntersectionObserver is used to optimize performance by only updating when the element is in view
+// requestAnimationFrame used for the scroll effects itself
+
+// Configuration options:
+// scaleFrom: starting scale when the element is at startY
+// scaleTo: ending scale when the element is at endY
+// startY: vertical position (as fraction of viewport height) where scaling starts
+// endY: vertical position (as fraction of viewport height) where scaling ends
+
+function setupScrollScaleForClass(className, config) {
+  const elements = document.querySelectorAll(`.${className}`);
+
+  elements.forEach((el) => {
+    let active = false;
+
+    const io = new IntersectionObserver(
+      ([e]) => {
+        active = e.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+
+    io.observe(el);
+
+    function loop() {
+      if (active) {
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+
+        const centerY = rect.top + rect.height / 2;
+        const frac = centerY / vh;
+
+        let scale;
+
+        if (frac >= config.startY) {
+          scale = config.scaleFrom;
+        } else if (frac <= config.endY) {
+          scale = config.scaleTo;
+        } else {
+          const t = (config.startY - frac) / (config.startY - config.endY);
+          scale = config.scaleFrom + (config.scaleTo - config.scaleFrom) * t;
+        }
+
+        el.style.transform = `scale(${scale})`;
+      }
+
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+  });
+}
+
+setupScrollScaleForClass('scale-target', {
+  scaleFrom: 1.1,
+  scaleTo: 1.0,
+  startY: 1.0,
+  endY: 0.5,
+});
