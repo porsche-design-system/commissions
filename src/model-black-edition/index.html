@@ -190,7 +190,7 @@
         </p-tabs-bar>
 
         <p-carousel class="col-full" slides-per-page="auto" pagination="false">
-          <div class="p-fluid-xs gap-fluid-xs flex w-[300px] flex-col">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px] flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne Black Edition"
@@ -211,7 +211,7 @@
             </div>
           </div>
 
-          <div class="p-fluid-xs gap-fluid-xs flex w-[300px]  flex-col">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px]  flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -233,7 +233,7 @@
             </div>
           </div>
 
-          <div class="p-fluid-xs gap-fluid-xs flex w-[300px]  flex-col">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px]  flex-col">
             <img
               src="/assets/model-black-edition/model-cayenne-suv-1.png"
               alt="Cayenne SUV"
@@ -580,10 +580,10 @@
       </section>
     </main>
 
-    <footer class="grid-template py-fluid-lg bg-surface">
+    <footer class="grid-template py-fluid-lg bg-canvas dark">
       <h2 class="sr-only">Porsche Landingpage Footer</h2>
       <form
-        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-fluid-md grid md:grid-cols-[repeat(3,minmax(0,1fr))]"
+        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-fluid-md grid md:grid-cols-[repeat(3,minmax(0,1fr))] dark"
         action="#"
         onsubmit="return false;"
         aria-label="Change your delivery country"
@@ -593,6 +593,7 @@
           name="region"
           label="Change your delivery country"
           value="germany"
+          theme="dark"
         >
           <p-optgroup label="Asia">
             <p-select-option value="china">
@@ -658,22 +659,22 @@
           <h3 id="heading-footer-1" class="prose-text-2xs text-contrast-medium">Legal Services</h3>
           <ul class="gap-fluid-sm grid">
             <li>
-              <p-link-pure href="#" icon="none">Terms and Conditions</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Terms and Conditions</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Privacy Notice </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Privacy Notice </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">California Privacy</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">California Privacy</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Imprint and Legal Notice</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Imprint and Legal Notice</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Accessibility Statement</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Accessibility Statement</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Open Source Software Notice</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Open Source Software Notice</p-link-pure>
             </li>
           </ul>
         </div>
@@ -681,19 +682,19 @@
           <h3 class="prose-text-2xs text-contrast-medium">Porsche Design</h3>
           <ul class="gap-fluid-sm grid">
             <li>
-              <p-link-pure href="#" icon="none">Press </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Press </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Jobs and Careers </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Jobs and Careers </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Studio F. A. Porsche</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Studio F. A. Porsche</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Data Privacy </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Data Privacy </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Timepieces Warranty & Service</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Timepieces Warranty & Service</p-link-pure>
             </li>
           </ul>
         </div>
@@ -701,19 +702,19 @@
           <h3 class="prose-text-2xs text-contrast-medium">Online Services</h3>
           <ul class="gap-fluid-sm grid">
             <li>
-              <p-link-pure href="#" icon="none">My Orders </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">My Orders </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Porsche Homepage </p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Porsche Homepage </p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Porsche Car Configurator</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Porsche Car Configurator</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Porsche New and Pre-Owned Vehicles</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Porsche New and Pre-Owned Vehicles</p-link-pure>
             </li>
             <li>
-              <p-link-pure href="#" icon="none">Compare Porsche models</p-link-pure>
+              <p-link-pure href="#" icon="none" theme="auto">Compare Porsche models</p-link-pure>
             </li>
           </ul>
         </div>
@@ -723,19 +724,54 @@
         class="col-extended gap-x-fluid-lg gap-y-static-lg grid items-center sm:grid-cols-[auto_minmax(0,1fr)]"
       >
         <div class="gap-fluid-md flex">
-          <p-link-pure href="#" icon="logo-instagram" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+          <p-link-pure
+            href="#"
+            icon="logo-instagram"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="auto"
+          >
             Instagram
           </p-link-pure>
-          <p-link-pure href="#" icon="logo-facebook" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+          <p-link-pure
+            href="#"
+            icon="logo-facebook"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="auto"
+          >
             Facebook
           </p-link-pure>
-          <p-link-pure href="#" icon="logo-x" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+          <p-link-pure
+            href="#"
+            icon="logo-x"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="auto"
+          >
             X
           </p-link-pure>
-          <p-link-pure href="#" icon="logo-pinterest" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+          <p-link-pure
+            href="#"
+            icon="logo-pinterest"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="auto"
+          >
             Pinterest
           </p-link-pure>
-          <p-link-pure href="#" icon="logo-youtube" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+          <p-link-pure
+            href="#"
+            icon="logo-youtube"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="auto"
+          >
             YouTube
           </p-link-pure>
         </div>
@@ -792,20 +828,24 @@
         </p>
       </article>
       <div class="col-extended gap-fluid-md mt-fluid-md grid justify-items-center">
-        <p-wordmark></p-wordmark>
+        <p-wordmark theme="auto"></p-wordmark>
         <p class="prose-text-2xs text-contrast-medium">© 2025 Porsche Sales and Marketplace, Inc.</p>
         <ul class="gap-fluid-md flex flex-wrap justify-center">
           <li>
-            <p-link-pure href="#" icon="none" size="x-small" underline="true">Legal notice</p-link-pure>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="auto">Legal notice</p-link-pure>
           </li>
           <li>
-            <p-link-pure href="#" icon="none" size="x-small" underline="true">Privacy notice</p-link-pure>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="auto">Privacy notice</p-link-pure>
           </li>
           <li>
-            <p-link-pure href="#" icon="none" size="x-small" underline="true">Accessibility Statement</p-link-pure>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="auto">
+              Accessibility Statement
+            </p-link-pure>
           </li>
           <li>
-            <p-link-pure href="#" icon="none" size="x-small" underline="true">Open Source Software Notice</p-link-pure>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="auto">
+              Open Source Software Notice
+            </p-link-pure>
           </li>
         </ul>
       </div>
