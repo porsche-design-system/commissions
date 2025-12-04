@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";const t=document.getElementById("nav-drilldown"),n=document.getElementById("nav-button");n.addEventListener("click",()=>{t.open=!0});t.addEventListener("dismiss",e=>{e.target.open=!1});t.addEventListener("update",e=>{e.target.activeIdentifier=e.detail.activeIdentifier});
