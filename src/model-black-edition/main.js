@@ -118,17 +118,17 @@ function setupScrollFloatForClass(className, config) {
 }
 
 setupScrollFloatForClass('float-target-1', {
-  translateFrom: 100,
-  translateTo: -200,
-  startY: 1.5,
+  translateFrom: 150,
+  translateTo: -300,
+  startY: 1.3,
   endY: -0.5,
 });
 
 setupScrollFloatForClass('float-target-2', {
-  translateFrom: 30,
-  translateTo: -200,
-  startY: 1.0,
-  endY: 0.4,
+  translateFrom: -50,
+  translateTo: 100,
+  startY: 1.3,
+  endY: -0.5,
 });
 
 setupScrollScaleForClass('scale-target', {
