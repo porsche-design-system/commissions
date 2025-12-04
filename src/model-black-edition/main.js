@@ -73,6 +73,64 @@ function setupScrollScaleForClass(className, config) {
   });
 }
 
+function setupScrollFloatForClass(className, config) {
+  const elements = document.querySelectorAll(`.${className}`);
+
+  elements.forEach((el) => {
+    let active = false;
+
+    const io = new IntersectionObserver(
+      ([e]) => {
+        active = e.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+
+    io.observe(el);
+
+    function loop() {
+      if (active) {
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+
+        const centerY = rect.top + rect.height / 2;
+        const frac = centerY / vh;
+
+        let y;
+
+        if (frac >= config.startY) {
+          y = config.translateFrom;
+        } else if (frac <= config.endY) {
+          y = config.translateTo;
+        } else {
+          const t = (config.startY - frac) / (config.startY - config.endY);
+          y = config.translateFrom + (config.translateTo - config.translateFrom) * t;
+        }
+
+        el.style.transform = `translate3d(0, ${y}px, 0)`;
+      }
+
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+  });
+}
+
+setupScrollFloatForClass('float-target-1', {
+  translateFrom: 100,
+  translateTo: -200,
+  startY: 1.5,
+  endY: -0.5,
+});
+
+setupScrollFloatForClass('float-target-2', {
+  translateFrom: 30,
+  translateTo: -200,
+  startY: 1.0,
+  endY: 0.4,
+});
+
 setupScrollScaleForClass('scale-target', {
   scaleFrom: 1.1,
   scaleTo: 1.0,
