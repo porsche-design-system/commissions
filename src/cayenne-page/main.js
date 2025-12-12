@@ -43,16 +43,16 @@ const MAX_DRAG_FRAME = 370;
 const LOOP_RANGE = MAX_DRAG_FRAME - MIN_DRAG_FRAME;
 
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-// --- CONFIG (FIXED PATH) ---
+// --- PATH LOGIC (FINAL FIX) ---
 const currentFrame = index => {
-  // Holt die Base-URL (z.B. "/" lokal oder "/commissions/..." auf dem Server)
+  // Vite Base URL (z.B. "/" oder "/dein-repo/")
   const baseUrl = import.meta.env.BASE_URL.endsWith('/')
     ? import.meta.env.BASE_URL
     : `${import.meta.env.BASE_URL}/`;
 
   const paddedIndex = (index + 1).toString().padStart(4, '0');
 
-  // FIX: Wir fügen "assets/" hinzu, da deine Bilder dort liegen
+  // WICHTIG: Kein "public" im Pfad, nur "assets/img/"
   return `${baseUrl}assets/img/${paddedIndex}.png`;
 };
 const images = [];
