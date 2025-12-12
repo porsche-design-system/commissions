@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const wrapper = document.getElementById("wrapper-animation");
 const canvas = document.getElementById("hero-canvas");
 const context = canvas.getContext("2d");
-const loader = document.getElementById("loader");
 const navbar = document.getElementById('navbar');
 const configBar = document.getElementById("config-bar");
 const studioContainer = document.getElementById("studio-container");
@@ -25,7 +24,7 @@ const hotspotElements = document.querySelectorAll('.hotspot');
 const hotspotData = Array.from(hotspotElements).map((el, index) => ({
   id: index,
   element: el,
-  targetFrame: parseInt(el.dataset.targetFrame),
+  targetFrame: parseInt(el.dataset.targetFrame, 10),
   title: el.dataset.title,
   desc: el.dataset.desc,
   image: el.dataset.image
@@ -102,7 +101,11 @@ function startIntro() {
     // WICHTIG: Wrapper sichtbar schalten!
     .set(wrapper, { autoAlpha: 1 })
 
-    .add(() => { document.querySelectorAll('.init-hidden').forEach(el => el.classList.remove('init-hidden')); })
+    .add(() => {
+      document.querySelectorAll('.init-hidden').forEach(el => {
+        el.classList.remove('init-hidden');
+      });
+    })
     .to("#intro-stack", { autoAlpha: 0, duration: 0.6, onComplete: () => {
         gsap.set("#intro-stack", { display: "none" });
         gsap.set("#loader", { display: "none" });
@@ -125,7 +128,7 @@ for (let i = 0; i < totalFrames; i++) {
     imagesLoaded++;
     const percent = Math.round((imagesLoaded / totalFrames) * 100);
     const textEl = document.getElementById("loader-text");
-    if(textEl) textEl.innerText = percent + "%";
+    if(textEl) textEl.innerText = `${percent}%`;
     const barEl = document.getElementById("loader-bar");
     if(barEl) gsap.set(barEl, { scaleX: percent / 100 });
 
