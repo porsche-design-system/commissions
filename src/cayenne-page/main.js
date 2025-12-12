@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const wrapper = document.getElementById("wrapper-animation");
 const canvas = document.getElementById("hero-canvas");
 const context = canvas.getContext("2d");
+// const loader wurde entfernt
 const navbar = document.getElementById('navbar');
 const configBar = document.getElementById("config-bar");
 const studioContainer = document.getElementById("studio-container");
@@ -19,7 +20,7 @@ const modalOverlay = document.getElementById("modal-overlay");
 const modalCard = document.querySelector(".modal-card");
 const toggleBtns = document.querySelectorAll(".toggle-btn");
 
-// --- DATA ---
+// --- HOTSPOTS PARSEN ---
 const hotspotElements = document.querySelectorAll('.hotspot');
 const hotspotData = Array.from(hotspotElements).map((el, index) => ({
   id: index,
@@ -33,8 +34,8 @@ const hotspotData = Array.from(hotspotElements).map((el, index) => ({
 // --- CONFIG ---
 const totalFrames = 370;
 const introLimit = 250;
+const idleTime = 100;
 const loopTime = 8;
-const idleTime = 100; // <--- HIER definiert, damit kein Fehler kommt!
 
 const HOTSPOT_BASE_FRAME = 290;
 const MIN_DRAG_FRAME = 270;
@@ -88,28 +89,45 @@ function startIntro() {
   });
 
   tl.set("#intro-stack", { autoAlpha: 1 })
-    .to("#loader-text, #loader-bar", { opacity: 0, duration: 0.5, ease: "power2.out" })
-    .to(".stack-card", { clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: 1.2, stagger: 0.1, ease: "power2.out" })
-    .to("#hero-card", { clipPath: "inset(0% 0% 0% 0%)", duration: 1.0, ease: "power3.inOut" }, "-=0.9")
+    .to("#loader-text, #loader-bar", {
+      opacity: 0, duration: 0.5, ease: "power2.out"
+    })
+    .to(".stack-card", {
+      clipPath: "inset(0% 0% 0% 0%)", scale: 1,
+      duration: 1.2, stagger: 0.1, ease: "power2.out"
+    })
     .to("#hero-card", {
-      width: "100vw", height: "100vh", scale: 1, borderRadius: 0, borderWidth: 0,
-      duration: 1.8, ease: "expo.inOut",
-      onStart: () => { gsap.set(".stack-card", { opacity: 0 }); }
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1.0,
+      ease: "power3.inOut"
+    }, "-=0.9")
+    .to("#hero-card", {
+      width: "100vw",
+      height: "100vh",
+      scale: 1,
+      borderRadius: 0,
+      borderWidth: 0,
+      duration: 1.8,
+      ease: "expo.inOut",
+      onStart: () => {
+        gsap.set(".stack-card", { opacity: 0 });
+      }
     }, "<")
 
-    // --- CLEANUP & HANDOVER ---
-    // WICHTIG: Wrapper sichtbar schalten!
+    // --- CLEANUP ---
     .set(wrapper, { autoAlpha: 1 })
-
     .add(() => {
       document.querySelectorAll('.init-hidden').forEach(el => {
         el.classList.remove('init-hidden');
       });
     })
-    .to("#intro-stack", { autoAlpha: 0, duration: 0.6, onComplete: () => {
+    .to("#intro-stack", {
+      autoAlpha: 0, duration: 0.6,
+      onComplete: () => {
         gsap.set("#intro-stack", { display: "none" });
         gsap.set("#loader", { display: "none" });
-      }})
+      }
+    })
     .to("#navbar", { autoAlpha: 1, y: 0, duration: 0.8 }, "<")
     .to("#ui-layer", { autoAlpha: 1, duration: 0.8 }, "<")
     .to("#config-bar", { autoAlpha: 1, duration: 0.8 }, "<+=0.1")
@@ -120,23 +138,32 @@ function startIntro() {
     });
 }
 
-// --- LOADER ---
+// --- LOADER & PRELOAD ---
+function onImageLoaded() {
+  imagesLoaded++;
+  const percent = Math.round((imagesLoaded / totalFrames) * 100);
+  const textEl = document.getElementById("loader-text");
+  if(textEl) textEl.innerText = `${percent}%`;
+  const barEl = document.getElementById("loader-bar");
+  if(barEl) gsap.set(barEl, { scaleX: percent / 100 });
+
+  if (imagesLoaded === totalFrames) {
+    init();
+    setTimeout(startIntro, 500);
+  }
+}
+
 for (let i = 0; i < totalFrames; i++) {
   const img = new Image();
   img.src = currentFrame(i);
-  img.onload = () => {
-    imagesLoaded++;
-    const percent = Math.round((imagesLoaded / totalFrames) * 100);
-    const textEl = document.getElementById("loader-text");
-    if(textEl) textEl.innerText = `${percent}%`;
-    const barEl = document.getElementById("loader-bar");
-    if(barEl) gsap.set(barEl, { scaleX: percent / 100 });
+  img.onload = onImageLoaded;
 
-    if (imagesLoaded === totalFrames) {
-      init();
-      setTimeout(startIntro, 500);
-    }
+  // FIX: Error Handling falls Pfad falsch ist
+  img.onerror = () => {
+    console.error(`Bild konnte nicht geladen werden: ${img.src}`);
+    onImageLoaded(); // Trotzdem weiterzählen, damit App nicht hängt
   };
+
   images.push(img);
 }
 
@@ -163,7 +190,7 @@ function render() {
     f = Math.round(sequence.current) % totalFrames;
   }
 
-  // Background Logic
+  // --- BACKGROUND LOGIC ---
   if (f >= 250 && !studioVisible) {
     studioVisible = true;
     studioContainer.classList.add("is-visible");
@@ -172,7 +199,7 @@ function render() {
     studioContainer.classList.remove("is-visible");
   }
 
-  // Config Bar Logic
+  // --- CONFIG BAR LOGIC ---
   if (introFinished && configBar) {
     const shouldShow = (f <= 250) && !isModalMode && !is360Mode;
     if (shouldShow !== configBarVisible) {
@@ -188,7 +215,10 @@ function render() {
   f = Math.round(f);
   if (f < 0) f = 0;
 
-  if(images[f]) {
+  // FIX: ABSTURZ-SCHUTZ
+  // Wir prüfen: Gibt es das Bild? Ist es fertig geladen? Hat es eine Breite?
+  // Wenn nein, brechen wir ab, statt drawImage aufzurufen.
+  if(images[f] && images[f].complete && images[f].naturalWidth > 0) {
     const img = images[f];
     const ratio = Math.max(canvas.width / img.width, canvas.height / img.height);
     const centerShift_x = (canvas.width - img.width * ratio) / 2;
@@ -241,6 +271,7 @@ function setMode(mode, skipAnimation = false) {
     activateBtn(1);
     wrapper.classList.add('is-360-mode');
     gsap.to(hotspotContainer, { autoAlpha: 0, duration: 0.3 });
+
   } else {
     is360Mode = false;
     activateBtn(0);
@@ -253,7 +284,8 @@ function setMode(mode, skipAnimation = false) {
     sequence.target = realVisualFrame;
 
     if (skipAnimation) {
-      startIdleLoop(); return;
+      startIdleLoop();
+      return;
     }
 
     gsap.to(sequence, {
@@ -280,7 +312,7 @@ function startIdleLoop() {
 
   isLooping = true;
   let distToEnd = (introLimit - 1) - sequence.target;
-  let duration = (distToEnd / introLimit) * 8;
+  let duration = (distToEnd / introLimit) * loopTime;
 
   loopAnimation = gsap.to(sequence, {
     target: introLimit,
@@ -290,7 +322,7 @@ function startIdleLoop() {
       sequence.current = 0;
       loopAnimation = gsap.fromTo(sequence, { target: 0 }, {
         target: introLimit,
-        duration: 8,
+        duration: loopTime,
         repeat: -1,
         ease: "none",
         onRepeat: () => { sequence.current = 0; }
@@ -312,6 +344,7 @@ function stopIdleLoop() {
 function clickHotspot(index) {
   stopIdleLoop();
   isModalMode = true;
+
   gsap.to(hotspotContainer, { autoAlpha: 0, duration: 0.3 });
   gsap.to(toggleContainer, { autoAlpha: 0, y: 50, duration: 0.3 });
 
@@ -331,11 +364,17 @@ function clickHotspot(index) {
 function openFlyout(index) {
   const data = hotspotData[index];
   if(!data) return;
-  document.getElementById('modal-title').innerText = data.title;
-  document.getElementById('modal-desc').innerText = data.desc;
-  document.getElementById('modal-img').src = data.image;
+
+  const titleEl = document.getElementById('modal-title');
+  const descEl = document.getElementById('modal-desc');
+  const imgEl = document.getElementById('modal-img');
+
+  if(titleEl) titleEl.innerText = data.title;
+  if(descEl) descEl.innerText = data.desc;
+  if(imgEl) imgEl.src = data.image;
 
   document.body.classList.add('no-scroll');
+
   gsap.to(modalOverlay, { autoAlpha: 1, duration: 0.5 });
   modalOverlay.style.pointerEvents = "auto";
   modalCard.classList.remove("translate-x-full");
@@ -429,23 +468,22 @@ function init() {
   // 2. Timeline
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: wrapper,      // Wir triggern den Wrapper
-      start: "top top",      // Startet ganz oben
-      end: "+=6000",         // Scrollweg von 6000px
-      pin: true,             // Pinnt den Wrapper fest
-      scrub: true,           // Koppelt Animation an Scrollbar
+      trigger: wrapper,
+      start: "top top",
+      end: "+=6000",
+      pin: true,
+      scrub: true,
 
       onUpdate: () => {
         if (!is360Mode && !isModalMode) {
           stopIdleLoop();
           clearTimeout(scrollTimeout);
-          scrollTimeout = setTimeout(startIdleLoop, idleTime);
+          scrollTimeout = setTimeout(startIdleLoop, 100);
         }
       }
     }
   });
 
-  // Sequenz
   tl.to(sequence, { target: introLimit, duration: 3, ease: "none" });
   tl.to(sequence, { target: 270, duration: 1, ease: "none" });
   tl.to(".info-overlay", { opacity: 1, duration: 0.5 })
@@ -453,19 +491,23 @@ function init() {
     .to(".info-overlay", { opacity: 0, duration: 0.5 });
   tl.to(sequence, { target: HOTSPOT_BASE_FRAME, duration: 1, ease: "none" });
 
-  // Visibility Check (läuft parallel)
+  // Visibility Check
   tl.to(hotspotState, { val: 1, duration: 3, onUpdate: checkVisibility }, "-=2");
 
-  // --- OUTRO / APPLE STYLE SHRINK ---
-  // Wir hängen es ans Ende der Timeline.
-  // Das bedeutet: Während der Wrapper noch gepinnt ist, schrumpft er am Ende der 6000px.
-  // Dann erst wird er losgelassen und der Spacer scrollt rein.
-  tl.to(wrapper, {
-    scale: 0.9,
+  // Outro
+  gsap.to(wrapper, {
+    scrollTrigger: {
+      trigger: ".spacer",
+      start: "top 100%",
+      end: "top 0%",
+      scrub: true,
+      immediateRender: false
+    },
+    scale: 0.85,
     borderRadius: "40px",
-    y: 50, // Leichtes Parallax
-    duration: 1,
-    ease: "power2.inOut"
+    y: 100,
+    filter: "brightness(0.6)",
+    ease: "power2.out"
   });
 
   hotspotData.forEach((h) => {
