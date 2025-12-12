@@ -43,7 +43,18 @@ const MAX_DRAG_FRAME = 370;
 const LOOP_RANGE = MAX_DRAG_FRAME - MIN_DRAG_FRAME;
 
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-const currentFrame = index => `./img/${(index + 1).toString().padStart(4, '0')}.png`;
+// --- CONFIG (FIXED PATH) ---
+const currentFrame = index => {
+  // Holt die Base-URL (z.B. "/" lokal oder "/commissions/..." auf dem Server)
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+
+  const paddedIndex = (index + 1).toString().padStart(4, '0');
+
+  // FIX: Wir fügen "assets/" hinzu, da deine Bilder dort liegen
+  return `${baseUrl}assets/img/${paddedIndex}.png`;
+};
 const images = [];
 let imagesLoaded = 0;
 
