@@ -1,187 +1,30 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cayenne Configurator</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
+  <title>Porsche Configurator - Base</title>
 </head>
+<body class="bg-white text-white overflow-x-hidden">
 
-<body class="bg-primary text-primary overflow-x-hidden w-full m-0 p-0">
-
-<nav id="navbar" style="opacity: 0; visibility: hidden;" class="opacity-0 w-full h-[120px] px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 z-50 transition-transform duration-300">
-  <div class="flex-shrink-0 z-10">
-    <button class="w-14 h-14 bg-frosted backdrop-blur-frosted rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 active:scale-95 group" aria-label="Menu">
-      <p-icon name="menu-lines"></p-icon>
-    </button>
+<div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black">
+  <div class="w-64 h-1 bg-gray-900 rounded-full overflow-hidden">
+    <div id="loader-bar" class="h-full bg-white origin-left scale-x-0"></div>
   </div>
-
-  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-    <svg viewBox="0 0 248 17" xmlns="http://www.w3.org/2000/svg" class="h-3 md:h-4 w-auto">
-      <path d="M27.6082 12.1542C30.2536 12.1542 31.678 10.7298 31.678 8.08448V4.06974C31.678 1.42441 30.2536 0 27.6082 0H0V16.4989H3.73976V12.1542H27.6082ZM27.9382 4.28972V7.8645C27.9382 8.29347 27.7072 8.52445 27.2783 8.52445H3.73976V3.62977H27.2783C27.7072 3.62977 27.9382 3.86075 27.9382 4.28972ZM40.4774 16.4989C37.8321 16.4989 36.4077 15.0745 36.4077 12.4292V4.06974C36.4077 1.42441 37.8321 0 40.4774 0H63.4109C66.0563 0 67.4807 1.42441 67.4807 4.06974V12.4292C67.4807 15.0745 66.0563 16.4989 63.4109 16.4989H40.4774ZM63.081 12.8692C63.5099 12.8692 63.7409 12.6382 63.7409 12.2092V4.28972C63.7409 3.86075 63.5099 3.62977 63.081 3.62977H40.8074C40.3784 3.62977 40.1474 3.86075 40.1474 4.28972V12.2092C40.1474 12.6382 40.3784 12.8692 40.8074 12.8692H63.081ZM100.204 10.8893C102.395 11.8109 103.935 13.9746 103.943 16.4989H100.204C100.204 13.5291 98.8287 12.1542 95.8589 12.1542H76.0051V16.4989H72.2654V0H99.8736C102.519 0 103.943 1.42441 103.943 4.06974V6.82726C103.943 9.3604 102.637 10.7738 100.204 10.8893ZM99.5436 8.52445C99.9726 8.52445 100.204 8.29347 100.204 7.8645V4.28972C100.204 3.86075 99.9726 3.62977 99.5436 3.62977H76.0051V8.52445H99.5436ZM108.453 4.06974C108.453 1.42441 109.877 0 112.523 0H139.581V3.0798H112.853C112.424 3.0798 112.193 3.31079 112.193 3.73976V6.04961C112.193 6.47858 112.424 6.70957 112.853 6.70957H136.061C138.707 6.70957 140.131 8.13398 140.131 10.7793V12.4292C140.131 15.0745 138.707 16.4989 136.061 16.4989H109.003V13.4191H135.731C136.16 13.4191 136.391 13.1882 136.391 12.7592V10.4493C136.391 10.0204 136.16 9.78937 135.731 9.78937H112.523C109.877 9.78937 108.453 8.36496 108.453 5.71963V4.06974ZM144.806 4.06974C144.806 1.42441 146.23 0 148.875 0H175.274V3.62977H149.205C148.776 3.62977 148.545 3.86075 148.545 4.28972V12.2092C148.545 12.6382 148.776 12.8692 149.205 12.8692H175.274V16.4989H148.875C146.23 16.4989 144.806 15.0745 144.806 12.4292V4.06974ZM209.922 0V16.4989H206.182V10.0644H183.798V16.4989H180.058V0H183.798V6.43459H206.182V0H209.922ZM218.501 3.0798V6.70957H247.484V9.78937H218.501V13.4191H247.484V16.4989H214.761V0H247.484V3.0798H218.501Z" fill="#FFF" />
-    </svg>
-  </div>
-
-  <div class="flex-shrink-0 z-10">
-    <div class="bg-frosted backdrop-blur-frosted rounded-full p-1.5 flex items-center gap-1">
-      <button class="w-14 h-14 rounded-full bg-frosted backdrop-blur-frosted text-primary flex items-center justify-center hover:bg-[#3E3E3E] transition-colors">
-        <p-icon name="search"></p-icon>
-      </button>
-      <button class="w-14 h-14 rounded-full bg-frosted backdrop-blur-frosted text-primary flex items-center justify-center hover:bg-[#3E3E3E] transition-colors">
-        <p-icon name="pin"></p-icon>
-      </button>
-      <button class="flex items-center gap-3 pl-3 pr-5 h-14 rounded-full hover:bg-frosted hover:backdrop-blur-frosted">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center text-primary">
-          <p-icon name="user"></p-icon>
-        </div>
-        <div class="flex flex-col items-start leading-none hidden md:flex">
-          <span class="text-xs text-primary tracking-wide">Max Mustermann</span>
-          <span class="text-2xs text-contrast-medium uppercase tracking-wider">My Account</span>
-        </div>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<div id="loader" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-xl font-medium z-[99]"></div>
-
-
-<div id="intro-stack" style="opacity: 0; visibility: hidden;" class="fixed inset-0 z-[90] flex items-center justify-center pointer-events-none invisible">
-
-  <div class="stack-card absolute w-64 h-80 md:w-80 md:h-96 bg-primary rounded-xl shadow-2xl overflow-hidden">
-    <img src="../../public/assets/img/0101.png" class="w-full h-full object-cover">
-  </div>
-
-  <div class="stack-card absolute w-64 h-80 md:w-80 md:h-96 bg-primary rounded-xl shadow-2xl overflow-hidden">
-    <img src="../../public/assets/img/0120.png" class="w-full h-full object-cover">
-  </div>
-
-  <div class="stack-card absolute w-64 h-80 md:w-80 md:h-96 bg-primary rounded-xl shadow-2xl overflow-hidden">
-    <img src="../../public/assets/img/0140.png" class="w-full h-full object-cover">
-  </div>
-
-  <div id="hero-card" class="absolute w-64 h-80 md:w-80 md:h-96 bg-primary rounded-xl shadow-2xl overflow-hidden">
-    <img src="../../public/assets/img/0001.png" class="w-full h-full object-cover object-center">
-  </div>
-
 </div>
 
-
-<div id="wrapper-animation" class="overflow-hidden z-[1]" style="opacity: 0; visibility: hidden;">
-  <div id="studio-container">
-    <div class="studio-stage"></div>
-    <div class="studio-floor"></div>
-  </div>
-
+<div id="hero-wrapper" class="relative bg-black overflow-hidden">
   <canvas id="hero-canvas" class="block w-full h-full object-cover"></canvas>
 </div>
 
-<div id="config-bar" style="opacity: 0; visibility: hidden;" class="fixed bottom-8 left-8 z-40 flex flex-col md:flex-row md:flex-row items-center gap-6 p-4 rounded-2xl bg-frosted backdrop-blur-frosted transition-transform duration-500">
-
-  <button class="bg-primary text-canvas px-8 py-3 rounded-xl text-sm hover:bg-gray-200 transition-colors shadow-lg">
-    Konfigurieren
-  </button>
-
-  <div class="flex flex-col md:flex-row items-center gap-4 md:gap-12 text-sm">
-    <div class="flex flex-col text-center md:text-left">
-      <span class="text-primary tracking-wide">Ab 120.296,00 €</span>
-      <span class="text-contrast-medium font-light">1.460,00 €/mtl.</span>
-    </div>
-
-    <a href="#" class="group flex items-center gap-1 text-primary whitespace-nowrap">
-      Sofort verfügbare Fahrzeuge
-      <p-icon name="arrow-right"></p-icon>
-
-    </a>
-  </div>
-</div>
-
-<div id="mode-toggle" style="opacity: 0; visibility: hidden;" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-1 p-1.5 rounded-full bg-frosted backdrop-blur-frosted transition-all duration-200 opacity-0 invisible translate-y-4">
-  <button class="toggle-btn px-6 py-3 rounded-full text-sm transition-all duration-300 bg-white text-black shadow-lg" onclick="setMode('features')">Merkmale</button>
-  <button class="toggle-btn px-6 py-3 rounded-full text-sm transition-all duration-300 text-white hover:bg-white/10" onclick="setMode('360')">360-Grad</button>
-</div>
-
-<div id="ui-layer" style="opacity: 0; visibility: hidden;" class="opacity-0 fixed top-0 left-0 w-screen h-screen z-10 pointer-events-none">
-<!--
-  <div class="info-overlay absolute top-1/2 right-[10%] -translate-y-1/2 text-right opacity-0 transition-opacity duration-500">
-    <h2 class="text-5xl md:text-6xl font-light tracking-wider mb-4">Heckansicht</h2>
-    <p class="text-gray-400 text-lg">Frame 270</p>
-  </div>
--->
-  <div class="dark hotspots-container absolute top-0 left-0 w-full h-full pointer-events-none opacity-0 invisible transition-all duration-700 ease-in-out">
-
-    <div class="hotspot absolute w-14 h-14 flex items-center justify-center rounded-full cursor-pointer pointer-events-auto scale-0 opacity-0 transition-all duration-500 ease-elastic hover:scale-110 group"
-         style="top: 55%; left: 35%"
-         data-target-frame="275"
-         data-title="Matrix LED"
-         data-desc="Das durchgehende Leuchtenband unterstreicht die Breite des Fahrzeugs und sorgt für unverwechselbares Design bei Nacht."
-         data-image="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80">
-
-      <p-icon theme="dark" name="plus"></p-icon>
-      <div class="absolute inset-0 bg-frosted backdrop-blur-frosted rounded-full -z-10 transition-colors duration-300 group-hover:bg-white/20"></div>
-    </div>
-
-    <div class="hotspot absolute w-14 h-14 flex items-center justify-center rounded-full cursor-pointer pointer-events-auto scale-0 opacity-0 transition-all duration-500 ease-elastic hover:scale-110 group"
-         style="top: 40%; left: 65%"
-         data-target-frame="295"
-         data-title="Silhouette"
-         data-desc="Die klassische Flyline wurde neu interpretiert. Sportlicher, dynamischer und effizienter als je zuvor."
-         data-image="https://images.unsplash.com/photo-1503376763036-066120622c74?auto=format&fit=crop&w=800&q=80">
-      <p-icon theme="dark" name="plus"></p-icon>
-      <div class="absolute inset-0 bg-frosted backdrop-blur-frosted rounded-full -z-10 transition-colors duration-300 group-hover:bg-white/20"></div>
-    </div>
-
-    <div class="hotspot absolute w-14 h-14 flex items-center justify-center rounded-full cursor-pointer pointer-events-auto scale-0 opacity-0 transition-all duration-500 ease-elastic hover:scale-110 group"
-         style="top: 60%; left: 75%"
-         data-target-frame="315"
-         data-title="Ladeport"
-         data-desc="Mit bis zu 800 Volt Systemspannung laden Sie schneller als Sie einen Kaffee trinken können."
-         data-image="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80">
-      <p-icon theme="dark" name="plus"></p-icon>
-      <div class="absolute inset-0 bg-frosted backdrop-blur-frosted rounded-full -z-10 transition-colors duration-300 group-hover:bg-white/20"></div>
-    </div>
-
-  </div>
-</div>
-
-<div id="modal-overlay" style="opacity: 0; visibility: hidden;" class="fixed inset-0 z-[100] flex justify-end items-stretch pointer-events-none opacity-0 invisible transition-all duration-500 bg-black/40 backdrop-blur-sm">
-
-  <div class="flex-1 cursor-pointer" onclick="closeModal()"></div>
-
-  <div class="modal-card w-[500px] max-w-[90vw] h-full bg-white text-black shadow-2xl flex flex-col translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-l-3xl overflow-hidden relative">
-
-    <button onclick="closeModal()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/80 backdrop-blur text-black border border-gray-200 flex items-center justify-center z-20 hover:bg-black hover:text-white hover:rotate-90 transition-all duration-300">
-      <i data-lucide="x" class="w-5 h-5"></i>
-    </button>
-
-    <div class="h-[40%] w-full relative shrink-0 bg-gray-100">
-      <img id="modal-img" src="" alt="Detail" class="w-full h-full object-cover block">
-    </div>
-
-    <div class="flex-1 p-10 flex flex-col overflow-y-auto">
-      <h3 id="modal-title" class="text-3xl font-bold mb-4 text-black">Title</h3>
-      <p id="modal-desc" class="text-gray-600 leading-relaxed mb-8">Description...</p>
-
-      <div class="mt-auto pt-6 border-t border-gray-100 flex gap-3">
-        <button onclick="prevSpot()" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all">
-          <i data-lucide="arrow-left" class="w-5 h-5"></i>
-        </button>
-        <button onclick="nextSpot()" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all">
-          <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="spacer h-screen bg-[#111] relative z-[2] flex flex-col items-center justify-center text-gray-500">
-  <h1 class="text-3xl font-light mb-2">Technische Daten</h1>
-  <p>Ende der Animation.</p>
+<div id="content-section" class="relative w-full h-[2000px] bg-indigo-900 z-10 flex flex-col items-center pt-32">
+  <h2 class="text-4xl font-bold mb-4">Technische Daten</h2>
+  <p class="text-lg opacity-80 max-w-2xl text-center">
+    Hier geht die Seite weiter...
+  </p>
 </div>
 
 <script type="module" src="main.js"></script>

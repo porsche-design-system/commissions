@@ -1,102 +1,19 @@
 @import "tailwindcss";
 @import "@porsche-design-system/components-js/tailwindcss";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-.init-hidden {
-  /* biome-ignore lint/complexity/noImportantStyles: FOUC Schutz muss Tailwind überschreiben */
-  opacity: 0 !important;
-  /* biome-ignore lint/complexity/noImportantStyles: FOUC Schutz muss Tailwind überschreiben */
-  visibility: hidden !important;
+html, body {
+  overflow-x: hidden; /* Nur horizontal verstecken */
+  overflow-y: auto;   /* Vertikal erlauben! */
 }
 
-body.no-scroll { overflow: hidden; }
-#hero-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Important to fill the wrapper */
-}
-
-.is-360-mode #hero-canvas { cursor: grab; }
-.is-360-mode #hero-canvas:active { cursor: grabbing; }
-.ease-elastic { transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
-#hero-card { will-change: transform, width, height; }
-
-/* --- STUDIO BACKGROUND CSS (Dein Code) --- */
-:root {
-  --bg-wall: #000;
-  --bg-spot: #111;
-  --bg-floor: #111;
-}
-
-/* Container für den Background - Startet unsichtbar */
-#studio-container {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -1; /* Hinter dem Canvas */
-  opacity: 0; /* Startzustand */
-  transition: opacity 1.5s ease-in-out; /* Weicher Fade */
-  pointer-events: none;
-}
-
-/* Wenn aktiv, dann sichtbar */
-#studio-container.is-visible {
-  opacity: 1;
-}
-
-.studio-stage {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
-  background-color: var(--bg-wall);
-  background-image: radial-gradient(
-    circle at 50% 30%,
-    var(--bg-spot) 0%,
-    color-mix(in srgb, var(--bg-spot), transparent 10%) 15%,
-    color-mix(in srgb, var(--bg-spot), transparent 25%) 30%,
-    color-mix(in srgb, var(--bg-spot), transparent 50%) 50%,
-    color-mix(in srgb, var(--bg-spot), transparent 80%) 70%,
-    transparent 90%
-  );
-}
-
-.studio-floor {
-  position: absolute; bottom: 0; left: 0; width: 100%; height: 55%; z-index: 2;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.5) 0%,
-    color-mix(in srgb, var(--bg-floor), rgba(0,0,0,0.5) 80%) 10%,
-    color-mix(in srgb, var(--bg-floor), rgba(0,0,0,0.5) 50%) 25%,
-    var(--bg-floor) 50%,
-    rgba(255,255,255,0.03) 100%
-  );
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.013) 4.2%, rgba(0,0,0,0.049) 8.3%, rgba(0,0,0,0.111) 12.5%, rgba(0,0,0,0.2) 16.7%, rgba(0,0,0,0.314) 20.8%, rgba(0,0,0,0.444) 25%, rgba(0,0,0,0.584) 29.2%, rgba(0,0,0,0.724) 33.3%, rgba(0,0,0,0.853) 37.5%, black 41.7%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.013) 4.2%, rgba(0,0,0,0.049) 8.3%, rgba(0,0,0,0.111) 12.5%, rgba(0,0,0,0.2) 16.7%, rgba(0,0,0,0.314) 20.8%, rgba(0,0,0,0.444) 25%, rgba(0,0,0,0.584) 29.2%, rgba(0,0,0,0.724) 33.3%, rgba(0,0,0,0.853) 37.5%, black 41.7%);
-}
-
-/* Container für die 3D Stage */
-#wrapper-animation {
+#hero-wrapper {
   width: 100%;
   height: 100vh;
-  position: relative; /* GSAP macht das Pinning */
-  overflow: hidden;
-  z-index: 1;
-  margin: 0 auto;
-
-  /* Startwerte */
-  border-radius: 0;
-  transform-origin: center center;
-  opacity: 0; /* Startet unsichtbar, wird von JS eingeblendet */
-  visibility: hidden;
+  height: 100dvh;
 }
 
-.spacer {
-  position: relative;
-  z-index: 10;
-  background-color: #111;
-  /* Ensure it has enough content or height to scroll */
-  min-height: 100vh;
+body.no-scroll {
+  overflow: hidden;
 }
 
 
