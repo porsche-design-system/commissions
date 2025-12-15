@@ -20,7 +20,7 @@ jobs:
       options: --user 1001
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Lint'
@@ -34,14 +34,14 @@ jobs:
       options: --user 1001
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Build'
         run: npm run build
         shell: bash
       - name: 'Upload'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: commissions
           path: ./dist
@@ -53,14 +53,14 @@ jobs:
       options: --user 1001
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Build (Prod)'
         run: BASE_PATH=/commissions/${{ github.ref_name }}/ npm run build
         shell: bash
       - name: 'Upload'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: commissions-prod
           path: ./dist

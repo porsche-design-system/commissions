@@ -20,11 +20,11 @@ jobs:
       options: --user 1001
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: commissions
           path: ./dist
@@ -39,11 +39,11 @@ jobs:
       options: --user 1001
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: commissions
           path: ./dist
@@ -63,11 +63,11 @@ jobs:
         shardTotal: [ 3 ]
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: commissions
           path: ./dist
@@ -76,7 +76,7 @@ jobs:
         shell: bash
       - name: 'VRT Regression'
         if: failure()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: vrt-regression-${{ matrix.shardIndex }}
           path: ./tests/vrt/test-results
@@ -93,11 +93,11 @@ jobs:
         shardTotal: [ 4 ]
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 'Install'
         uses: ./.github/actions/install
       - name: 'Download'
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: commissions
           path: ./dist
@@ -106,7 +106,7 @@ jobs:
         shell: bash
       - name: 'LH Regression'
         if: failure()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lh-regression-${{ matrix.shardIndex }}
           path: ./tests/lh/test-results

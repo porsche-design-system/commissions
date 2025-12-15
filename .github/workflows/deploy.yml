@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: 'gh-pages'
       - name: 'Clean'
@@ -20,7 +20,7 @@ jobs:
           rm -rf "./${{ github.ref_name }}"
         shell: bash
       - name: 'Download'
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: commissions-prod
           path: "./${{ github.ref_name }}"
