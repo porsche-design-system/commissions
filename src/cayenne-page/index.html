@@ -5,10 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-  <title>Porsche Configurator - Base</title>
+  <title>Porsche Configurator</title>
 </head>
 <body class="bg-white text-white overflow-x-hidden">
+
+<nav id="navbar" class="light w-full h-[120px] px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 z-50 transition-transform duration-300">
+  <div class="flex-shrink-0 z-10 flex-1">
+    <button class="w-14 h-14 bg-frosted backdrop-blur-frosted rounded-full flex items-center justify-center hover:bg-contrast-medium transition-colors duration-200 group" aria-label="Menu">
+      <p-icon theme="light" name="menu-lines"></p-icon>
+    </button>
+  </div>
+
+  <div class="flex items-center justify-center flex-1">
+    <p-wordmark theme="light"></p-wordmark>
+
+  </div>
+
+  <div class="flex-1 flex justify-end">
+    <div class="backdrop-blur-frosted bg-frosted rounded-full p-1 flex items-center gap-1">
+      <button class="w-12 h-12 rounded-full bg-frosted backdrop-blur-frosted text-primary flex items-center justify-center hover:bg-frosted transition-colors">
+        <p-icon theme="light" name="search"></p-icon>
+      </button>
+      <button class="w-12 h-12 rounded-full bg-frosted backdrop-blur-frosted text-primary flex items-center justify-center hover:bg-frosted transition-colors">
+        <p-icon theme="light" name="pin"></p-icon>
+      </button>
+      <button class="flex items-center gap-3 pl-3 pr-5 h-12 rounded-full bg-frosted backdrop-blur-frosted hover:bg-frosted hover:backdrop-blur-frosted">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-primary">
+          <p-icon theme="light" name="user"></p-icon>
+        </div>
+        <div class="flex flex-col items-start leading-none hidden md:flex">
+          <span class="text-xs text-primary tracking-wide">Max Mustermann</span>
+          <span class="text-2xs text-contrast-medium">My Account</span>
+        </div>
+      </button>
+    </div>
+  </div>
+</nav>
+
 
 <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black">
   <div class="w-64 h-1 bg-gray-900 rounded-full overflow-hidden">
@@ -16,17 +49,185 @@
   </div>
 </div>
 
-<div id="hero-wrapper" class="relative bg-black overflow-hidden">
+<div id="hero-wrapper" class="fixed inset-0 z-20 w-full h-screen bg-black overflow-hidden origin-top">
   <canvas id="hero-canvas" class="block w-full h-full object-cover"></canvas>
+
+  <div id="hotspots" class="absolute inset-0 z-30 pointer-events-none opacity-0 transition-opacity duration-500">
+
+    <button
+      class="hotspot-btn pointer-events-auto absolute top-[62%] left-[28%] group"
+      data-frame="290"
+      data-title="22-Zoll GT Design"
+      data-text="Leichtmetallräder mit motorsport-inspiriertem Design für maximale Performance und Belüftung der Bremsanlage."
+      aria-label="Felgen Details">
+
+    <span class="relative flex h-14 w-14">
+      <span class="dark relative inline-flex rounded-full h-14 w-14 bg-frosted backdrop-blur-frosted items-center justify-center">
+          <p-icon theme="dark" name="plus"></p-icon>
+      </span>
+    </span>
+    </button>
+
+    <button
+      class="hotspot-btn pointer-events-auto absolute top-[48%] left-[68%] group"
+      data-frame="300"
+      data-title="HD-Matrix LED"
+      data-text="Innovative Lichttechnologie mit über 32.000 Pixeln pro Scheinwerfer für eine exakte Ausleuchtung ohne Blendung."
+      aria-label="Licht Details">
+
+    <span class="relative flex h-14 w-14">
+      <span class="dark relative inline-flex rounded-full h-14 w-14 bg-frosted backdrop-blur-frosted hover:bg-white duration-100 transition-colors items-center justify-center">
+          <p-icon theme="dark" name="plus"></p-icon>
+      </span>
+    </span>
+    </button>
+
+  </div>
+
+
 </div>
 
-<div id="content-section" class="relative w-full h-[2000px] bg-indigo-900 z-10 flex flex-col items-center pt-32">
-  <h2 class="text-4xl font-bold mb-4">Technische Daten</h2>
-  <p class="text-lg opacity-80 max-w-2xl text-center">
-    Hier geht die Seite weiter...
-  </p>
+<div id="config-bar" style="opacity: 0; visibility: hidden;" class="fixed bottom-8 left-8 z-40 flex flex-col md:flex-row items-center gap-8 p-4 rounded-2xl bg-frosted backdrop-blur-frosted transition-transform duration-500">
+  <div class="flex flex-col text-center md:text-left">
+    <span class="text-sm text-primary">Cayenne</span>
+  </div>
+  <div class="flex flex-col text-center md:text-left">
+    <span class="text-primary tracking-wide">Ab 120.296,00 €</span>
+    <span class="text-contrast-medium font-light">1.460,00 €/mtl.</span>
+  </div>
+  <div class="flex flex-row text-center gap-3 md:text-left">
+  <button class="bg-primary px-8 py-3 rounded-xl text-sm hover:bg-contrast-high transition-colors">
+    Konfigurieren
+  </button>
+  <button class="bg-frosted backdrop-blur-frosted text-primary px-8 py-3 rounded-xl text-sm hover:bg-gray-200 transition-colors">
+    Sofort verfügbare Fahrzeuge
+  </button>
+  </div>
+</div>
+
+<div id="detail-modal" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-500 flex justify-end">
+
+  <div id="modal-overlay" class="absolute inset-0 bg-black/40"></div>
+
+  <div id="modal-content" class="dark relative w-full md:w-[500px] h-full bg-base backdrop-blur-md shadow-2xl p-12 translate-x-full transition-transform duration-500 ease-out flex flex-col justify-center">
+
+    <button id="modal-close" class="absolute top-8 right-8 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-black">
+      ✕
+    </button>
+
+    <h3 id="modal-title" class="dark text-4xl text-primary font-light mb-6">Titel</h3>
+    <p id="modal-text" class="text-contrast-medium leading-relaxed text-lg">Beschreibungstext...</p>
+
+<!--    <div class="mt-8">-->
+<!--      <button class="bg-black text-white px-6 py-3 rounded-lg text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors">-->
+<!--        Mehr erfahren-->
+<!--      </button>-->
+<!--    </div>-->
+    <div class="dark flex gap-4">
+      <button id="modal-prev" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-100 transition-colors text-black" aria-label="Vorheriger Punkt">
+        <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="modal-next" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-100 transition-colors text-black" aria-label="Nächster Punkt">
+        <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div id="scroll-proxy" class="h-[900vh]"></div>
+
+<div id="content-section" class=" w-full  bg-[#fdf6e3] z-10 ">
+
+  <div id="camera-rig" class="sticky top-0 w-full h-screen overflow-hidden"
+       style="perspective: 100vh; perspective-origin: center center;">
+
+
+    <div class="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none mix-blend-multiply">
+      <h2 class="text-8xl md:text-[10vw] text-center text-slate-800 tracking-tighter flex flex-col gap-4">
+        <span class="split-text-up opacity-0 reveal-text">Driving</span>
+        <span class="split-text-down opacity-0 reveal-text">Fun</span>
+      </h2>
+    </div>
+
+    <div id="final-hero" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 overflow-hidden rounded-lg pointer-events-none w-0 h-0">
+      <img src="/assets/cayenne/interieur.webp" class="w-full h-full object-cover" alt="Porsche Interieur">
+    </div>
+
+    <div id="tunnel-layer" class="relative w-full h-full" style="transform-style: preserve-3d;">
+
+      <div class="tunnel-item absolute top-[20%] left-[10%] w-[30vw] aspect-[3/4] overflow-hidden rounded-4xl shadow-2xl"
+           style="mask-image: radial-gradient(circle, white, black); -webkit-mask-image: radial-gradient(circle, white, black);">
+
+        <video
+          src="/assets/cayenne/cayenne-4.webm"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover origin-center will-change-transform"
+        ></video>
+
+      </div>
+
+      <div class="tunnel-item absolute top-[5%] right-[10%] w-[30vw] aspect-[3/4] overflow-hidden rounded-4xl shadow-2xl"
+           style="mask-image: radial-gradient(circle, white, black); -webkit-mask-image: radial-gradient(circle, white, black);">
+
+        <video
+          src="/assets/cayenne/cayenne-3.webm"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover origin-center will-change-transform"
+        ></video>
+
+      </div>
+      <div class="tunnel-item absolute top-[20%] left-[10%] w-[30vw] aspect-square overflow-hidden rounded-4xl shadow-2xl"
+           style="mask-image: radial-gradient(circle, white, black); -webkit-mask-image: radial-gradient(circle, white, black);">
+
+        <video
+          src="/assets/cayenne/cayenne.webm"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover origin-center will-change-transform"
+        ></video>
+
+      </div>
+
+      <div class="tunnel-item absolute top-[20%] right-[10%] w-[30vw] aspect-[4/5] overflow-hidden rounded-4xl shadow-2xl"
+           style="mask-image: radial-gradient(circle, white, black); -webkit-mask-image: radial-gradient(circle, white, black);">
+
+        <video
+          src="/assets/cayenne/cayenne-2.webm"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover origin-center will-change-transform"
+        ></video>
+
+      </div>
+
+      <div class="tunnel-item absolute top-[35%] left-[5%] w-[30vw] aspect-[4/5] overflow-hidden rounded-4xl shadow-2xl">
+        <img src="/assets/cayenne/CY26J6AOD0001_layout.jpg" class="w-full h-full object-cover origin-center">
+      </div>
+
+      <div class="tunnel-item absolute top-[10%] right-[5%] w-[35vw] aspect-square overflow-hidden rounded-4xl shadow-2xl">
+        <img src="/assets/cayenne/CY26J6EOX0007_KV_4zu5_layout.jpg" class="w-full h-full object-cover origin-center">
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <script type="module" src="main.js"></script>
+
 </body>
 </html>

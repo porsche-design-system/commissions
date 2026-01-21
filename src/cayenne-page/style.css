@@ -2,17 +2,59 @@
 @import "@porsche-design-system/components-js/tailwindcss";
 
 html, body {
-  overflow-x: hidden; /* Nur horizontal verstecken */
-  overflow-y: auto;   /* Vertikal erlauben! */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+
 
 #hero-wrapper {
   width: 100%;
   height: 100vh;
+  background:
+    /* Layer 1: Vignette (Dunkle Ecken) */
+    radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%),
+
+      /* Layer 2: Glow (Der Schein auf dem Horizont) */
+    linear-gradient(to bottom, transparent 35%, rgba(204, 204, 204, 0.15) 50%, transparent 65%),
+
+      /* Layer 3: Die Basisfarben (Der Sonnenuntergang selbst) */
+    linear-gradient(
+      to bottom,
+      #050505 0%,     /* Start: Fast Schwarz */
+      #1a1a1a 20%,    /* Dunkles Rotbraun */
+      #424242 35%,    /* Rostrot */
+      #5a5a5a 49%,    /* Horizont Orange */
+      #343333 51%,    /* Horizont Wasser */
+      #191919 65%,    /* Wasser */
+      #1b1b1b 80%,    /* Dunkles Wasser */
+      #030303 100%    /* Ende */
+    );
+  /* Optional: Damit der Glow noch besser leuchtet */
+  background-blend-mode: normal, screen, normal;
 }
+
+#hero-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Shortcut für top:0, right:0, bottom:0, left:0 */
+  z-index: 1; /* Liegt über dem Hintergrund, aber unter dem Text (wenn Text z-index > 1 hat) */
+  pointer-events: none;
+  opacity: 0; /* Standardmäßig aus */
+  transition: opacity 0.5s ease;
+
+  /* Der SVG Filter als Bild */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Wenn 360 Modus aktiv ist, zeige Hand-Cursor auf dem Canvas Wrapper */
+.is-360-active #hero-canvas { cursor: grab; }
+.is-360-active #hero-canvas:active { cursor: grabbing; }
+
+/* Hilfsklasse um Scrollen zu verhindern */
+body.no-scroll { overflow: hidden; }
 
 body.no-scroll {
   overflow: hidden;
+  height: 100vh;
 }
-
-
