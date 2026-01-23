@@ -1,427 +1,597 @@
 <!doctype html>
 <html lang="en" class="light" style="--accent: green">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Marketing (Template)"/>
-  <title>Marketing (Template)</title>
-</head>
-<body class="bg-canvas prose-text-sm">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marketing (Template)">
+    <title>Marketing (Template)</title>
+  </head>
+  <body class="bg-canvas prose-text-sm">
+    <div
+      class="fixed z-999 bottom-fluid-sm start-fluid-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm grid gap-fluid-xs"
+    >
+      <p-select name="theme" label="Theme" compact="true" value="light">
+        <p-select-option value="light">Light</p-select-option>
+        <p-select-option value="dark">Dark</p-select-option>
+        <p-select-option value="auto">Auto</p-select-option>
+      </p-select>
+      <p-select name="accent" label="Accent" compact="true" value="green">
+        <p-select-option value="neutral">Neutral</p-select-option>
+        <p-select-option value="green">Aventurin Green</p-select-option>
+        <p-select-option value="blue">Enzian Blue</p-select-option>
+        <p-select-option value="aqua">Frozen Blue</p-select-option>
+        <p-select-option value="red">Copper Ruby</p-select-option>
+        <p-select-option value="limegreen">Oak Green</p-select-option>
+      </p-select>
+      <p-select name="frosted-color" label="Frosted Color" compact="true" value="bg-contrast-100-accent">
+        <p-select-option value="bg-frosted-accent">bg-frosted-accent</p-select-option>
+        <p-select-option value="bg-contrast-100-accent">bg-contrast-100-accent</p-select-option>
+      </p-select>
+    </div>
 
-<div class="fixed z-999 bottom-fluid-sm start-fluid-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm grid gap-fluid-xs">
-  <p-select name="theme" label="Theme" compact="true" value="light">
-    <p-select-option value="light">Light</p-select-option>
-    <p-select-option value="dark">Dark</p-select-option>
-    <p-select-option value="auto">Auto</p-select-option>
-  </p-select>
-  <p-select name="accent" label="Accent" compact="true" value="green">
-    <p-select-option value="neutral">Neutral</p-select-option>
-    <p-select-option value="green">Aventurin Green</p-select-option>
-    <p-select-option value="blue">Enzian Blue</p-select-option>
-    <p-select-option value="aqua">Frozen Blue</p-select-option>
-    <p-select-option value="red">Copper Ruby</p-select-option>
-    <p-select-option value="limegreen">Oak Green</p-select-option>
-  </p-select>
-  <p-select name="frosted-color" label="Frosted Color" compact="true" value="bg-contrast-100-accent">
-    <p-select-option value="bg-frosted-accent">bg-frosted-accent</p-select-option>
-    <p-select-option value="bg-contrast-100-accent">bg-contrast-100-accent</p-select-option>
-  </p-select>
-</div>
-
-<header class="grid-template">
-  <div class="col-wide grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-fluid-md items-center min-h-[80px]">
-    <div class="flex flex-wrap gap-static-md items-center justify-start">
-      <p-button-pure id="nav-button" class="p-static-xs -m-static-xs" type="button" icon="menu-lines" hide-label="{base: true, s: false}" aria="{'aria-haspopup': 'dialog'}">Menu</p-button-pure>
-    </div>
-    <p-crest class="sm:hidden" href="#"></p-crest>
-    <p-wordmark class="max-sm:hidden" href="#"></p-wordmark>
-    <div class="flex flex-wrap gap-static-md items-center justify-end">
-      <p-button-pure class="p-static-xs -m-static-xs" title="Search" type="button" icon="search" hide-label="true">Search</p-button-pure>
-      <p-button-pure class="p-static-xs -m-static-xs" title="User" type="button" icon="user" hide-label="true">User</p-button-pure>
-    </div>
-  </div>
-</header>
-
-<main class="grid-template gap-y-fluid-xl pb-fluid-2xl">
-
-  <div class="col-extended grid grid-cols-subgrid">
-    <div class="col-span-full grid place-items-center">
-      <img id="vehicle" class="row-span-full col-span-full" src="/assets/aventuringruenmetallic.png" alt="" />
-      <p-model-signature class="[--p-model-signature-width:100%] [--p-model-signature-height:auto] [--p-model-signature-color:color-mix(in_srgb,var(--accent)_30%,transparent)] backdrop-blur-frosted row-span-full col-span-full" size="inherit" model="macan" safe-zone="false"></p-model-signature>
-    </div>
-    <div class="col-span-full grid gap-fluid-sm justify-items-center">
-      <p-tag color="background-frosted">Electric</p-tag>
-      <h1 class="prose-display-md">Macan Turbo S</h1>
-      <p class="prose-text-sm text-contrast-500">From $73.450 or 756/mo. for 36 mo.</p>
-    </div>
-  </div>
-
-  <div class="col-basic grid grid-cols-subgrid">
-    <div class="col-span-one-half p-fluid-xl rounded-[32px] bg-contrast-100-accent backdrop-blur-frosted grid gap-fluid-xs place-content-center justify-items-center">
-      <h3 class="prose-text-xs text-contrast-500">Top Speed</h3>
-      <h4 class="prose-display-sm">305<span class="text-lg">km/h</span></h4>
-    </div>
-    <div class="col-span-one-half p-fluid-xl rounded-[32px] bg-contrast-100-accent backdrop-blur-frosted grid gap-fluid-xs place-content-center justify-items-center">
-      <h3 class="prose-text-xs text-contrast-500">Acceleration</h3>
-      <h4 class="prose-display-sm">5.7<span class="text-lg">s</span></h4>
-    </div>
-  </div>
-
-  <div class="col-basic grid grid-cols-subgrid">
-    <div class="col-span-full grid gap-fluid-xl place-items-center">
-      <p class="prose-text-md text-center mx-fluid-2xl">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-      <h3 class="prose-display-lg text-[15vw] text-(--accent)">electric</h3>
-    </div>
-    <div class="-mt-fluid-xl col-span-full grid gap-fluid-xl place-items-center bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-2xl">
-      <img src="/assets/motor.png" alt="" />
-      <button class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent">Explore E-Performance</button>
-    </div>
-  </div>
-
-  <div class="col-full grid grid-cols-subgrid">
-    <img class="col-span-full row-span-full w-full h-full min-w-full min-h-full object-cover" src="/assets/coast.png" alt="" />
-    <div class="col-span-full row-span-full grid justify-end justify-items-end">
-      <div class="bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md m-fluid-lg max-w-[30%] grid grid-rows-[minmax(0,1fr)_auto]">
-        <div class="grid content-center">
-          <h3 class="prose-text-xs text-center text-contrast-500">Range</h3>
-          <h4 class="prose-display-md text-center">479<span class="text-lg">km</span></h4>
+    <header class="grid-template">
+      <div class="col-wide grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-fluid-md items-center min-h-[80px]">
+        <div class="flex flex-wrap gap-static-md items-center justify-start">
+          <p-button-pure
+            id="nav-button"
+            class="p-static-xs -m-static-xs"
+            type="button"
+            icon="menu-lines"
+            hide-label="{base: true, s: false}"
+            aria="{'aria-haspopup': 'dialog'}"
+          >
+            Menu
+          </p-button-pure>
         </div>
-        <div class="p-fluid-md grid gap-fluid-md">
-          <div class="h-[300px] overflow-y-auto bg-masked-fade-to-t rounded-lg border-1">
-            <div class="sticky top-0 p-static-md bg-contrast-100-accent backdrop-blur-frosted">
-              <p class="prose-text-md text-center">Hello</p>
+        <p-crest class="sm:hidden" href="#"></p-crest>
+        <p-wordmark class="max-sm:hidden" href="#"></p-wordmark>
+        <div class="flex flex-wrap gap-static-md items-center justify-end">
+          <p-button-pure class="p-static-xs -m-static-xs" title="Search" type="button" icon="search" hide-label="true">
+            Search
+          </p-button-pure>
+          <p-button-pure class="p-static-xs -m-static-xs" title="User" type="button" icon="user" hide-label="true">
+            User
+          </p-button-pure>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid-template gap-y-fluid-xl pb-fluid-2xl">
+      <div class="col-extended grid grid-cols-subgrid">
+        <div class="col-span-full grid place-items-center">
+          <img id="vehicle" class="row-span-full col-span-full" src="/assets/aventuringruenmetallic.png" alt="">
+          <p-model-signature
+            class="[--p-model-signature-width:100%] [--p-model-signature-height:auto] [--p-model-signature-color:color-mix(in_srgb,var(--accent)_30%,transparent)] backdrop-blur-frosted row-span-full col-span-full"
+            size="inherit"
+            model="macan"
+            safe-zone="false"
+          ></p-model-signature>
+        </div>
+        <div class="col-span-full grid gap-fluid-sm justify-items-center">
+          <p-tag color="background-frosted">Electric</p-tag>
+          <h1 class="prose-display-md">Macan Turbo S</h1>
+          <p class="prose-text-sm text-contrast-500">From $73.450 or 756/mo. for 36 mo.</p>
+        </div>
+      </div>
+
+      <div class="col-basic grid grid-cols-subgrid">
+        <div
+          class="col-span-one-half p-fluid-xl rounded-[32px] bg-contrast-100-accent backdrop-blur-frosted grid gap-fluid-xs place-content-center justify-items-center"
+        >
+          <h3 class="prose-text-xs text-contrast-500">Top Speed</h3>
+          <h4 class="prose-display-sm">
+            305<span class="text-lg">km/h</span>
+          </h4>
+        </div>
+        <div
+          class="col-span-one-half p-fluid-xl rounded-[32px] bg-contrast-100-accent backdrop-blur-frosted grid gap-fluid-xs place-content-center justify-items-center"
+        >
+          <h3 class="prose-text-xs text-contrast-500">Acceleration</h3>
+          <h4 class="prose-display-sm">
+            5.7<span class="text-lg">s</span>
+          </h4>
+        </div>
+      </div>
+
+      <div class="col-basic grid grid-cols-subgrid">
+        <div class="col-span-full grid gap-fluid-xl place-items-center">
+          <p class="prose-text-md text-center mx-fluid-2xl">
+            High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at
+            the charging station.
+          </p>
+          <h3 class="prose-display-lg text-[15vw] text-(--accent)">electric</h3>
+        </div>
+        <div
+          class="-mt-fluid-xl col-span-full grid gap-fluid-xl place-items-center bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-2xl"
+        >
+          <img src="/assets/motor.png" alt="">
+          <button
+            class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent"
+          >
+            Explore E-Performance
+          </button>
+        </div>
+      </div>
+
+      <div class="col-full grid grid-cols-subgrid">
+        <img
+          class="col-span-full row-span-full w-full h-full min-w-full min-h-full object-cover"
+          src="/assets/coast.png"
+          alt=""
+        >
+        <div class="col-span-full row-span-full grid justify-end justify-items-end">
+          <div
+            class="bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md m-fluid-lg max-w-[30%] grid grid-rows-[minmax(0,1fr)_auto]"
+          >
+            <div class="grid content-center">
+              <h3 class="prose-text-xs text-center text-contrast-500">Range</h3>
+              <h4 class="prose-display-md text-center">
+                479<span class="text-lg">km</span>
+              </h4>
             </div>
-            <p class="prose-text-md text-center">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-            <p class="prose-text-md text-center">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-            <p class="prose-text-md text-center">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
+            <div class="p-fluid-md grid gap-fluid-md">
+              <div class="h-[300px] overflow-y-auto bg-masked-fade-to-t rounded-lg border-1">
+                <div class="sticky top-0 p-static-md bg-contrast-100-accent backdrop-blur-frosted">
+                  <p class="prose-text-md text-center">Hello</p>
+                </div>
+                <p class="prose-text-md text-center">
+                  High voltage for a new way of life: Experience the impressive performance of the Macan - on the road
+                  and at the charging station.
+                </p>
+                <p class="prose-text-md text-center">
+                  High voltage for a new way of life: Experience the impressive performance of the Macan - on the road
+                  and at the charging station.
+                </p>
+                <p class="prose-text-md text-center">
+                  High voltage for a new way of life: Experience the impressive performance of the Macan - on the road
+                  and at the charging station.
+                </p>
+              </div>
+              <button
+                class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent"
+              >
+                Explore E-Performance
+              </button>
+            </div>
           </div>
-          <button class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent">Explore E-Performance</button>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col-wide grid grid-cols-subgrid">
-    <div class="col-span-full bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md grid grid-cols-2 gap-fluid-md">
-      <img class="-mb-fluid-md h-[50vw]" src="/assets/wallbox.png" alt="" />
-      <div class="max-w-[480px] grid content-center justify-items-start gap-fluid-md">
-        <h4 class="prose-display-md">E-Performance</h4>
-        <p class="prose-text-sm">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-        <button class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent">Explore E-Performance</button>
+      <div class="col-wide grid grid-cols-subgrid">
+        <div
+          class="col-span-full bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md grid grid-cols-2 gap-fluid-md"
+        >
+          <img class="-mb-fluid-md h-[50vw]" src="/assets/wallbox.png" alt="">
+          <div class="max-w-[480px] grid content-center justify-items-start gap-fluid-md">
+            <h4 class="prose-display-md">E-Performance</h4>
+            <p class="prose-text-sm">
+              High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and
+              at the charging station.
+            </p>
+            <button
+              class="explore-e-performance bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent"
+            >
+              Explore E-Performance
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col-basic grid grid-cols-subgrid">
-    <form class="col-span-one-half bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md grid gap-fluid-sm">
-      <label class="grid gap-fluid-xs">
-        Firstname
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="firstname" placeholder="Placeholder" />
-      </label>
-      <label class="grid gap-fluid-xs">
-        Lastname
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="lastname" placeholder="Placeholder" />
-      </label>
-      <label class="grid gap-fluid-xs">
-        Zipcode
-        <input class="bg-error-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="zip" placeholder="Placeholder" value="123456" />
-        <span class="text-error">Explanation of error</span>
-      </label>
-      <label class="grid gap-fluid-xs">
-        Zipcode
-        <input class="bg-success-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="zip" placeholder="Placeholder" value="123456" />
-        <span class="text-success">Explanation of success</span>
-      </label>
-      <label class="grid gap-fluid-xs">
-        City
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="city" placeholder="Placeholder" value="Stuttgart" />
-      </label>
-      <button class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent">Submit</button>
-      <button class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent">Cancel</button>
-      <div class="overflow-x-auto py-static-md bg-masked-fade-x rounded-lg border-1">
-        <p class="prose-text-md whitespace-nowrap">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
+      <div class="col-basic grid grid-cols-subgrid">
+        <form
+          class="col-span-one-half bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-md grid gap-fluid-sm"
+        >
+          <label class="grid gap-fluid-xs">
+            Firstname
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="firstname"
+              placeholder="Placeholder"
+            >
+          </label>
+          <label class="grid gap-fluid-xs">
+            Lastname
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="lastname"
+              placeholder="Placeholder"
+            >
+          </label>
+          <label class="grid gap-fluid-xs">
+            Zipcode
+            <input
+              class="bg-error-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="zip"
+              placeholder="Placeholder"
+              value="123456"
+            >
+            <span class="text-error">Explanation of error</span>
+          </label>
+          <label class="grid gap-fluid-xs">
+            Zipcode
+            <input
+              class="bg-success-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="zip"
+              placeholder="Placeholder"
+              value="123456"
+            >
+            <span class="text-success">Explanation of success</span>
+          </label>
+          <label class="grid gap-fluid-xs">
+            City
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="city"
+              placeholder="Placeholder"
+              value="Stuttgart"
+            >
+          </label>
+          <button
+            class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent"
+          >
+            Submit
+          </button>
+          <button
+            class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent"
+          >
+            Cancel
+          </button>
+          <div class="overflow-x-auto py-static-md bg-masked-fade-x rounded-lg border-1">
+            <p class="prose-text-md whitespace-nowrap">
+              High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and
+              at the charging station.
+            </p>
+          </div>
+          <div
+            class="overflow-x-auto py-static-md bg-masked-fade-x-init hover:bg-masked-fade-x rounded-lg border-1 transition-[mask] duration-long"
+          >
+            <p class="prose-text-md whitespace-nowrap">
+              High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and
+              at the charging station.
+            </p>
+          </div>
+        </form>
+        <form class="col-span-one-half p-fluid-md grid gap-fluid-sm">
+          <label class="grid gap-fluid-xs">
+            Firstname
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="firstname"
+              placeholder="Placeholder"
+            >
+          </label>
+          <label class="grid gap-fluid-xs">
+            Lastname
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="lastname"
+              placeholder="Placeholder"
+            >
+          </label>
+          <label class="grid gap-fluid-xs">
+            Zipcode
+            <input
+              class="bg-error-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="zip"
+              placeholder="Placeholder"
+              value="123456"
+            >
+            <span class="text-error">Explanation of error</span>
+          </label>
+          <label class="grid gap-fluid-xs">
+            Zipcode
+            <input
+              class="bg-success-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="zip"
+              placeholder="Placeholder"
+              value="123456"
+            >
+            <span class="text-success">Explanation of success</span>
+          </label>
+          <label class="grid gap-fluid-xs">
+            City
+            <input
+              class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent"
+              name="city"
+              placeholder="Placeholder"
+              value="Stuttgart"
+            >
+          </label>
+          <button
+            class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent"
+          >
+            Submit
+          </button>
+          <button
+            class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent"
+          >
+            Cancel
+          </button>
+          <div class="overflow-x-auto py-static-md bg-masked-fade-x rounded-lg border-1">
+            <p class="prose-text-md whitespace-nowrap">
+              High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and
+              at the charging station.
+            </p>
+          </div>
+          <div
+            class="overflow-x-auto py-static-md bg-masked-fade-x-init hover:bg-masked-fade-x rounded-lg border-1 transition-[mask] duration-long"
+          >
+            <p class="prose-text-md whitespace-nowrap">
+              High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and
+              at the charging station.
+            </p>
+          </div>
+        </form>
       </div>
-      <div class="overflow-x-auto py-static-md bg-masked-fade-x-init hover:bg-masked-fade-x rounded-lg border-1 transition-[mask] duration-long">
-        <p class="prose-text-md whitespace-nowrap">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
+    </main>
+
+    <footer class="grid-template py-fluid-lg bg-surface">
+      <form
+        class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-fluid-md"
+        action="#"
+        onsubmit="return false;"
+      >
+        <p-select
+          class="[--p-select-background-color:transparent]"
+          name="region"
+          label="Change your delivery country"
+          value="germany"
+          filter="true"
+        >
+          <p-optgroup label="Asia">
+            <p-select-option value="china">
+              <img src="/assets/flags/china.svg" alt="">
+              China
+            </p-select-option>
+            <p-select-option value="japan">
+              <img src="/assets/flags/japan.svg" alt="">
+              Japan
+            </p-select-option>
+            <p-select-option value="south-korea">
+              <img src="/assets/flags/south-korea.svg" alt="">
+              South Korea
+            </p-select-option>
+          </p-optgroup>
+          <p-optgroup label="Europe">
+            <p-select-option value="austria">
+              <img src="/assets/flags/austria.svg" alt="">
+              Austria
+            </p-select-option>
+            <p-select-option value="france">
+              <img src="/assets/flags/france.svg" alt="">
+              France
+            </p-select-option>
+            <p-select-option value="germany">
+              <img src="/assets/flags/germany.svg" alt="">
+              Germany
+            </p-select-option>
+            <p-select-option value="great-britain">
+              <img src="/assets/flags/great-britain.svg" alt="">
+              Great Britain
+            </p-select-option>
+            <p-select-option value="italy">
+              <img src="/assets/flags/italy.svg" alt="">
+              Italy
+            </p-select-option>
+            <p-select-option value="portugal">
+              <img src="/assets/flags/portugal.svg" alt="">
+              Portugal
+            </p-select-option>
+            <p-select-option value="spain">
+              <img src="/assets/flags/spain.svg" alt="">
+              Spain
+            </p-select-option>
+          </p-optgroup>
+          <p-optgroup label="North America">
+            <p-select-option value="canada">
+              <img src="/assets/flags/canada.svg" alt="">
+              Canada
+            </p-select-option>
+            <p-select-option value="usa">
+              <img src="/assets/flags/usa.svg" alt="">
+              USA
+            </p-select-option>
+          </p-optgroup>
+        </p-select>
+      </form>
+      <div
+        class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-x-fluid-md gap-y-fluid-lg mt-fluid-sm mb-fluid-lg"
+      >
+        <div class="flex flex-col gap-fluid-sm">
+          <h5 class="prose-text-2xs text-contrast-medium">Legal Services</h5>
+          <ul class="grid gap-fluid-sm">
+            <li>
+              <p-link-pure href="#" icon="none">Terms and Conditions</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Privacy Notice</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">California Privacy</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Imprint and Legal Notice</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Accessibility Statement</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Open Source Software Notice</p-link-pure>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-fluid-sm">
+          <h5 class="prose-text-2xs text-contrast-medium">Porsche Design</h5>
+          <ul class="grid gap-fluid-sm">
+            <li>
+              <p-link-pure href="#" icon="none">Press</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Jobs and Careers</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Studio F. A. Porsche</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Data Privacy</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Timepieces Warranty & Service</p-link-pure>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-fluid-sm">
+          <h5 class="prose-text-2xs text-contrast-medium">Online Services</h5>
+          <ul class="grid gap-fluid-sm">
+            <li>
+              <p-link-pure href="#" icon="none">My Orders</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Porsche Homepage</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Porsche Car Configurator</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Porsche New and Pre-Owned Vehicles</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none">Compare Porsche models</p-link-pure>
+            </li>
+          </ul>
+        </div>
       </div>
-    </form>
-    <form class="col-span-one-half p-fluid-md grid gap-fluid-sm">
-      <label class="grid gap-fluid-xs">
-        Firstname
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="firstname" placeholder="Placeholder" />
-      </label>
-      <label class="grid gap-fluid-xs">
-        Lastname
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="lastname" placeholder="Placeholder" />
-      </label>
-      <label class="grid gap-fluid-xs">
-        Zipcode
-        <input class="bg-error-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="zip" placeholder="Placeholder" value="123456" />
-        <span class="text-error">Explanation of error</span>
-      </label>
-      <label class="grid gap-fluid-xs">
-        Zipcode
-        <input class="bg-success-soft backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="zip" placeholder="Placeholder" value="123456" />
-        <span class="text-success">Explanation of success</span>
-      </label>
-      <label class="grid gap-fluid-xs">
-        City
-        <input class="bg-contrast-100-accent backdrop-blur-frosted rounded-md p-fluid-sm focus:outline focus:outline-contrast-300-accent" name="city" placeholder="Placeholder" value="Stuttgart" />
-      </label>
-      <button class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent">Submit</button>
-      <button class="bg-contrast-200-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-300-accent">Cancel</button>
-      <div class="overflow-x-auto py-static-md bg-masked-fade-x rounded-lg border-1">
-        <p class="prose-text-md whitespace-nowrap">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
+      <div class="col-extended grid sm:grid-cols-[auto_minmax(0,1fr)] items-center gap-x-fluid-lg gap-y-static-lg">
+        <div class="flex gap-fluid-md">
+          <p-link-pure href="#" icon="logo-instagram" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+            Some label
+          </p-link-pure>
+          <p-link-pure href="#" icon="logo-facebook" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+            Some label
+          </p-link-pure>
+          <p-link-pure href="#" icon="logo-x" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+            Some label
+          </p-link-pure>
+          <p-link-pure href="#" icon="logo-pinterest" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+            Some label
+          </p-link-pure>
+          <p-link-pure href="#" icon="logo-youtube" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
+            Some label
+          </p-link-pure>
+        </div>
+        <div class="flex gap-fluid-xs">
+          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/hskK1tzN0CS8cdGIttugu/883187acee1c66e7d4593141f3e659c3/Visa.svg"
+              alt="visa logo"
+            >
+          </a>
+          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/34g5LXmVhTzseATJL7CLFj/501eba81ff4787357277faff4ea04f4d/Master__1_.svg"
+              alt="master card logo"
+            >
+          </a>
+          <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/4NeGQiGeYT5VZ3G591li1k/c12d0cc589f608a6db3d3e7d2aae0255/PayPal.svg"
+              alt="paypal logo"
+            >
+          </a>
+        </div>
       </div>
-      <div class="overflow-x-auto py-static-md bg-masked-fade-x-init hover:bg-masked-fade-x rounded-lg border-1 transition-[mask] duration-long">
-        <p class="prose-text-md whitespace-nowrap">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
+      <div class="col-extended grid gap-fluid-md mt-fluid-md">
+        <p class="prose-text-2xs text-contrast-medium">
+          The consumption and emission values stated were determined in accordance with the legally prescribed
+          measurement procedures. Since September 1, 2017, certain new vehicles have been type-approved in accordance
+          with the Worldwide Harmonized Vehicles Test Procedure (WLTP), a more realistic test procedure for measuring
+          fuel/electricity consumption and CO₂ emissions. Since September 1, 2018, the WLTP has replaced the New
+          European Driving Cycle (NEDC). Due to the more realistic testing conditions, the fuel/electricity consumption
+          and CO₂ emission values measured according to the WLTP are, in many cases, higher than those measured
+          according to the NEDC. As a result, vehicle taxation may change accordingly starting September 1, 2018.
+          Further information on the differences between WLTP and NEDC can be found at www.porsche.com/wltp.
+        </p>
+        <p class="prose-text-2xs text-contrast-medium">
+          Currently, regardless of the applied type-approval procedure, it remains mandatory to communicate NEDC values.
+          The additional disclosure of WLTP values may be done on a voluntary basis until their mandatory use. In the
+          case of new vehicles type-approved according to WLTP, NEDC values are derived from WLTP values and stated
+          during the transitional period. Where NEDC values are stated as ranges, they do not refer to a specific
+          individual vehicle and are not part of the offer. They serve solely for comparison purposes between different
+          vehicle types. Optional equipment and accessories (attachments, tire formats, etc.) can alter relevant vehicle
+          parameters such as weight, rolling resistance, and aerodynamics, and can influence fuel/electricity
+          consumption, CO₂ emissions, and performance values of a vehicle in addition to weather and traffic conditions
+          and individual driving behavior. Further information on the official fuel/electricity consumption and official
+          specific CO₂ emissions of new passenger cars can be found in the "Guide on fuel consumption, CO₂ emissions and
+          electricity consumption of new passenger cars," available free of charge at all sales outlets and from DAT.
+        </p>
+        <p class="prose-text-2xs text-contrast-medium">
+          Neither the number of active users of this Porsche Connect Store nor the number of active users of the App
+          Center available in the connected vehicle (Macan electric) upon activation of the Connect services exceeds the
+          threshold of 45 million active users in the European Union as defined by the Digital Services Act (DSA).
+          Important information regarding fully electric Porsche models can be found here.
+        </p>
       </div>
-    </form>
-  </div>
+      <div class="col-extended grid gap-fluid-md justify-items-center mt-fluid-md">
+        <p-wordmark></p-wordmark>
+        <p class="prose-text-2xs text-contrast-medium">© 2025 Porsche Sales and Marketplace, Inc.</p>
+        <ul class="flex flex-wrap justify-center gap-fluid-md">
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true">Legal notice</p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true">Privacy notice</p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true">Accessibility Statement</p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true">Open Source Software Notice</p-link-pure>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
-</main>
+    <dialog
+      class="[open]:grid place-items-center place-content-center w-full max-w-full h-full max-h-full bg-transparent backdrop:bg-contrast-100-accent backdrop:backdrop-blur-frosted"
+    >
+      <div class="bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-lg m-fluid-lg max-w-[60vw]">
+        <h2 class="prose-display-md">Macan Turbo S</h2>
 
-<footer class="grid-template py-fluid-lg bg-surface">
-  <form
-    class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-fluid-md"
-    action="#" onsubmit="return false;">
-    <p-select class="[--p-select-background-color:transparent]" name="region" label="Change your delivery country"
-              value="germany" filter="true">
-      <p-optgroup label="Asia">
-        <p-select-option value="china"><img src="/assets/flags/china.svg" alt=""/>China</p-select-option>
-        <p-select-option value="japan"><img src="/assets/flags/japan.svg" alt=""/>Japan</p-select-option>
-        <p-select-option value="south-korea"><img src="/assets/flags/south-korea.svg" alt=""/>South Korea
-        </p-select-option>
-      </p-optgroup>
-      <p-optgroup label="Europe">
-        <p-select-option value="austria"><img src="/assets/flags/austria.svg" alt=""/>Austria</p-select-option>
-        <p-select-option value="france"><img src="/assets/flags/france.svg" alt=""/>France</p-select-option>
-        <p-select-option value="germany"><img src="/assets/flags/germany.svg" alt=""/>Germany</p-select-option>
-        <p-select-option value="great-britain"><img src="/assets/flags/great-britain.svg" alt=""/>Great Britain
-        </p-select-option>
-        <p-select-option value="italy"><img src="/assets/flags/italy.svg" alt=""/>Italy</p-select-option>
-        <p-select-option value="portugal"><img src="/assets/flags/portugal.svg" alt=""/>Portugal</p-select-option>
-        <p-select-option value="spain"><img src="/assets/flags/spain.svg" alt=""/>Spain</p-select-option>
-      </p-optgroup>
-      <p-optgroup label="North America">
-        <p-select-option value="canada"><img src="/assets/flags/canada.svg" alt=""/>Canada</p-select-option>
-        <p-select-option value="usa"><img src="/assets/flags/usa.svg" alt=""/>USA</p-select-option>
-      </p-optgroup>
-    </p-select>
-  </form>
-  <div
-    class="col-extended grid xs:grid-cols-[repeat(2,minmax(0,1fr))] md:grid-cols-[repeat(3,minmax(0,1fr))] gap-x-fluid-md gap-y-fluid-lg mt-fluid-sm mb-fluid-lg">
-    <div class="flex flex-col gap-fluid-sm">
-      <h5 class="prose-text-2xs text-contrast-medium">Legal Services</h5>
-      <ul class="grid gap-fluid-sm">
-        <li>
-          <p-link-pure href="#" icon="none">
-            Terms and Conditions
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Privacy Notice
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            California Privacy
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Imprint and Legal Notice
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Accessibility Statement
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Open Source Software Notice
-          </p-link-pure>
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-fluid-sm">
-      <h5 class="prose-text-2xs text-contrast-medium">Porsche Design</h5>
-      <ul class="grid gap-fluid-sm">
-        <li>
-          <p-link-pure href="#" icon="none">
-            Press
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Jobs and Careers
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Studio F. A. Porsche
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Data Privacy
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Timepieces Warranty & Service
-          </p-link-pure>
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-fluid-sm">
-      <h5 class="prose-text-2xs text-contrast-medium">Online Services</h5>
-      <ul class="grid gap-fluid-sm">
-        <li>
-          <p-link-pure href="#" icon="none">
-            My Orders
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Porsche Homepage
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Porsche Car Configurator
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Porsche New and Pre-Owned Vehicles
-          </p-link-pure>
-        </li>
-        <li>
-          <p-link-pure href="#" icon="none">
-            Compare Porsche models
-          </p-link-pure>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-extended grid sm:grid-cols-[auto_minmax(0,1fr)] items-center gap-x-fluid-lg gap-y-static-lg">
-    <div class="flex gap-fluid-md">
-      <p-link-pure href="#" icon="logo-instagram" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
-        Some label
-      </p-link-pure>
-      <p-link-pure href="#" icon="logo-facebook" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
-        Some label
-      </p-link-pure>
-      <p-link-pure href="#" icon="logo-x" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
-        Some label
-      </p-link-pure>
-      <p-link-pure href="#" icon="logo-pinterest" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
-        Some label
-      </p-link-pure>
-      <p-link-pure href="#" icon="logo-youtube" hide-label="true" size="medium" class="p-static-sm -m-static-sm">
-        Some label
-      </p-link-pure>
-    </div>
-    <div class="flex gap-fluid-xs">
-      <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
-        <img
-          src="https://images.ctfassets.net/1oyzmkwpf3d5/hskK1tzN0CS8cdGIttugu/883187acee1c66e7d4593141f3e659c3/Visa.svg"
-          alt="visa logo"/>
-      </a>
-      <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
-        <img
-          src="https://images.ctfassets.net/1oyzmkwpf3d5/34g5LXmVhTzseATJL7CLFj/501eba81ff4787357277faff4ea04f4d/Master__1_.svg"
-          alt="master card logo"/>
-      </a>
-      <a href="#" class="focus-visible:outline outline-focus outline-offset-2 rounded-sm">
-        <img
-          src="https://images.ctfassets.net/1oyzmkwpf3d5/4NeGQiGeYT5VZ3G591li1k/c12d0cc589f608a6db3d3e7d2aae0255/PayPal.svg"
-          alt="paypal logo"/>
-      </a>
-    </div>
-  </div>
-  <div class="col-extended grid gap-fluid-md mt-fluid-md">
-    <p class="prose-text-2xs text-contrast-medium">
-      The consumption and emission values stated were determined in accordance with the legally prescribed measurement
-      procedures. Since September 1, 2017, certain new vehicles have been type-approved in accordance with the
-      Worldwide Harmonized Vehicles Test Procedure (WLTP), a more realistic test procedure for measuring
-      fuel/electricity consumption and CO₂ emissions. Since September 1, 2018, the WLTP has replaced the New European
-      Driving Cycle (NEDC). Due to the more realistic testing conditions, the fuel/electricity consumption and CO₂
-      emission values measured according to the WLTP are, in many cases, higher than those measured according to the
-      NEDC. As a result, vehicle taxation may change accordingly starting September 1, 2018. Further information on
-      the differences between WLTP and NEDC can be found at www.porsche.com/wltp.
-    </p>
-    <p class="prose-text-2xs text-contrast-medium">
-      Currently, regardless of the applied type-approval procedure, it remains mandatory to communicate NEDC values.
-      The additional disclosure of WLTP values may be done on a voluntary basis until their mandatory use. In the case
-      of new vehicles type-approved according to WLTP, NEDC values are derived from WLTP values and stated during the
-      transitional period. Where NEDC values are stated as ranges, they do not refer to a specific individual vehicle
-      and are not part of the offer. They serve solely for comparison purposes between different vehicle types.
-      Optional equipment and accessories (attachments, tire formats, etc.) can alter relevant vehicle parameters such
-      as weight, rolling resistance, and aerodynamics, and can influence fuel/electricity consumption, CO₂ emissions,
-      and performance values of a vehicle in addition to weather and traffic conditions and individual driving
-      behavior. Further information on the official fuel/electricity consumption and official specific CO₂ emissions
-      of new passenger cars can be found in the "Guide on fuel consumption, CO₂ emissions and electricity consumption
-      of new passenger cars," available free of charge at all sales outlets and from DAT.
-    </p>
-    <p class="prose-text-2xs text-contrast-medium">
-      Neither the number of active users of this Porsche Connect Store nor the number of active users of the App
-      Center available in the connected vehicle (Macan electric) upon activation of the Connect services exceeds the
-      threshold of 45 million active users in the European Union as defined by the Digital Services Act (DSA).
-      Important information regarding fully electric Porsche models can be found here.
-    </p>
-  </div>
-  <div class="col-extended grid gap-fluid-md justify-items-center mt-fluid-md">
-    <p-wordmark></p-wordmark>
-    <p class="prose-text-2xs text-contrast-medium">
-      © 2025 Porsche Sales and Marketplace, Inc.
-    </p>
-    <ul class="flex flex-wrap justify-center gap-fluid-md">
-      <li>
-        <p-link-pure href="#" icon="none" size="x-small" underline="true">
-          Legal notice
-        </p-link-pure>
-      </li>
-      <li>
-        <p-link-pure href="#" icon="none" size="x-small" underline="true">
-          Privacy notice
-        </p-link-pure>
-      </li>
-      <li>
-        <p-link-pure href="#" icon="none" size="x-small" underline="true">
-          Accessibility Statement
-        </p-link-pure>
-      </li>
-      <li>
-        <p-link-pure href="#" icon="none" size="x-small" underline="true">
-          Open Source Software Notice
-        </p-link-pure>
-      </li>
-    </ul>
-  </div>
-</footer>
+        <div
+          class="mt-fluid-md max-w-[50%] grid gap-fluid-md bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-md"
+        >
+          <p class="prose-text-md">
+            High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at
+            the charging station.
+          </p>
+          <button
+            id="close-dialog"
+            class="bg-contrast-100-accent prose-text-sm backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent"
+          >
+            Close
+          </button>
+        </div>
 
-<dialog class="[open]:grid place-items-center place-content-center w-full max-w-full h-full max-h-full bg-transparent backdrop:bg-contrast-100-accent backdrop:backdrop-blur-frosted">
-  <div class="bg-contrast-100-accent backdrop-blur-frosted rounded-[32px] p-fluid-lg m-fluid-lg max-w-[60vw]">
-    <h2 class="prose-display-md">Macan Turbo S</h2>
+        <button
+          popovertarget="my-popover"
+          class="mt-fluid-md prose-text-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent"
+        >
+          Open Popover
+        </button>
+        <div
+          class="left-fluid-md top-fluid-md prose-text-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm max-w-[320px]"
+          popover
+          id="my-popover"
+        >
+          <h2 class="prose-heading-md">E-Performance</h2>
+          <p>
+            High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at
+            the charging station.
+          </p>
+        </div>
+      </div>
+    </dialog>
 
-    <div class="mt-fluid-md max-w-[50%] grid gap-fluid-md bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-md">
-      <p class="prose-text-md">High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-      <button id="close-dialog" class="bg-contrast-100-accent prose-text-sm backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent">Close</button>
-    </div>
-
-    <button popovertarget="my-popover" class="mt-fluid-md prose-text-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm cursor-pointer transition hover:bg-contrast-200-accent">Open Popover</button>
-    <div class="left-fluid-md top-fluid-md prose-text-sm bg-contrast-100-accent backdrop-blur-frosted rounded-lg p-fluid-sm max-w-[320px]" popover id="my-popover">
-      <h2 class="prose-heading-md">E-Performance</h2>
-      <p>High voltage for a new way of life: Experience the impressive performance of the Macan - on the road and at the charging station.</p>
-    </div>
-
-  </div>
-</dialog>
-
-<script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

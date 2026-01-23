@@ -1,204 +1,196 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Porsche Shop – Made by Dreamers, for Dreamers."/>
-  <title>Porsche Shop (Template)</title>
-</head>
-<body>
-<div id="app" class="layout">
-  <header class="layout__header">
-    <p-link-pure href="#" icon="arrow-left">Back</p-link-pure>
-    <p-wordmark href="#"></p-wordmark>
-    <p-crest href="#"></p-crest>
-  </header>
-  <main class="layout__main">
-    <p-heading tag="h1" size="xx-large" align="center">Checkout</p-heading>
-    <div class="login">
-      <p-heading tag="h2" size="large">Please Login with Prosche ID or use the guest checkout</p-heading>
-      <div class="login__inputs">
-        <p-text-field-wrapper label="Email">
-          <input type="text" name="email" required/>
-        </p-text-field-wrapper>
-        <p-text-field-wrapper label="Password" show-password-toggle="false">
-          <input type="password" name="password" required/>
-        </p-text-field-wrapper>
-        <div class="login__inputs__actions">
-          <p-checkbox-wrapper label="Remember me">
-            <input type="checkbox" name="remember-me"/>
-          </p-checkbox-wrapper>
-          <p-link-pure underline="true" href="/">Forgot password?</p-link-pure>
-        </div>
-      </div>
-      <div class="login__footer">
-        <p-button>Log In</p-button>
-        <div class="login__divider">
-          <p-divider></p-divider>
-          <span>or</span>
-          <p-divider></p-divider>
-        </div>
-        <p-button variant="secondary">Guest Checkout</p-button>
-      </div>
-    </div>
-    <div class="checkout">
-      <section class="checkout__section">
-        <div class="checkout__heading">
-          <h2>1. Personal Details</h2>
-        </div>
-        <div class="checkout__radio-buttons">
-          <p-radio-button-wrapper label="Pick up your items at the next store">
-            <input type="radio" name="delivery"/>
-          </p-radio-button-wrapper>
-          <p-radio-button-wrapper label="Home Delivery">
-            <input type="radio" name="delivery" checked/>
-          </p-radio-button-wrapper>
-        </div>
-        <div class="checkout__inputs">
-          <p-text-field-wrapper label="Address Name (e.g.) Home, Office, etc.">
-            <input type="text" name="address"/>
-          </p-text-field-wrapper>
-          <div class="checkout__group">
-            <p-text-field-wrapper label="Firstname">
-              <input type="text" name="firstname" required/>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porsche Shop – Made by Dreamers, for Dreamers.">
+    <title>Porsche Shop (Template)</title>
+  </head>
+  <body>
+    <div id="app" class="layout">
+      <header class="layout__header">
+        <p-link-pure href="#" icon="arrow-left">Back</p-link-pure>
+        <p-wordmark href="#"></p-wordmark>
+        <p-crest href="#"></p-crest>
+      </header>
+      <main class="layout__main">
+        <p-heading tag="h1" size="xx-large" align="center">Checkout</p-heading>
+        <div class="login">
+          <p-heading tag="h2" size="large">Please Login with Prosche ID or use the guest checkout</p-heading>
+          <div class="login__inputs">
+            <p-text-field-wrapper label="Email">
+              <input type="text" name="email" required>
             </p-text-field-wrapper>
-            <p-text-field-wrapper label="Lastname">
-              <input type="text" name="lastname" required/>
+            <p-text-field-wrapper label="Password" show-password-toggle="false">
+              <input type="password" name="password" required>
             </p-text-field-wrapper>
+            <div class="login__inputs__actions">
+              <p-checkbox-wrapper label="Remember me">
+                <input type="checkbox" name="remember-me">
+              </p-checkbox-wrapper>
+              <p-link-pure underline="true" href="/">Forgot password?</p-link-pure>
+            </div>
           </div>
-          <p-text-field-wrapper label="Address 1">
-            <input type="text" name="address-1" required/>
-          </p-text-field-wrapper>
-          <p-text-field-wrapper label="Address 2">
-            <input type="text" name="address-2"/>
-          </p-text-field-wrapper>
-          <p-select-wrapper filter="true" label="Some label">
-            <select name="country">
-              <option>Select country</option>
-              <option value="AF">Afghanistan</option>
-              <option value="AX">Åland Islands</option>
-              <option value="AL">Albania</option>
-              <option value="DZ">Algeria</option>
-              <option value="AS">American Samoa</option>
-              <option value="AD">Andorra</option>
-              <option value="AO">Angola</option>
-              <option value="AI">Anguilla</option>
-              <option value="AQ" disabled>Antarctica</option>
-              <option value="AG">Antigua and Barbuda</option>
-              <option value="AR">Argentina</option>
-              <option value="AM">Armenia</option>
-              <option value="AW">Aruba</option>
-              <option value="AU">Australia</option>
-              <option value="AT">Austria</option>
-              <option value="AZ">Azerbaijan</option>
-            </select>
-          </p-select-wrapper>
-          <p-text-field-wrapper label="Zip / postal code">
-            <input type="text" name="zip" required/>
-          </p-text-field-wrapper>
-          <p-text-field-wrapper label="Phone" unit="+49" unit-position="prefix">
-            <input type="number" name="phone" required/>
-          </p-text-field-wrapper>
+          <div class="login__footer">
+            <p-button>Log In</p-button>
+            <div class="login__divider">
+              <p-divider></p-divider>
+              <span>or</span>
+              <p-divider></p-divider>
+            </div>
+            <p-button variant="secondary">Guest Checkout</p-button>
+          </div>
         </div>
-        <div class="checkout__checkboxes">
-          <p-checkbox-wrapper label="Bill to this address">
-            <input type="checkbox" name="bill-to-this-address" checked/>
-          </p-checkbox-wrapper>
-          <p-checkbox-wrapper label="Ship to this address">
-            <input type="checkbox" name="ship-to-this-address" checked/>
-          </p-checkbox-wrapper>
-          <p-button-pure icon="plus">Add shipping address</p-button-pure>
+        <div class="checkout">
+          <section class="checkout__section">
+            <div class="checkout__heading">
+              <h2>1. Personal Details</h2>
+            </div>
+            <div class="checkout__radio-buttons">
+              <p-radio-button-wrapper label="Pick up your items at the next store">
+                <input type="radio" name="delivery">
+              </p-radio-button-wrapper>
+              <p-radio-button-wrapper label="Home Delivery">
+                <input type="radio" name="delivery" checked>
+              </p-radio-button-wrapper>
+            </div>
+            <div class="checkout__inputs">
+              <p-text-field-wrapper label="Address Name (e.g.) Home, Office, etc.">
+                <input type="text" name="address">
+              </p-text-field-wrapper>
+              <div class="checkout__group">
+                <p-text-field-wrapper label="Firstname">
+                  <input type="text" name="firstname" required>
+                </p-text-field-wrapper>
+                <p-text-field-wrapper label="Lastname">
+                  <input type="text" name="lastname" required>
+                </p-text-field-wrapper>
+              </div>
+              <p-text-field-wrapper label="Address 1">
+                <input type="text" name="address-1" required>
+              </p-text-field-wrapper>
+              <p-text-field-wrapper label="Address 2">
+                <input type="text" name="address-2">
+              </p-text-field-wrapper>
+              <p-select-wrapper filter="true" label="Some label">
+                <select name="country">
+                  <option>Select country</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="AX">Åland Islands</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ" disabled>Antarctica</option>
+                  <option value="AG">Antigua and Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                </select>
+              </p-select-wrapper>
+              <p-text-field-wrapper label="Zip / postal code">
+                <input type="text" name="zip" required>
+              </p-text-field-wrapper>
+              <p-text-field-wrapper label="Phone" unit="+49" unit-position="prefix">
+                <input type="number" name="phone" required>
+              </p-text-field-wrapper>
+            </div>
+            <div class="checkout__checkboxes">
+              <p-checkbox-wrapper label="Bill to this address">
+                <input type="checkbox" name="bill-to-this-address" checked>
+              </p-checkbox-wrapper>
+              <p-checkbox-wrapper label="Ship to this address">
+                <input type="checkbox" name="ship-to-this-address" checked>
+              </p-checkbox-wrapper>
+              <p-button-pure icon="plus">Add shipping address</p-button-pure>
+            </div>
+            <div class="checkout__footer">
+              <p-button>Continue to shipping</p-button>
+            </div>
+          </section>
+          <section class="checkout__section">
+            <div class="checkout__heading checkout__heading--disabled">
+              <h2>2. Shipping</h2>
+              <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
+            </div>
+          </section>
+          <section class="checkout__section">
+            <div class="checkout__heading checkout__heading--disabled">
+              <h2>3. Payment</h2>
+              <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
+            </div>
+          </section>
+          <section class="checkout__section">
+            <div class="checkout__heading checkout__heading--disabled">
+              <h2>4. Summary</h2>
+              <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
+            </div>
+          </section>
         </div>
-        <div class="checkout__footer">
-          <p-button>Continue to shipping</p-button>
+      </main>
+      <aside class="layout__aside">
+        <div class="shopping-cart">
+          <div class="shopping-cart__products">
+            <a href="#">
+              <img srcset="/assets/weekender@2x.webp 2x" src="/assets/weekender.webp" width="960" height="1080" alt="">
+              <span>
+                <b>Porsche Bracelet</b>
+                <span>Black, One Size</span>
+              </span>
+              <span>911,00 €</span>
+            </a>
+            <a href="#">
+              <img srcset="/assets/sneaker@2x.webp 2x" src="/assets/sneaker.webp" width="960" height="1080" alt="">
+              <span>
+                <b>Porsche Bracelet</b>
+                <span>Black, One Size</span>
+              </span>
+              <span>911,00 €</span>
+            </a>
+            <a href="#">
+              <img srcset="/assets/sneaker@2x.webp 2x" src="/assets/sneaker.webp" width="960" height="1080" alt="">
+              <span>
+                <b>Porsche Bracelet</b>
+                <span>Black, One Size</span>
+              </span>
+              <span>911,00 €</span>
+            </a>
+            <a href="#">
+              <img srcset="/assets/backpack@2x.webp 2x" src="/assets/backpack.webp" width="960" height="1080" alt="">
+              <span>
+                <b>EvoKNIT® Trainers II</b>
+                <span>Black, One Size</span>
+              </span>
+              <span>911,00 €</span>
+            </a>
+          </div>
+          <div class="shopping-cart__summary">
+            <div>
+              <p-text>Subtotal</p-text>
+              <p-text>SGD 340.00</p-text>
+            </div>
+            <div>
+              <p-text>*GST Inclusive</p-text>
+              <p-text>SGD 25.19</p-text>
+            </div>
+            <div>
+              <p-text>Shipping</p-text>
+              <p-text>SDG 0.00</p-text>
+            </div>
+            <div>
+              <p-text weight="semi-bold">Grand Total</p-text>
+              <p-text weight="semi-bold">SDG 340.00</p-text>
+            </div>
+          </div>
         </div>
-      </section>
-      <section class="checkout__section">
-        <div class="checkout__heading checkout__heading--disabled">
-          <h2>2. Shipping</h2>
-          <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
-        </div>
-      </section>
-      <section class="checkout__section">
-        <div class="checkout__heading checkout__heading--disabled">
-          <h2>3. Payment</h2>
-          <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
-        </div>
-      </section>
-      <section class="checkout__section">
-        <div class="checkout__heading checkout__heading--disabled">
-          <h2>4. Summary</h2>
-          <p-icon name="lock" color="state-disabled" aria="{ 'aria-label': 'Lock icon' }"></p-icon>
-        </div>
-      </section>
+      </aside>
     </div>
-  </main>
-  <aside class="layout__aside">
-    <div class="shopping-cart">
-      <div class="shopping-cart__products">
-        <a href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt=""/>
-          <span>
-            <b>Porsche Bracelet</b>
-            <span>Black, One Size</span>
-          </span>
-          <span>911,00 €</span>
-        </a>
-        <a href="#">
-          <img srcset="/assets/sneaker@2x.webp 2x"
-               src="/assets/sneaker.webp" width="960"
-               height="1080" alt=""/>
-          <span>
-            <b>Porsche Bracelet</b>
-            <span>Black, One Size</span>
-          </span>
-          <span>911,00 €</span>
-        </a>
-        <a href="#">
-          <img srcset="/assets/sneaker@2x.webp 2x"
-               src="/assets/sneaker.webp" width="960"
-               height="1080" alt=""/>
-          <span>
-            <b>Porsche Bracelet</b>
-            <span>Black, One Size</span>
-          </span>
-          <span>911,00 €</span>
-        </a>
-        <a href="#">
-          <img srcset="/assets/backpack@2x.webp 2x"
-               src="/assets/backpack.webp" width="960"
-               height="1080" alt=""/>
-          <span>
-            <b>EvoKNIT® Trainers II</b>
-            <span>Black, One Size</span>
-          </span>
-          <span>911,00 €</span>
-        </a>
-      </div>
-      <div class="shopping-cart__summary">
-        <div>
-          <p-text>Subtotal</p-text>
-          <p-text>SGD 340.00</p-text>
-        </div>
-        <div>
-          <p-text>*GST Inclusive</p-text>
-          <p-text>SGD 25.19</p-text>
-        </div>
-        <div>
-          <p-text>Shipping</p-text>
-          <p-text>SDG 0.00</p-text>
-        </div>
-        <div>
-          <p-text weight="semi-bold">Grand Total</p-text>
-          <p-text weight="semi-bold">SDG 340.00</p-text>
-        </div>
-      </div>
-    </div>
-  </aside>
-</div>
 
-<script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

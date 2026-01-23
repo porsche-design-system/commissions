@@ -35,6 +35,20 @@
       }
     }
   },
+  "css": {
+    "parser": {
+      "cssModules": false,
+      "allowWrongLineComments": false,
+      "tailwindDirectives": true
+    },
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "double"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
   "javascript": {
     "formatter": {
       "jsxQuoteStyle": "double",
@@ -51,9 +65,19 @@
       "unsafeParameterDecoratorsEnabled": true
     }
   },
+  "html": {
+    "formatter": {
+      "enabled": true
+    }
+  },
   "overrides": [
     {
       "includes": ["**/*.css", "**/*.scss"],
+      "css": {
+        "parser": {
+          "cssModules": true
+        }
+      },
       "javascript": {
         "formatter": {
           "quoteStyle": "double"

@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Model (Template)">
+    <title>Model (Template)</title>
+  </head>
+  <body class="bg-canvas">
+    <header
+      class="grid-template before:bg-fade-to-b absolute inset-x-0 z-1 before:pointer-events-none before:absolute before:inset-[0_0_-60px_0] before:-z-1"
+    >
+      <div class="col-wide gap-fluid-md grid min-h-[80px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
+        <div class="gap-static-md flex flex-wrap items-center justify-start">
+          <nav aria-label="Main">
+            <p-button-pure
+              id="nav-button"
+              class="p-static-xs -m-static-xs"
+              theme="dark"
+              type="button"
+              icon="menu-lines"
+              hide-label="{base: true, s: false}"
+              aria="{'aria-haspopup': 'dialog'}"
+            >
+              Menu
+            </p-button-pure>
+            <p-drilldown id="nav-drilldown">
+              <p-drilldown-item identifier="id-1" label="Some Label (1)">
+                <p-drilldown-item identifier="id-1-1" label="Some Label (1-1)">
+                  <p-drilldown-link href="#">Some anchor (1-1)</p-drilldown-link>
+                  <p-drilldown-link href="#">Some anchor (1-1)</p-drilldown-link>
+                </p-drilldown-item>
+                <p-drilldown-link href="#">Some anchor (1)</p-drilldown-link>
+                <p-drilldown-link href="#">Some anchor (1)</p-drilldown-link>
+                <p-drilldown-link href="#">Some anchor (1)</p-drilldown-link>
+              </p-drilldown-item>
+              <p-drilldown-item identifier="id-2" label="Some Label (2)">
+                <p-drilldown-link href="#">Some anchor (2)</p-drilldown-link>
+                <p-drilldown-link href="#">Some anchor (2)</p-drilldown-link>
+                <p-drilldown-link href="#">Some anchor (2)</p-drilldown-link>
+              </p-drilldown-item>
+              <p-drilldown-item identifier="id-3" label="Some Label (3)">
+                <p-drilldown-link href="#">Some anchor (3)</p-drilldown-link>
+                <p-drilldown-link href="#">Some anchor (3)</p-drilldown-link>
+              </p-drilldown-item>
+            </p-drilldown>
+          </nav>
+        </div>
+        <p-crest class="sm:hidden" href="#"></p-crest>
+        <p-wordmark class="max-sm:hidden" theme="dark" href="#"></p-wordmark>
+        <div class="gap-static-md flex flex-wrap items-center justify-end">
+          <p-button-pure
+            class="p-static-xs -m-static-xs"
+            title="Search"
+            theme="dark"
+            type="button"
+            icon="search"
+            hide-label="true"
+          >
+            Search
+          </p-button-pure>
+          <p-button-pure
+            class="p-static-xs -m-static-xs"
+            title="User"
+            theme="dark"
+            type="button"
+            icon="user"
+            hide-label="true"
+          >
+            User
+          </p-button-pure>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid-template gap-y-0 hyphens-none">
+      <section
+        aria-label="hero section"
+        class="col-full bg-canvas-dark after:col-full after:h-fill after:hero-gradient max-h-[calc(100svh + var(--spacing-fluid-md))] row-span-4 grid auto-rows-auto grid-cols-subgrid [grid-template-rows:minmax(120px,1fr)_repeat(3,auto)] gap-y-0 pb-[var(--spacing-fluid-2xl)] after:row-start-2 after:row-end-4 after:block after:content-['']"
+      >
+        <div class="col-full row-span-3 row-start-1">
+          <picture>
+            <source
+              srcset="/assets/model-black-edition/model-cayenne-hero-large.jpg"
+              media="(width >= 700px)"
+              class="h-full w-full object-cover"
+            >
+            <source
+              srcset="/assets/model-black-edition/model-cayenne-hero-small.webp"
+              media="(width < 700px)"
+              class="h-full w-full object-cover"
+            >
+            <img
+              src="/assets/model-black-edition/model-cayenne-hero-large.jpg"
+              alt=""
+              class="h-full w-full object-cover"
+            >
+          </picture>
+        </div>
+        <h1
+          class="col-basic prose-display-md text-canvas z-1 row-start-2 row-end-3 max-w-[20ch] place-self-center pt-[var(--spacing-fluid-xl)] text-center"
+        >
+          Cayenne Black
+          <br>
+          Edition models.
+        </h1>
+        <p
+          class="dark col-basic prose-text-lg text-contrast-high z-1 row-start-3 row-end-5 pt-[var(--spacing-fluid-md)] text-center"
+        >
+          Black Edition stands for selected Porsche models with extended standard equipment and accentuating details in
+          Black (high-gloss).
+        </p>
+      </section>
+
+      <section
+        aria-label="tab section"
+        class="col-full shadow-medium bg-canvas sticky top-0 z-300 grid grid-cols-subgrid"
+      >
+        <div class="col-basic pb-fluid-sm pt-fluid-md">
+          <p-tabs-bar active-tab-index="0">
+            <a>Model selection</a>
+            <a>Test drive</a>
+            <a>Exterior</a>
+            <a>Interior</a>
+          </p-tabs-bar>
+        </div>
+      </section>
+
+      <section
+        aria-label="content section"
+        class="col-full mt-fluid-xl mb-fluid-2xl bg-canvas-dark before:bg-canvas after:bg-canvas relative row-span-4 grid grid-cols-subgrid grid-rows-subgrid before:absolute before:inset-0 before:z-1 before:row-start-1 before:row-end-2 before:h-[70%] before:w-full before:content-[''] after:absolute after:bottom-0 after:z-1 after:row-start-4 after:row-end-5 after:h-[50%] after:w-full after:content-['']"
+      >
+        <div class="col-basic z-3 row-span-2 aspect-16/9 w-full place-self-stretch">
+          <div class="h-full w-full">
+            <div class="h-full w-full will-change-transform scale-target">
+              <img
+                src="/assets/model-black-edition/model-cayenne-1.jpg"
+                alt="model image 1"
+                class="h-full w-full rounded-xl object-cover"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-basic pt-fluid-lg pb-fluid-2xl sm:col-start-basic sm:col-span-5">
+          <div class="relative h-full w-full">
+            <div class="will-change-transform float-target-2">
+              <h2 class="prose-display-sm text-canvas rounded-lg">
+                When it comes to equipment, the defining colour is Black.
+              </h2>
+              <p class="prose-text-md text-canvas mt-fluid-md rounded-lg ">
+                The Cayenne Black Edition models express sportiness and dynamism primarily through their attractive
+                equipment. When choosing exterior and interior colours, there are of course many other options besides
+                Black.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="z-3 col-start-5 col-span-full transform sm:-col-start-10 sm:-col-end-3 sm:row-start-3 sm:row-end-5">
+          <div class="relative h-full w-full">
+            <div class="will-change-transform float-target-1">
+              <img
+                src="/assets/model-black-edition/model-cayenne-2.png"
+                alt="model image 2"
+                class="rounded-md object-cover h-full w-full"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="z-2 col-span-5 col-start-1 sm:col-span-8 sm:col-start-5">
+          <img
+            src="/assets/model-black-edition/model-cayenne-3.png"
+            alt="model image 2"
+            class="rounded-md object-cover h-full w-full"
+          >
+        </div>
+      </section>
+
+      <section aria-label="model section" class="col-full grid grid-cols-subgrid pt-[100px] pb-[150px]">
+        <div class="col-basic py-fluid-lg gap-fluid-md flex flex-col text-center">
+          <h2 class="prose-heading-2xl">One edition, many models.</h2>
+          <p class="prose-text-sm">Which Cayenne Black Edition model are you most excited about?</p>
+        </div>
+
+        <p-tabs-bar class="col-basic pb-fluid-md self-center" active-tab-index="0">
+          <button type="button">SUV</button>
+          <button type="button">Coupé</button>
+        </p-tabs-bar>
+
+        <p-carousel class="col-full" slides-per-page="auto" pagination="false">
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px] flex-col">
+            <img
+              src="/assets/model-black-edition/model-cayenne-suv-1.png"
+              alt="Cayenne Black Edition"
+              class="w-full object-cover"
+            >
+
+            <h2 class="prose-heading-md">Cayenne Black Edition</h2>
+
+            <h3 class="prose-text-sm text-contrast-high">Power output: 260 kW/353 PS¹</h3>
+
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Combined fuel consumption: 11.7 - 11.0 l/100 km,
+              combined CO₂ emissions: 267 - 249 g/km
+            </p>
+
+            <div class="mt-fluid-sm">
+              <p-button>Configure yours </p-button>
+            </div>
+          </div>
+
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px]  flex-col">
+            <img
+              src="/assets/model-black-edition/model-cayenne-suv-1.png"
+              alt="Cayenne SUV"
+              class="w-full object-cover"
+            >
+
+            <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
+
+            <h3 class="prose-text-sm text-contrast-high">Power output: 260 kW/353 PS¹</h3>
+
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Weighted combined fuel consumption: 4.4 - 4.1 l/100 km,
+              weighted combined energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined CO₂ emissions: 101 - 93
+              g/km combined fuel consumption with depleted battery: 10.5 - 10.0 l/100 km
+            </p>
+
+            <div aria-label="button container" class="mt-fluid-sm">
+              <p-button>Configure yours </p-button>
+            </div>
+          </div>
+
+          <div class="p-fluid-xs gap-fluid-xs flex w-[400px]  flex-col">
+            <img
+              src="/assets/model-black-edition/model-cayenne-suv-1.png"
+              alt="Cayenne SUV"
+              class="w-full object-cover"
+            >
+
+            <h2 class="prose-heading-md">Cayenne E-Hybrid Black Edition</h2>
+
+            <h3 class="prose-text-sm text-contrast-high">Power output: 260 kW/353 PS¹</h3>
+
+            <p class="prose-text-2xs text-contrast-high">
+              ¹Power output up to (kW)/Power output up to (PS). Weighted combined fuel consumption: 4.4 - 4.1 l/100 km,
+              weighted combined energy consumption: 19.7 - 19.3 kWh/100 km, weighted combined CO₂ emissions: 101 - 93
+              g/km combined fuel consumption with depleted battery: 10.5 - 10.0 l/100 km
+            </p>
+
+            <div class="mt-fluid-sm">
+              <p-button>Configure yours </p-button>
+            </div>
+          </div>
+        </p-carousel>
+      </section>
+
+      <section class="col-full" aria-label="cayenne showcase image">
+        <img
+          src="/assets/model-black-edition/model-cayenne-4.png"
+          alt="model cta image"
+          class="h-full w-full rounded-xl object-cover"
+        >
+      </section>
+
+      <section class="col-full py-[150px]" aria-label="exterior highlights">
+        <p-carousel
+          align-header="center"
+          heading-size="xx-large"
+          width="extended"
+          class="mt-fluid-md mb-fluid-lg"
+          style="--p-hyphens: none"
+          slides-per-page="auto"
+        >
+          <h2 slot="heading">Exterior highlights.</h2>
+          <p slot="description">
+            A perfect match with any exterior colour: Selected accentuating details in Black (high-gloss).
+          </p>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="More striking appearance"
+            compact="true"
+            class="h-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-1.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              The SportDesign front end of the Cayenne Black Edition models and the SportDesign package for the Cayenne
+              S models provide even more expressiveness.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="RS Spyder Design wheels."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-2.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              Inspired by motor racing: The 21-inch RS Spyder Design wheels, painted in Black (high-gloss) with polished
+              cross-sectional areas and a Porsche Crest in colour.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Accentuating details in Black."
+            compact="true"
+            class="h-[650px] w-[410px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-3.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              Accentuating details in Black (high-gloss) including the exterior mirrors, the side window trim and the
+              lettering lend the exterior even more dynamism.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="HD-Matrix LED main headlights."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-4.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              Accentuating details in Black (high-gloss) including the exterior mirrors, the side window trim and the
+              lettering lend the exterior even more dynamism.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Panorama Roof System."
+            compact="true"
+            class="h-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-5.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              The Panorama Roof System, with its large glass panels, creates a pleasant light ambiance inside the
+              Cayenne Black Edition SUV models. The privacy glazing of the rear windows protects against unwanted views.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Panorama Roof System."
+            compact="true"
+            class="h-[650px] w-[410px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-6.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              The Panorama Roof System, with its large glass panels, creates a pleasant light ambiance inside the
+              Cayenne Black Edition SUV models. The privacy glazing of the rear windows protects against unwanted views.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Panorama Roof System."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-exterior-7.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-xs">
+              The Panorama Roof System, with its large glass panels, creates a pleasant light ambiance inside the
+              Cayenne Black Edition SUV models. The privacy glazing of the rear windows protects against unwanted views.
+            </p-text>
+          </p-link-tile>
+        </p-carousel>
+      </section>
+
+      <section class="col-full" aria-label="cayenne interior showcase image">
+        <img
+          src="/assets/model-black-edition/model-cayenne-5.png"
+          alt="model cta image"
+          class="h-full w-full rounded-xl object-cover"
+        >
+      </section>
+
+      <section class="col-full py-[150px]" aria-label="interior highlights">
+        <p-carousel
+          align-header="center"
+          heading-size="xx-large"
+          width="extended"
+          class="mt-fluid-md mb-fluid-lg"
+          style="--p-hyphens: none"
+          slides-per-page="auto"
+        >
+          <h1 slot="heading">Interior highlights.</h1>
+          <p slot="description">
+            The equipment in the Cayenne Black Edition models offers not only a sporty atmosphere but also a high level
+            of comfort.
+          </p>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Sporty elegance."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-interior-1.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              A clear statement of comfort and style: Comfort seats in the front (14-way, electric) with memory package
+              and embossed Porsche Crest on the headrests.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Comfort seats."
+            compact="true"
+            class="h-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-interior-2.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              A clear statement of comfort and style: Comfort seats in the front (14-way, electric) with memory package
+              and embossed Porsche Crest on the headrests.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="GT sports steering wheel."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-interior-3.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              Optimised for sporty driving: The heated multifunction sports steering wheel in GT design with a smooth
+              Black leather steering wheel rim.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="BOSE® Surround Sound System."
+            compact="true"
+            class="h-[650px] w-[410px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-interior-4.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              The BOSE® Surround Sound System features 14 amplifier channels. The total output: 710 watts. 14
+              loudspeakers including a separate subwoofer ensure a balanced, faithfully reproduced acoustic pattern.
+            </p-text>
+          </p-link-tile>
+
+          <p-link-tile
+            href="https://porsche.com"
+            description="Driving comfort."
+            compact="true"
+            class="h-[650px] w-[650px]"
+            size="large"
+            label="Learn more"
+          >
+            <img src="/assets/model-black-edition/model-cayenne-interior-5.webp" alt="Some image description">
+            <p-text slot="footer" theme="dark" class="pt-fluid-sm">
+              Sporty or comfortable: The adaptive air suspension adapts to your preference and driving mode. Adaptive
+              cruise control and Lane Change Assist help you reach your destination with greater ease and comfort.
+            </p-text>
+          </p-link-tile>
+        </p-carousel>
+      </section>
+
+      <section class="col-extended pb-fluid-lg">
+        <img
+          src="/assets/model-black-edition/model-cayenne-6.png"
+          alt="model cta image"
+          class="h-full w-full rounded-xl object-cover"
+        >
+      </section>
+
+      <section class="col-full pt-[150px] pb-[200px]" aria-label="black edition extended package">
+        <p-carousel align-header="center" heading-size="xx-large" width="extended" class="mb-fluid-lg">
+          <h2 slot="heading">Black Edition Extended Package.</h2>
+          <p slot="description">
+            Customise your Black Edition model even further with the optional package from Porsche Exclusive Manufaktur.
+          </p>
+
+          <div class="grid md:grid-cols-2">
+            <img
+              src="/assets/model-black-edition/model-cayenne-package-3.png"
+              alt="model cta image"
+              class="h-full w-full rounded-xl object-cover"
+            >
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
+              <h2 class="prose-heading-lg">'Black Edition' lettering.</h2>
+              <p class="hyphens-auto">
+                The 'Black Edition' side lettering in Black on the front doors adds a special accentuating detail.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 ">
+            <img
+              src="/assets/model-black-edition/model-cayenne-package-2.png"
+              alt="model cta image"
+              class="h-full w-full rounded-xl object-cover"
+            >
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
+              <h2 class="prose-heading-lg">Door sill guards.</h2>
+              <p class="hyphens-auto">
+                Making the Black Edition unmistakable even in the dark: Front door sill guards with 'Black Edition'
+                lettering illuminated in White. The brushed aluminium guards bear the model logo on the back.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 ">
+            <img
+              src="/assets/model-black-edition/model-cayenne-package-1.png"
+              alt="model cta image"
+              class="h-full w-full rounded-xl object-cover"
+            >
+
+            <div class="py-fluid-lg md:px-fluid-lg md:gap-fluid-sm flex flex-col justify-center">
+              <h2 class="prose-heading-lg">Driver's key with key pouch.</h2>
+              <p class="hyphens-auto">
+                Completing the Black Edition: Set of two driver's keys painted in Black (high-gloss) with 'Black
+                Edition' lettering and exclusive key pouch.
+              </p>
+            </div>
+          </div>
+        </p-carousel>
+      </section>
+
+      <section class="col-basic pt-fluid-xl pb-fluid-lg mb-xl text-center" aria-label="cta banner section">
+        <h2 class="prose-heading-lg">Consumption and Emissions.</h2>
+        <p class="text-contrast-medium mt-fluid-sm hyphens-auto">
+          <span class="font-bold">Cayenne E-Hybrid Coupé Black Edition:</span>
+          Fuel consumption (weighted) combined (model range): 4.4 – 4.0 l/100 km, Electric energy consumption (weighted)
+          combined (model range): 31.2 – 19.2 kWh/100 km, CO₂-emissions (weighted) combined (model range): 100 – 91
+          g/km, Fuel consumption (sustaining) combined (model range): 10.5 – 9.9 l/100 km
+          <span class="font-bold">Cayenne E-Hybrid Black Edition:</span>Fuel consumption (weighted) combined (model
+          range): 4.4 – 4.1 l/100 km, Electric energy consumption (weighted) combined (model range): 31.4 – 19.3 kWh/100
+          km, CO₂-emissions (weighted) combined (model range): 101 – 93 g/km, Fuel consumption (sustaining) combined
+          (model range): 10.5 – 10.0 l/100 km
+          <span
+            class="font-bold"
+            >Cayenne Black Edition:</span
+          >Fuel consumption combined (model range): 11.7 –11.0 l/100 km, CO₂-emissions combined (model range): 267 – 249
+          g/km
+          <span class="font-bold">Cayenne Coupé Black Edition:</span>Fuel consumption combined (model range): 11.7 –
+          10.9 l/100 km, CO₂-emissions combined (model range): 266 – 247 g/km
+          <span class="font-bold">Cayenne S E-Hybrid Coupé Black Edition: </span>
+          Fuel consumption (weighted) combined (model range): 4.5 – 4.0 l/100 km, Electric energy consumption (weighted)
+          combined (model range): 31.8 – 19.2 kWh/100 km, CO₂-emissions (weighted) combined (model range): 103 – 92
+          g/km, Fuel consumption (sustaining) combined (model range): 10.6 – 10.0 l/100 km
+          <span
+            class="font-bold"
+            >Cayenne S E-Hybrid Black Edition:</span
+          >Fuel consumption (weighted) combined (model range): 4.5 – 4.1 l/100 km, Electric energy consumption
+          (weighted) combined (model range): 31.9 – 19.3 kWh/100 km, CO₂-emissions (weighted) combined (model range):
+          103 – 93 g/km, Fuel consumption (sustaining) combined (model range): 10.6 – 10.0 l/100 km
+        </p>
+      </section>
+    </main>
+
+    <footer class="grid-template py-fluid-lg bg-canvas-dark dark">
+      <h2 class="sr-only">Porsche Landingpage Footer</h2>
+      <form
+        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-fluid-md grid md:grid-cols-[repeat(3,minmax(0,1fr))] "
+        action="#"
+        onsubmit="return false;"
+        aria-label="Change your delivery country"
+      >
+        <p-select
+          class="[--p-select-background-color:transparent]"
+          name="region"
+          label="Change your delivery country"
+          value="germany"
+          theme="dark"
+        >
+          <p-optgroup label="Asia">
+            <p-select-option value="china">
+              <img src="/assets/flags/china.svg" alt="">
+              China
+            </p-select-option>
+            <p-select-option value="japan">
+              <img src="/assets/flags/japan.svg" alt="">
+              Japan
+            </p-select-option>
+            <p-select-option value="south-korea">
+              <img src="/assets/flags/south-korea.svg" alt="">
+              South Korea
+            </p-select-option>
+          </p-optgroup>
+          <p-optgroup label="Europe">
+            <p-select-option value="austria">
+              <img src="/assets/flags/austria.svg" alt="">
+              Austria
+            </p-select-option>
+            <p-select-option value="france">
+              <img src="/assets/flags/france.svg" alt="">
+              France
+            </p-select-option>
+            <p-select-option value="germany">
+              <img src="/assets/flags/germany.svg" alt="">
+              Germany
+            </p-select-option>
+            <p-select-option value="great-britain">
+              <img src="/assets/flags/great-britain.svg" alt="">
+              Great Britain
+            </p-select-option>
+            <p-select-option value="italy">
+              <img src="/assets/flags/italy.svg" alt="">
+              Italy
+            </p-select-option>
+            <p-select-option value="portugal">
+              <img src="/assets/flags/portugal.svg" alt="">
+              Portugal
+            </p-select-option>
+            <p-select-option value="spain">
+              <img src="/assets/flags/spain.svg" alt="">
+              Spain
+            </p-select-option>
+          </p-optgroup>
+          <p-optgroup label="North America">
+            <p-select-option value="canada">
+              <img src="/assets/flags/canada.svg" alt="">
+              Canada
+            </p-select-option>
+            <p-select-option value="usa">
+              <img src="/assets/flags/usa.svg" alt="">
+              USA
+            </p-select-option>
+          </p-optgroup>
+        </p-select>
+      </form>
+      <nav
+        aria-label="Footer"
+        class="col-extended xs:grid-cols-[repeat(2,minmax(0,1fr))] gap-x-fluid-md gap-y-fluid-lg mt-fluid-sm mb-fluid-lg grid md:grid-cols-[repeat(3,minmax(0,1fr))]"
+      >
+        <div class="gap-fluid-sm flex flex-col">
+          <h3 id="heading-footer-1" class="prose-text-2xs text-contrast-medium">Legal Services</h3>
+          <ul class="gap-fluid-sm grid">
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Terms and Conditions</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Privacy Notice </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">California Privacy</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Imprint and Legal Notice</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Accessibility Statement</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Open Source Software Notice</p-link-pure>
+            </li>
+          </ul>
+        </div>
+        <div class="gap-fluid-sm flex flex-col">
+          <h3 class="prose-text-2xs text-contrast-medium">Porsche Design</h3>
+          <ul class="gap-fluid-sm grid">
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Press </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Jobs and Careers </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Studio F. A. Porsche</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Data Privacy </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Timepieces Warranty & Service</p-link-pure>
+            </li>
+          </ul>
+        </div>
+        <div class="gap-fluid-sm flex flex-col">
+          <h3 class="prose-text-2xs text-contrast-medium">Online Services</h3>
+          <ul class="gap-fluid-sm grid">
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">My Orders </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Porsche Homepage </p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Porsche Car Configurator</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Porsche New and Pre-Owned Vehicles</p-link-pure>
+            </li>
+            <li>
+              <p-link-pure href="#" icon="none" theme="dark">Compare Porsche models</p-link-pure>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <article
+        aria-label="Social media and payment service providers"
+        class="col-extended gap-x-fluid-lg gap-y-static-lg grid items-center sm:grid-cols-[auto_minmax(0,1fr)]"
+      >
+        <div class="gap-fluid-md flex">
+          <p-link-pure
+            href="#"
+            icon="logo-instagram"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="dark"
+          >
+            Instagram
+          </p-link-pure>
+          <p-link-pure
+            href="#"
+            icon="logo-facebook"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="dark"
+          >
+            Facebook
+          </p-link-pure>
+          <p-link-pure
+            href="#"
+            icon="logo-x"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="dark"
+          >
+            X
+          </p-link-pure>
+          <p-link-pure
+            href="#"
+            icon="logo-pinterest"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="dark"
+          >
+            Pinterest
+          </p-link-pure>
+          <p-link-pure
+            href="#"
+            icon="logo-youtube"
+            hide-label="true"
+            size="medium"
+            class="p-static-sm -m-static-sm"
+            theme="dark"
+          >
+            YouTube
+          </p-link-pure>
+        </div>
+        <div class="gap-fluid-xs flex">
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/hskK1tzN0CS8cdGIttugu/883187acee1c66e7d4593141f3e659c3/Visa.svg"
+              alt="visa"
+            >
+          </a>
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/34g5LXmVhTzseATJL7CLFj/501eba81ff4787357277faff4ea04f4d/Master__1_.svg"
+              alt="master card"
+            >
+          </a>
+          <a href="#" class="outline-focus rounded-sm outline-offset-2 focus-visible:outline">
+            <img
+              src="https://images.ctfassets.net/1oyzmkwpf3d5/4NeGQiGeYT5VZ3G591li1k/c12d0cc589f608a6db3d3e7d2aae0255/PayPal.svg"
+              alt="paypal"
+            >
+          </a>
+        </div>
+      </article>
+      <article aria-label="Consumption and emission information" class="col-extended gap-fluid-md mt-fluid-md grid">
+        <p class="prose-text-2xs text-contrast-medium">
+          The consumption and emission values stated were determined in accordance with the legally prescribed
+          measurement procedures. Since September 1, 2017, certain new vehicles have been type-approved in accordance
+          with the Worldwide Harmonized Vehicles Test Procedure (WLTP), a more realistic test procedure for measuring
+          fuel/electricity consumption and CO₂ emissions. Since September 1, 2018, the WLTP has replaced the New
+          European Driving Cycle (NEDC). Due to the more realistic testing conditions, the fuel/electricity consumption
+          and CO₂ emission values measured according to the WLTP are, in many cases, higher than those measured
+          according to the NEDC. As a result, vehicle taxation may change accordingly starting September 1, 2018.
+          Further information on the differences between WLTP and NEDC can be found at www.porsche.com/wltp.
+        </p>
+        <p class="prose-text-2xs text-contrast-medium">
+          Currently, regardless of the applied type-approval procedure, it remains mandatory to communicate NEDC values.
+          The additional disclosure of WLTP values may be done on a voluntary basis until their mandatory use. In the
+          case of new vehicles type-approved according to WLTP, NEDC values are derived from WLTP values and stated
+          during the transitional period. Where NEDC values are stated as ranges, they do not refer to a specific
+          individual vehicle and are not part of the offer. They serve solely for comparison purposes between different
+          vehicle types. Optional equipment and accessories (attachments, tire formats, etc.) can alter relevant vehicle
+          parameters such as weight, rolling resistance, and aerodynamics, and can influence fuel/electricity
+          consumption, CO₂ emissions, and performance values of a vehicle in addition to weather and traffic conditions
+          and individual driving behavior. Further information on the official fuel/electricity consumption and official
+          specific CO₂ emissions of new passenger cars can be found in the "Guide on fuel consumption, CO₂ emissions and
+          electricity consumption of new passenger cars," available free of charge at all sales outlets and from DAT.
+        </p>
+        <p class="prose-text-2xs text-contrast-medium">
+          Neither the number of active users of this Porsche Connect Store nor the number of active users of the App
+          Center available in the connected vehicle (Macan electric) upon activation of the Connect services exceeds the
+          threshold of 45 million active users in the European Union as defined by the Digital Services Act (DSA).
+          Important information regarding fully electric Porsche models can be found here.
+        </p>
+      </article>
+      <div class="col-extended gap-fluid-md mt-fluid-md grid justify-items-center">
+        <p-wordmark theme="dark"></p-wordmark>
+        <p class="prose-text-2xs text-contrast-medium">© 2025 Porsche Sales and Marketplace, Inc.</p>
+        <ul class="gap-fluid-md flex flex-wrap justify-center">
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="dark">Legal notice</p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="dark">Privacy notice</p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="dark">
+              Accessibility Statement
+            </p-link-pure>
+          </li>
+          <li>
+            <p-link-pure href="#" icon="none" size="x-small" underline="true" theme="dark">
+              Open Source Software Notice
+            </p-link-pure>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

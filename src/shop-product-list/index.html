@@ -1,645 +1,969 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Porsche Shop (Template)</title>
-</head>
-<body>
-<div id="app">
-  <header class="header">
-    <div class="header__nav">
-      <div class="header__part">
-        <p-button-pure id="button-menu" icon="menu-lines"
-                       hide-label="{base: true, xs: false}"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }">Menu
-        </p-button-pure>
-        <p-button-pure id="button-search" icon="search" hide-label="true"
-                       type="button" aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }">Search
-        </p-button-pure>
-      </div>
-      <p-wordmark href="#"></p-wordmark>
-      <p-crest href="#"></p-crest>
-      <div class="header__part">
-        <p-link-pure href="#" icon="user" hide-label="true">Account</p-link-pure>
-        <p-link-pure href="#" icon="heart" hide-label="true">Favorites</p-link-pure>
-        <p-link-pure href="#" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Shop (Template)</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__nav">
+          <div class="header__part">
+            <p-button-pure
+              id="button-menu"
+              icon="menu-lines"
+              hide-label="{base: true, xs: false}"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Main navigation menu' }"
+            >
+              Menu
+            </p-button-pure>
+            <p-button-pure
+              id="button-search"
+              icon="search"
+              hide-label="true"
+              type="button"
+              aria="{ 'aria-haspopup': 'dialog', 'aria-label': 'Search' }"
+            >
+              Search
+            </p-button-pure>
+          </div>
+          <p-wordmark href="#"></p-wordmark>
+          <p-crest href="#"></p-crest>
+          <div class="header__part">
+            <p-link-pure href="#" icon="user" hide-label="true">Account</p-link-pure>
+            <p-link-pure href="#" icon="heart" hide-label="true">Favorites</p-link-pure>
+            <p-link-pure href="#" icon="shopping-cart" hide-label="true">Shopping cart</p-link-pure>
+          </div>
+        </div>
+        <nav class="header__categories" aria-label="Category navigation">
+          <p-tabs-bar active-tab-index="0">
+            <a href="#" aria-current="page">Women</a>
+            <a href="#">Men</a>
+            <a href="#">Accessories</a>
+            <a href="#">Model Cars</a>
+            <a href="#">Porsche Originals</a>
+            <a href="#">Porsche Design</a>
+          </p-tabs-bar>
+        </nav>
+      </header>
+      <main>
+        <!--    <nav class="breadcrumb" aria-label="Breadcrumb navigation">-->
+        <!--      <ol>-->
+        <!--        <li><p-link-pure href="#" size="x-small" underline="true" icon="none">Home</p-link-pure></li>-->
+        <!--        <li class="breadcrumb__divider" role="presentation" aria-hidden="true">/</li>-->
+        <!--        <li><p-link-pure href="#" size="x-small" underline="true" icon="none">Woman</p-link-pure></li>-->
+        <!--        <li class="breadcrumb__divider" role="presentation" aria-hidden="true">/</li>-->
+        <!--        <li><p-link-pure href="#" size="x-small" icon="none" aria="{ 'aria-current': 'page' }" class="breadcrumb&#45;&#45;current">Shoes</p-link-pure></li>-->
+        <!--      </ol>-->
+        <!--    </nav>-->
+        <section class="teaser">
+          <div class="teaser__media">
+            <img
+              srcset="assets/header-woman@2x.webp 2x"
+              src="assets/header-woman.webp"
+              width="1308"
+              height="734"
+              alt="Some alternative text for screen readers describing the image"
+            >
+          </div>
+          <div class="teaser__header">
+            <p-display theme="dark" align="center" size="small" tag="h1">Women</p-display>
+            <p-link-pure href="#" theme="dark" icon="none" underline="true" variant="secondary">
+              See Products
+            </p-link-pure>
+          </div>
+        </section>
+        <section class="products">
+          <div class="products__sort">
+            <p-select-wrapper label="Sort product list" hide-label="true">
+              <select name="sort">
+                <option value="">New Items</option>
+                <option value="">Price up</option>
+                <option value="">Price down</option>
+              </select>
+            </p-select-wrapper>
+          </div>
+          <div class="products__filter">
+            <p-button-pure icon="none" type="button">Remove All</p-button-pure>
+            <p-button
+              variant="secondary"
+              type="button"
+              icon="filter"
+              hide-label="{base: true, s: false }"
+              aria="{ 'aria-haspopup': 'dialog' }"
+              id="button-filter"
+            >
+              Filter (3)
+            </p-button>
+          </div>
+          <div class="products__list">
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Porsche Wappen-Schlüsselanhänger Charging Service"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="T-Shirt Wappen - Essential"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="T-Shirt Unisex - Transformers: Rise of the Beasts x Porsche"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Jacke - Taycan"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Polo-Shirt Wappen - Essential"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Fleecejacke Unisex - MARTINI RACING®"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="T-Shirt - Sport"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Park Unisex - Urban Explorer"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Slides"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Fahrzeugschlüssel"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Seitenwangen im MARTINI RACING® Design"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+            <p-link-tile-product
+              aspect-ratio="{ base: '9:16', xs: '3:4' }"
+              heading="Radnabenabdeckungen in Aurum (seidenglanz) mit monochromem Porsche Wappen"
+              price="1.911,00 €"
+              href="#"
+            >
+              <img
+                srcset="/assets/weekender@2x.webp 2x"
+                src="/assets/weekender.webp"
+                width="960"
+                height="1080"
+                alt="Some alternative text for screen readers describing the image"
+              >
+            </p-link-tile-product>
+          </div>
+          <div class="products__footer">
+            <p-text>Viewing 1 - 50 of 400</p-text>
+            <p-button icon="none" type="button">Show 50 more results</p-button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"></footer>
     </div>
-    <nav class="header__categories" aria-label="Category navigation">
-      <p-tabs-bar active-tab-index="0">
-        <a href="#" aria-current="page">Women</a>
-        <a href="#">Men</a>
-        <a href="#">Accessories</a>
-        <a href="#">Model Cars</a>
-        <a href="#">Porsche Originals</a>
-        <a href="#">Porsche Design</a>
-      </p-tabs-bar>
-    </nav>
-  </header>
-  <main>
-    <!--    <nav class="breadcrumb" aria-label="Breadcrumb navigation">-->
-    <!--      <ol>-->
-    <!--        <li><p-link-pure href="#" size="x-small" underline="true" icon="none">Home</p-link-pure></li>-->
-    <!--        <li class="breadcrumb__divider" role="presentation" aria-hidden="true">/</li>-->
-    <!--        <li><p-link-pure href="#" size="x-small" underline="true" icon="none">Woman</p-link-pure></li>-->
-    <!--        <li class="breadcrumb__divider" role="presentation" aria-hidden="true">/</li>-->
-    <!--        <li><p-link-pure href="#" size="x-small" icon="none" aria="{ 'aria-current': 'page' }" class="breadcrumb&#45;&#45;current">Shoes</p-link-pure></li>-->
-    <!--      </ol>-->
-    <!--    </nav>-->
-    <section class="teaser">
-      <div class="teaser__media">
-        <img srcset="assets/header-woman@2x.webp 2x" src="assets/header-woman.webp" width="1308" height="734"
-             alt="Some alternative text for screen readers describing the image"/>
-      </div>
-      <div class="teaser__header">
-        <p-display theme="dark" align="center" size="small" tag="h1">Women</p-display>
-        <p-link-pure href="#" theme="dark" icon="none" underline="true" variant="secondary">See Products</p-link-pure>
-      </div>
-    </section>
-    <section class="products">
-      <div class="products__sort">
-        <p-select-wrapper label="Sort product list" hide-label="true">
-          <select name="sort">
-            <option value="">New Items</option>
-            <option value="">Price up</option>
-            <option value="">Price down</option>
-          </select>
-        </p-select-wrapper>
-      </div>
-      <div class="products__filter">
-        <p-button-pure icon="none" type="button">Remove All</p-button-pure>
-        <p-button variant="secondary" type="button" icon="filter" hide-label="{base: true, s: false }"
-                  aria="{ 'aria-haspopup': 'dialog' }" id="button-filter">Filter (3)
-        </p-button>
-      </div>
-      <div class="products__list">
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }"
-                             heading="Porsche Wappen-Schlüsselanhänger Charging Service" price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="T-Shirt Wappen - Essential"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }"
-                             heading="T-Shirt Unisex - Transformers: Rise of the Beasts x Porsche" price="1.911,00 €"
-                             href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Jacke - Taycan" price="1.911,00 €"
-                             href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Polo-Shirt Wappen - Essential"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Fleecejacke Unisex - MARTINI RACING®"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="T-Shirt - Sport" price="1.911,00 €"
-                             href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Park Unisex - Urban Explorer"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Slides" price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Fahrzeugschlüssel" price="1.911,00 €"
-                             href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }" heading="Seitenwangen im MARTINI RACING® Design"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-        <p-link-tile-product aspect-ratio="{ base: '9:16', xs: '3:4' }"
-                             heading="Radnabenabdeckungen in Aurum (seidenglanz) mit monochromem Porsche Wappen"
-                             price="1.911,00 €" href="#">
-          <img srcset="/assets/weekender@2x.webp 2x"
-               src="/assets/weekender.webp" width="960"
-               height="1080" alt="Some alternative text for screen readers describing the image"/>
-        </p-link-tile-product>
-      </div>
-      <div class="products__footer">
-        <p-text>Viewing 1 - 50 of 400</p-text>
-        <p-button icon="none" type="button">Show 50 more results</p-button>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"></footer>
-</div>
 
-<p-flyout id="flyout-filter" class="flyout-filter">
-  <!-- Use only one flyout for filter and replace its content dynamically -->
-  <div slot="header">
-    <p-heading tag="h2" size="large">Product Filter</p-heading>
-  </div>
-  <p-accordion heading="Price Range" tag="h3">
-    <div class="flyout-filter__settings">
-      <p-text-field-wrapper label="Minimum Price">
-        <input type="number" name="min-price"/>
+    <p-flyout id="flyout-filter" class="flyout-filter">
+      <!-- Use only one flyout for filter and replace its content dynamically -->
+      <div slot="header">
+        <p-heading tag="h2" size="large">Product Filter</p-heading>
+      </div>
+      <p-accordion heading="Price Range" tag="h3">
+        <div class="flyout-filter__settings">
+          <p-text-field-wrapper label="Minimum Price">
+            <input type="number" name="min-price">
+          </p-text-field-wrapper>
+          <p-text-field-wrapper label="Maximum Price">
+            <input type="number" name="max-price">
+          </p-text-field-wrapper>
+        </div>
+      </p-accordion>
+      <p-accordion heading="Gender" tag="h3">
+        <div class="flyout-filter__settings">
+          <p-checkbox-wrapper label="Women">
+            <input type="checkbox" name="woman">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Men">
+            <input type="checkbox" name="man">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Kids">
+            <input type="checkbox" name="kids">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Divers">
+            <input type="checkbox" name="divers">
+          </p-checkbox-wrapper>
+        </div>
+      </p-accordion>
+      <p-accordion heading="Collection" tag="h3">
+        <div class="flyout-filter__settings">
+          <p-checkbox-wrapper label="Dakar">
+            <input type="checkbox" name="dakar">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Penske Motorsport">
+            <input type="checkbox" name="penske-motorsport">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Transformers">
+            <input type="checkbox" name="transformers">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Racing">
+            <input type="checkbox" name="racong">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="RS 2.7">
+            <input type="checkbox" name="rs-2-7">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Martini Racing">
+            <input type="checkbox" name="martini-racing">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Motorsport">
+            <input type="checkbox" name="motorsport">
+          </p-checkbox-wrapper>
+        </div>
+      </p-accordion>
+      <p-accordion heading="Color" tag="h3">
+        <div class="flyout-filter__settings">
+          <p-checkbox-wrapper label="Blue">
+            <input type="checkbox" name="blue">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Grey">
+            <input type="checkbox" name="grey">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Black">
+            <input type="checkbox" name="black">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="White">
+            <input type="checkbox" name="white">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Red">
+            <input type="checkbox" name="red">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Brown">
+            <input type="checkbox" name="brown">
+          </p-checkbox-wrapper>
+          <p-checkbox-wrapper label="Green">
+            <input type="checkbox" name="green">
+          </p-checkbox-wrapper>
+        </div>
+      </p-accordion>
+      <p-accordion heading="Size" tag="h3">
+        <div class="flyout-filter__settings">
+          <p-segmented-control columns="2" aria-label="Choose a product size">
+            <p-segmented-control-item value="xs">XS</p-segmented-control-item>
+            <p-segmented-control-item value="s">S</p-segmented-control-item>
+            <p-segmented-control-item value="m">M</p-segmented-control-item>
+            <p-segmented-control-item value="l">L</p-segmented-control-item>
+            <p-segmented-control-item value="xl">XL</p-segmented-control-item>
+            <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
+            <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
+            <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
+            <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
+            <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
+            <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
+            <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
+            <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
+            <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
+          </p-segmented-control>
+        </div>
+      </p-accordion>
+    </p-flyout>
+
+    <p-flyout id="flyout-wishlist" class="flyout-wishlist">
+      <!-- Use only one flyout for wishlist and replace its content dynamically -->
+      <div slot="header">
+        <p-heading tag="h2" size="large">Add to Wishlist</p-heading>
+      </div>
+      <img
+        srcset="/assets/weekender@2x.webp 2x"
+        src="/assets/weekender.webp"
+        width="960"
+        height="1080"
+        alt="Some alternative text for screen readers describing the image"
+      >
+      <div class="flyout-wishlist__header">
+        <p-heading tag="h3" size="large">EviKnit® Trainers II</p-heading>
+        <p-text weight="semi-bold">SGD 680</p-text>
+        <p-text>
+          Tongueless sports shoe in a modern sock-shoe style. Exclusive design using PUMA EvoKNIT® knit with a NITRO
+          FOAM® sole for dynamism, cushioning and stability.
+        </p-text>
+      </div>
+      <div class="flyout-wishlist__color">
+        <h4>
+          Color: <span>Black</span>
+        </h4>
+        <div class="flyout-wishlist__color-swatch"></div>
+      </div>
+      <div class="flyout-wishlist__size">
+        <h4>
+          Size: <span>-</span>
+        </h4>
+        <p-segmented-control columns="2" aria-label="Choose a product size">
+          <p-segmented-control-item value="xs">XS</p-segmented-control-item>
+          <p-segmented-control-item value="s">S</p-segmented-control-item>
+          <p-segmented-control-item value="m">M</p-segmented-control-item>
+          <p-segmented-control-item value="l">L</p-segmented-control-item>
+          <p-segmented-control-item value="xl">XL</p-segmented-control-item>
+          <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
+          <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
+          <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
+          <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
+          <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
+          <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
+          <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
+          <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
+          <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
+        </p-segmented-control>
+        <p-button-pure type="button" icon="information" id="button-size-chart">View size chart</p-button-pure>
+      </div>
+      <div class="flyout-wishlist__footer">
+        <p-button type="button">Add to wishlist</p-button>
+      </div>
+    </p-flyout>
+
+    <p-flyout id="flyout-search" class="flyout-search">
+      <div slot="header">
+        <p-heading tag="h2" size="large">Search products</p-heading>
+      </div>
+      <p-text-field-wrapper label="Search for products" hide-label="true">
+        <input type="search" name="search" placeholder="e.g. Sneaker, T-Shirt,…">
       </p-text-field-wrapper>
-      <p-text-field-wrapper label="Maximum Price">
-        <input type="number" name="max-price"/>
-      </p-text-field-wrapper>
-    </div>
-  </p-accordion>
-  <p-accordion heading="Gender" tag="h3">
-    <div class="flyout-filter__settings">
-      <p-checkbox-wrapper label="Women">
-        <input type="checkbox" name="woman"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Men">
-        <input type="checkbox" name="man"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Kids">
-        <input type="checkbox" name="kids"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Divers">
-        <input type="checkbox" name="divers"/>
-      </p-checkbox-wrapper>
-    </div>
-  </p-accordion>
-  <p-accordion heading="Collection" tag="h3">
-    <div class="flyout-filter__settings">
-      <p-checkbox-wrapper label="Dakar">
-        <input type="checkbox" name="dakar"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Penske Motorsport">
-        <input type="checkbox" name="penske-motorsport"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Transformers">
-        <input type="checkbox" name="transformers"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Racing">
-        <input type="checkbox" name="racong"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="RS 2.7">
-        <input type="checkbox" name="rs-2-7"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Martini Racing">
-        <input type="checkbox" name="martini-racing"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Motorsport">
-        <input type="checkbox" name="motorsport"/>
-      </p-checkbox-wrapper>
-    </div>
-  </p-accordion>
-  <p-accordion heading="Color" tag="h3">
-    <div class="flyout-filter__settings">
-      <p-checkbox-wrapper label="Blue">
-        <input type="checkbox" name="blue"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Grey">
-        <input type="checkbox" name="grey"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Black">
-        <input type="checkbox" name="black"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="White">
-        <input type="checkbox" name="white"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Red">
-        <input type="checkbox" name="red"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Brown">
-        <input type="checkbox" name="brown"/>
-      </p-checkbox-wrapper>
-      <p-checkbox-wrapper label="Green">
-        <input type="checkbox" name="green"/>
-      </p-checkbox-wrapper>
-    </div>
-  </p-accordion>
-  <p-accordion heading="Size" tag="h3">
-    <div class="flyout-filter__settings">
-      <p-segmented-control columns="2" aria-label="Choose a product size">
-        <p-segmented-control-item value="xs">XS</p-segmented-control-item>
-        <p-segmented-control-item value="s">S</p-segmented-control-item>
-        <p-segmented-control-item value="m">M</p-segmented-control-item>
-        <p-segmented-control-item value="l">L</p-segmented-control-item>
-        <p-segmented-control-item value="xl">XL</p-segmented-control-item>
-        <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
-        <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
-        <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
-        <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
-        <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
-        <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
-        <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
-        <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
-        <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
-      </p-segmented-control>
-    </div>
-  </p-accordion>
-</p-flyout>
+      <div class="flyout-search__results">
+        <a href="#">
+          <img srcset="/assets/weekender@2x.webp 2x" src="/assets/weekender.webp" width="960" height="1080" alt="">
+          <b>Weekender</b>
+          911,00 €
+        </a>
+        <a href="#">
+          <img srcset="/assets/sneaker@2x.webp 2x" src="/assets/sneaker.webp" width="960" height="1080" alt="">
+          <b>Sneaker</b>
+          911,00 €
+        </a>
+        <a href="#">
+          <img srcset="/assets/backpack@2x.webp 2x" src="/assets/backpack.webp" width="960" height="1080" alt="">
+          <b>Porsche Wappen-Schlüsselanhänger Charging Service</b>
+          911,00 €
+        </a>
+      </div>
+    </p-flyout>
 
-<p-flyout id="flyout-wishlist" class="flyout-wishlist">
-  <!-- Use only one flyout for wishlist and replace its content dynamically -->
-  <div slot="header">
-    <p-heading tag="h2" size="large">Add to Wishlist</p-heading>
-  </div>
-  <img srcset="/assets/weekender@2x.webp 2x"
-       src="/assets/weekender.webp" width="960"
-       height="1080" alt="Some alternative text for screen readers describing the image"/>
-  <div class="flyout-wishlist__header">
-    <p-heading tag="h3" size="large">EviKnit® Trainers II</p-heading>
-    <p-text weight="semi-bold">SGD 680</p-text>
-    <p-text>
-      Tongueless sports shoe in a modern sock-shoe style. Exclusive design using PUMA EvoKNIT® knit with a NITRO FOAM®
-      sole for dynamism, cushioning and stability.
-    </p-text>
-  </div>
-  <div class="flyout-wishlist__color">
-    <h4>Color: <span>Black</span></h4>
-    <div class="flyout-wishlist__color-swatch"></div>
-  </div>
-  <div class="flyout-wishlist__size">
-    <h4>Size: <span>-</span></h4>
-    <p-segmented-control columns="2" aria-label="Choose a product size">
-      <p-segmented-control-item value="xs">XS</p-segmented-control-item>
-      <p-segmented-control-item value="s">S</p-segmented-control-item>
-      <p-segmented-control-item value="m">M</p-segmented-control-item>
-      <p-segmented-control-item value="l">L</p-segmented-control-item>
-      <p-segmented-control-item value="xl">XL</p-segmented-control-item>
-      <p-segmented-control-item value="xxl">XXL</p-segmented-control-item>
-      <p-segmented-control-item value="eu40">EU 40</p-segmented-control-item>
-      <p-segmented-control-item value="eu41">EU 41</p-segmented-control-item>
-      <p-segmented-control-item value="one-size">One Size</p-segmented-control-item>
-      <p-segmented-control-item value="eu42">EU 42</p-segmented-control-item>
-      <p-segmented-control-item value="eu43">EU 43</p-segmented-control-item>
-      <p-segmented-control-item value="eu44">EU 44</p-segmented-control-item>
-      <p-segmented-control-item value="eu45">EU 45</p-segmented-control-item>
-      <p-segmented-control-item value="eu46">EU 46</p-segmented-control-item>
-    </p-segmented-control>
-    <p-button-pure type="button" icon="information" id="button-size-chart">View size chart</p-button-pure>
-  </div>
-  <div class="flyout-wishlist__footer">
-    <p-button type="button">Add to wishlist</p-button>
-  </div>
-</p-flyout>
+    <p-drilldown id="flyout-menu" active-identifier="women" aria="{'aria-label': 'Main navigation'}">
+      <p-drilldown-item identifier="women" label="Women">
+        <p-link-tile
+          href="#"
+          label="Martini Racing® Collection"
+          description="Martini Racing® Collection"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/women@2x.webp 2x"
+            src="/assets/women.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Jacket</p-drilldown-link>
+        <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
+        <p-drilldown-link href="#">Socks</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Caps</p-drilldown-link>
+        <p-drilldown-link href="#">Belts</p-drilldown-link>
+        <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">Transformers</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Dakar</p-drilldown-link>
+        <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Essential</p-drilldown-link>
+        <p-drilldown-link href="#">Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="men" label="Men">
+        <p-link-tile
+          href="#"
+          label="Martini Racing® Collection"
+          description="Martini Racing® Collection"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/men@2x.webp 2x"
+            src="/assets/men.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Jacket</p-drilldown-link>
+        <p-drilldown-link href="#">Pants</p-drilldown-link>
+        <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
+        <p-drilldown-link href="#">Socks</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Caps</p-drilldown-link>
+        <p-drilldown-link href="#">Belts</p-drilldown-link>
+        <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Footwear</h3>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">Transformers</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Dakar</p-drilldown-link>
+        <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Essential</p-drilldown-link>
+        <p-drilldown-link href="#">Motorsport</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="kids" label="Kids">
+        <p-link-tile
+          href="#"
+          label="Playmobil® 911 Carrera RS 2.7"
+          description="Playmobil® 911 Carrera RS 2.7"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/kids@2x.webp 2x"
+            src="/assets/kids.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Kids</h3>
+        <p-drilldown-link href="#">Apparel</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Toys</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="accessories" label="Accessories">
+        <p-link-tile
+          href="#"
+          label="Umbrella Martini Racing®"
+          description="Umbrella Martini Racing®"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/accessories@2x.webp 2x"
+            src="/assets/accessories.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
+        <p-drilldown-link href="#">Eyewear</p-drilldown-link>
+        <p-drilldown-link href="#">Calendar & Books</p-drilldown-link>
+        <p-drilldown-link href="#">Golf</p-drilldown-link>
+        <p-drilldown-link href="#">Home & Office</p-drilldown-link>
+        <p-drilldown-link href="#">Key Rings & Others</p-drilldown-link>
+        <p-drilldown-link href="#">Timepieces</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Collection</h3>
+        <p-drilldown-link href="#">75 Years</p-drilldown-link>
+        <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
+        <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
+        <p-drilldown-link href="#">Heritage 2.0</p-drilldown-link>
+        <p-drilldown-link href="#">Sports</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="model-cars" label="Model Cars">
+        <p-link-tile
+          href="#"
+          label="911 Targa S 2.4 (1972)"
+          description="911 Targa S 2.4 (1972)"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/model-cars@2x.webp 2x"
+            src="/assets/model-cars.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Model Cars</h3>
+        <p-drilldown-link href="#">718</p-drilldown-link>
+        <p-drilldown-link href="#">911</p-drilldown-link>
+        <p-drilldown-link href="#">Taycan</p-drilldown-link>
+        <p-drilldown-link href="#">Macan</p-drilldown-link>
+        <p-drilldown-link href="#">Others</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="porsche-design" label="Porsche Design">
+        <p-link-tile
+          href="#"
+          label="Sunglasses P´8508"
+          description="Sunglasses P´8508"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/porsche-design@2x.webp 2x"
+            src="/assets/porsche-design.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Apparel</h3>
+        <p-drilldown-link href="#">Bottoms</p-drilldown-link>
+        <p-drilldown-link href="#">Sweaters</p-drilldown-link>
+        <p-drilldown-link href="#">T-Shirts</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Accessories</h3>
+        <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
+        <p-drilldown-link href="#">Fragrances</p-drilldown-link>
+        <p-drilldown-link href="#">Sunglasses</p-drilldown-link>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+        <h3>Footwear</h3>
+        <p-drilldown-link href="#">View all</p-drilldown-link>
+      </p-drilldown-item>
+      <p-drilldown-item identifier="christmas" label="Christmas">
+        <p-link-tile
+          href="#"
+          label="911 Dakar 992 Xmas Ltd. Edition"
+          description="911 Dakar 992 Xmas Ltd. Edition"
+          weight="semi-bold"
+          compact="true"
+          aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
+        >
+          <img
+            srcset="/assets/christmas@2x.webp 2x"
+            src="/assets/christmas.webp"
+            width="308"
+            height="308"
+            alt="Some alternative text for screen readers describing the image"
+          >
+        </p-link-tile>
+        <h3>Gifts</h3>
+        <p-drilldown-link href="#">For Him</p-drilldown-link>
+        <p-drilldown-link href="#">For Her</p-drilldown-link>
+        <p-drilldown-link href="#">For Kids</p-drilldown-link>
+      </p-drilldown-item>
+    </p-drilldown>
 
-<p-flyout id="flyout-search" class="flyout-search">
-  <div slot="header">
-    <p-heading tag="h2" size="large">Search products</p-heading>
-  </div>
-  <p-text-field-wrapper label="Search for products" hide-label="true">
-    <input type="search" name="search" placeholder="e.g. Sneaker, T-Shirt,…"/>
-  </p-text-field-wrapper>
-  <div class="flyout-search__results">
-    <a href="#">
-      <img srcset="/assets/weekender@2x.webp 2x"
-           src="/assets/weekender.webp" width="960"
-           height="1080" alt=""/>
-      <b>Weekender</b>
-      911,00 €
-    </a>
-    <a href="#">
-      <img srcset="/assets/sneaker@2x.webp 2x"
-           src="/assets/sneaker.webp" width="960"
-           height="1080" alt=""/>
-      <b>Sneaker</b>
-      911,00 €
-    </a>
-    <a href="#">
-      <img srcset="/assets/backpack@2x.webp 2x"
-           src="/assets/backpack.webp" width="960"
-           height="1080" alt=""/>
-      <b>Porsche Wappen-Schlüsselanhänger Charging Service</b>
-      911,00 €
-    </a>
-  </div>
-</p-flyout>
+    <p-modal heading="Size Chart" id="modal-size-chart">
+      <!-- Use only one modal for size-chart and replace its content dynamically -->
+      <p-table caption="Size Chart for men" class="table-size-chart">
+        <p-table-head>
+          <p-table-head-row>
+            <p-table-head-cell>Men</p-table-head-cell>
+            <p-table-head-cell>XS</p-table-head-cell>
+            <p-table-head-cell>S</p-table-head-cell>
+            <p-table-head-cell>M</p-table-head-cell>
+            <p-table-head-cell>L</p-table-head-cell>
+            <p-table-head-cell>XL</p-table-head-cell>
+            <p-table-head-cell>XXL</p-table-head-cell>
+            <p-table-head-cell>3XL</p-table-head-cell>
+          </p-table-head-row>
+        </p-table-head>
+        <p-table-body>
+          <p-table-row>
+            <p-table-cell role="rowheader">Germany / France / Italy</p-table-cell>
+            <p-table-cell>40-42</p-table-cell>
+            <p-table-cell>44-46</p-table-cell>
+            <p-table-cell>48-50</p-table-cell>
+            <p-table-cell>52-54</p-table-cell>
+            <p-table-cell>56-58</p-table-cell>
+            <p-table-cell>60-62</p-table-cell>
+            <p-table-cell>64-66</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">United Kingdom</p-table-cell>
+            <p-table-cell>32-34</p-table-cell>
+            <p-table-cell>36-38</p-table-cell>
+            <p-table-cell>40-42</p-table-cell>
+            <p-table-cell>44-46</p-table-cell>
+            <p-table-cell>48-50</p-table-cell>
+            <p-table-cell>52-54</p-table-cell>
+            <p-table-cell>56-58</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">USA</p-table-cell>
+            <p-table-cell>34</p-table-cell>
+            <p-table-cell>36</p-table-cell>
+            <p-table-cell>38-40</p-table-cell>
+            <p-table-cell>42-44</p-table-cell>
+            <p-table-cell>46-48</p-table-cell>
+            <p-table-cell>50</p-table-cell>
+            <p-table-cell>52</p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">
+              China - upper clothing <br>
+              [height/chest]
+            </p-table-cell>
+            <p-table-cell>
+              175/80A-
+              <br>
+              175/84A
+            </p-table-cell>
+            <p-table-cell>
+              175/88A-
+              <br>
+              180/92A
+            </p-table-cell>
+            <p-table-cell>
+              180/96A-
+              <br>
+              180/100A
+            </p-table-cell>
+            <p-table-cell>
+              180/104B-
+              <br>
+              180/108B
+            </p-table-cell>
+            <p-table-cell>
+              185/112B-
+              <br>
+              185/116B
+            </p-table-cell>
+            <p-table-cell>
+              185/120B-
+              <br>
+              185/124B
+            </p-table-cell>
+            <p-table-cell>
+              185/128B-
+              <br>
+              190/132B
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">
+              China - lower clothing <br>
+              [height/waist]
+            </p-table-cell>
+            <p-table-cell>
+              175/66A-
+              <br>
+              175/70A
+            </p-table-cell>
+            <p-table-cell>
+              175/74A-
+              <br>
+              180/78A
+            </p-table-cell>
+            <p-table-cell>
+              180/84A-
+              <br>
+              180/88A
+            </p-table-cell>
+            <p-table-cell>
+              180/94B-
+              <br>
+              180/98B
+            </p-table-cell>
+            <p-table-cell>
+              185/102B-
+              <br>
+              185/108B
+            </p-table-cell>
+            <p-table-cell>
+              185/112B-
+              <br>
+              185/116B
+            </p-table-cell>
+            <p-table-cell>
+              185/120B-
+              <br>
+              190/124B
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">Chest size</p-table-cell>
+            <p-table-cell>
+              84.0cm
+              <br>
+              33"
+            </p-table-cell>
+            <p-table-cell>
+              88.0-92.0cm
+              <br>
+              34 1/2-36 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              96.0-100.0cm
+              <br>
+              37 3/4-39 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              104.0-108.0cm
+              <br>
+              41-42 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              112.0-116.0cm
+              <br>
+              44-45 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              120.0-124.0cm
+              <br>
+              47 1/4-48 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              128.0-132.0cm
+              <br>
+              50 1/2-52"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">Waist size</p-table-cell>
+            <p-table-cell>
+              70.0cm
+              <br>
+              27 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              74.0-78.0cm
+              <br>
+              29-30 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              83.0-88.0cm
+              <br>
+              32 3/4-34 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              93.0-98.0cm
+              <br>
+              36 1/2-38 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              102.0-107.0cm
+              <br>
+              40 1/4-42"
+            </p-table-cell>
+            <p-table-cell>
+              111.0-116.0cm
+              <br>
+              43 3/4-45 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              120.0-124.0cm
+              <br>
+              47 1/4-48 3/4"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">Hip Size</p-table-cell>
+            <p-table-cell>
+              90.0cm
+              <br>
+              35 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              93.0-96.0cm
+              <br>
+              36 1/2-37 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              99.0-102.0cm
+              <br>
+              39-40 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              105.0-108.0cm
+              <br>
+              41 1/4-42 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              111.0-114.0cm
+              <br>
+              43 3/4-45"
+            </p-table-cell>
+            <p-table-cell>
+              117.0-120.0cm
+              <br>
+              46-47 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              123.0-126.0cm
+              <br>
+              48 1/2-49 1/2"
+            </p-table-cell>
+          </p-table-row>
+          <p-table-row>
+            <p-table-cell role="rowheader">Inside leg length</p-table-cell>
+            <p-table-cell>
+              81.0cm
+              <br>
+              32"
+            </p-table-cell>
+            <p-table-cell>
+              81.5-82.0cm
+              <br>
+              32-32 1/4"
+            </p-table-cell>
+            <p-table-cell>
+              82.5-83.0cm
+              <br>
+              32 1/2-32 3/4"
+            </p-table-cell>
+            <p-table-cell>
+              83.5-84.0cm
+              <br>
+              33"
+            </p-table-cell>
+            <p-table-cell>
+              84.5-85.0cm
+              <br>
+              33 1/4-33 1/2"
+            </p-table-cell>
+            <p-table-cell>
+              85.5-86.0cm
+              <br>
+              33 3/4-34"
+            </p-table-cell>
+            <p-table-cell>
+              86.5-87.0cm
+              <br>
+              34-34 1/4"
+            </p-table-cell>
+          </p-table-row>
+        </p-table-body>
+      </p-table>
+    </p-modal>
 
-<p-drilldown id="flyout-menu" active-identifier="women" aria="{'aria-label': 'Main navigation'}">
-  <p-drilldown-item identifier="women" label="Women">
-    <p-link-tile
-      href="#"
-      label="Martini Racing® Collection"
-      description="Martini Racing® Collection"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/women@2x.webp 2x"
-           src="/assets/women.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Jacket</p-drilldown-link>
-    <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
-    <p-drilldown-link href="#">Socks</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Caps</p-drilldown-link>
-    <p-drilldown-link href="#">Belts</p-drilldown-link>
-    <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">Transformers</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Dakar</p-drilldown-link>
-    <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Essential</p-drilldown-link>
-    <p-drilldown-link href="#">Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="men" label="Men">
-    <p-link-tile
-      href="#"
-      label="Martini Racing® Collection"
-      description="Martini Racing® Collection"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/men@2x.webp 2x"
-           src="/assets/men.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Jacket</p-drilldown-link>
-    <p-drilldown-link href="#">Pants</p-drilldown-link>
-    <p-drilldown-link href="#">Polo & Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirt</p-drilldown-link>
-    <p-drilldown-link href="#">Socks</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Caps</p-drilldown-link>
-    <p-drilldown-link href="#">Belts</p-drilldown-link>
-    <p-drilldown-link href="#">Beanies, Scarves & Gloves</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Footwear</h3>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">Transformers</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Dakar</p-drilldown-link>
-    <p-drilldown-link href="#">Penske Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Essential</p-drilldown-link>
-    <p-drilldown-link href="#">Motorsport</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="kids" label="Kids">
-    <p-link-tile
-      href="#"
-      label="Playmobil® 911 Carrera RS 2.7"
-      description="Playmobil® 911 Carrera RS 2.7"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/kids@2x.webp 2x"
-           src="/assets/kids.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Kids</h3>
-    <p-drilldown-link href="#">Apparel</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Toys</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="accessories" label="Accessories">
-    <p-link-tile
-      href="#"
-      label="Umbrella Martini Racing®"
-      description="Umbrella Martini Racing®"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/accessories@2x.webp 2x"
-           src="/assets/accessories.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
-    <p-drilldown-link href="#">Eyewear</p-drilldown-link>
-    <p-drilldown-link href="#">Calendar & Books</p-drilldown-link>
-    <p-drilldown-link href="#">Golf</p-drilldown-link>
-    <p-drilldown-link href="#">Home & Office</p-drilldown-link>
-    <p-drilldown-link href="#">Key Rings & Others</p-drilldown-link>
-    <p-drilldown-link href="#">Timepieces</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Collection</h3>
-    <p-drilldown-link href="#">75 Years</p-drilldown-link>
-    <p-drilldown-link href="#">MARTINI RACING®</p-drilldown-link>
-    <p-drilldown-link href="#">Porsche x FIN</p-drilldown-link>
-    <p-drilldown-link href="#">Heritage 2.0</p-drilldown-link>
-    <p-drilldown-link href="#">Sports</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="model-cars" label="Model Cars">
-    <p-link-tile
-      href="#"
-      label="911 Targa S 2.4 (1972)"
-      description="911 Targa S 2.4 (1972)"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/model-cars@2x.webp 2x"
-           src="/assets/model-cars.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Model Cars</h3>
-    <p-drilldown-link href="#">718</p-drilldown-link>
-    <p-drilldown-link href="#">911</p-drilldown-link>
-    <p-drilldown-link href="#">Taycan</p-drilldown-link>
-    <p-drilldown-link href="#">Macan</p-drilldown-link>
-    <p-drilldown-link href="#">Others</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="porsche-design" label="Porsche Design">
-    <p-link-tile
-      href="#"
-      label="Sunglasses P´8508"
-      description="Sunglasses P´8508"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/porsche-design@2x.webp 2x"
-           src="/assets/porsche-design.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Apparel</h3>
-    <p-drilldown-link href="#">Bottoms</p-drilldown-link>
-    <p-drilldown-link href="#">Sweaters</p-drilldown-link>
-    <p-drilldown-link href="#">T-Shirts</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Accessories</h3>
-    <p-drilldown-link href="#">Bags & Luggage</p-drilldown-link>
-    <p-drilldown-link href="#">Fragrances</p-drilldown-link>
-    <p-drilldown-link href="#">Sunglasses</p-drilldown-link>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-    <h3>Footwear</h3>
-    <p-drilldown-link href="#">View all</p-drilldown-link>
-  </p-drilldown-item>
-  <p-drilldown-item identifier="christmas" label="Christmas">
-    <p-link-tile
-      href="#"
-      label="911 Dakar 992 Xmas Ltd. Edition"
-      description="911 Dakar 992 Xmas Ltd. Edition"
-      weight="semi-bold"
-      compact="true"
-      aspect-ratio="{base: '4:3', xs: '16:9', s: '1:1'}"
-    >
-      <img srcset="/assets/christmas@2x.webp 2x"
-           src="/assets/christmas.webp" width="308" height="308"
-           alt="Some alternative text for screen readers describing the image"/>
-    </p-link-tile>
-    <h3>Gifts</h3>
-    <p-drilldown-link href="#">For Him</p-drilldown-link>
-    <p-drilldown-link href="#">For Her</p-drilldown-link>
-    <p-drilldown-link href="#">For Kids</p-drilldown-link>
-  </p-drilldown-item>
-</p-drilldown>
-
-<p-modal heading="Size Chart" id="modal-size-chart">
-  <!-- Use only one modal for size-chart and replace its content dynamically -->
-  <p-table caption="Size Chart for men" class="table-size-chart">
-    <p-table-head>
-      <p-table-head-row>
-        <p-table-head-cell>Men</p-table-head-cell>
-        <p-table-head-cell>XS</p-table-head-cell>
-        <p-table-head-cell>S</p-table-head-cell>
-        <p-table-head-cell>M</p-table-head-cell>
-        <p-table-head-cell>L</p-table-head-cell>
-        <p-table-head-cell>XL</p-table-head-cell>
-        <p-table-head-cell>XXL</p-table-head-cell>
-        <p-table-head-cell>3XL</p-table-head-cell>
-      </p-table-head-row>
-    </p-table-head>
-    <p-table-body>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Germany / France / Italy</p-table-cell>
-        <p-table-cell>40-42</p-table-cell>
-        <p-table-cell>44-46</p-table-cell>
-        <p-table-cell>48-50</p-table-cell>
-        <p-table-cell>52-54</p-table-cell>
-        <p-table-cell>56-58</p-table-cell>
-        <p-table-cell>60-62</p-table-cell>
-        <p-table-cell>64-66</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">United Kingdom</p-table-cell>
-        <p-table-cell>32-34</p-table-cell>
-        <p-table-cell>36-38</p-table-cell>
-        <p-table-cell>40-42</p-table-cell>
-        <p-table-cell>44-46</p-table-cell>
-        <p-table-cell>48-50</p-table-cell>
-        <p-table-cell>52-54</p-table-cell>
-        <p-table-cell>56-58</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">USA</p-table-cell>
-        <p-table-cell>34</p-table-cell>
-        <p-table-cell>36</p-table-cell>
-        <p-table-cell>38-40</p-table-cell>
-        <p-table-cell>42-44</p-table-cell>
-        <p-table-cell>46-48</p-table-cell>
-        <p-table-cell>50</p-table-cell>
-        <p-table-cell>52</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">China - upper clothing <br>[height/chest]</p-table-cell>
-        <p-table-cell>175/80A-<br>175/84A</p-table-cell>
-        <p-table-cell>175/88A-<br>180/92A</p-table-cell>
-        <p-table-cell>180/96A-<br>180/100A</p-table-cell>
-        <p-table-cell>180/104B-<br>180/108B</p-table-cell>
-        <p-table-cell>185/112B-<br>185/116B</p-table-cell>
-        <p-table-cell>185/120B-<br>185/124B</p-table-cell>
-        <p-table-cell>185/128B-<br>190/132B</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">China - lower clothing <br>[height/waist]</p-table-cell>
-        <p-table-cell>175/66A-<br>175/70A</p-table-cell>
-        <p-table-cell>175/74A-<br>180/78A</p-table-cell>
-        <p-table-cell>180/84A-<br>180/88A</p-table-cell>
-        <p-table-cell>180/94B-<br>180/98B</p-table-cell>
-        <p-table-cell>185/102B-<br>185/108B</p-table-cell>
-        <p-table-cell>185/112B-<br>185/116B</p-table-cell>
-        <p-table-cell>185/120B-<br>190/124B</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Chest size</p-table-cell>
-        <p-table-cell>84.0cm<br>33"</p-table-cell>
-        <p-table-cell>88.0-92.0cm<br>34 1/2-36 1/4"</p-table-cell>
-        <p-table-cell>96.0-100.0cm<br>37 3/4-39 1/2"</p-table-cell>
-        <p-table-cell>104.0-108.0cm<br>41-42 1/2"</p-table-cell>
-        <p-table-cell>112.0-116.0cm<br>44-45 3/4"</p-table-cell>
-        <p-table-cell>120.0-124.0cm<br>47 1/4-48 3/4"</p-table-cell>
-        <p-table-cell>128.0-132.0cm<br>50 1/2-52"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Waist size</p-table-cell>
-        <p-table-cell>70.0cm<br>27 1/2"</p-table-cell>
-        <p-table-cell>74.0-78.0cm<br>29-30 3/4"</p-table-cell>
-        <p-table-cell>83.0-88.0cm<br>32 3/4-34 1/2"</p-table-cell>
-        <p-table-cell>93.0-98.0cm<br>36 1/2-38 1/2"</p-table-cell>
-        <p-table-cell>102.0-107.0cm<br>40 1/4-42"</p-table-cell>
-        <p-table-cell>111.0-116.0cm<br>43 3/4-45 3/4"</p-table-cell>
-        <p-table-cell>120.0-124.0cm<br>47 1/4-48 3/4"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Hip Size</p-table-cell>
-        <p-table-cell>90.0cm<br>35 1/2"</p-table-cell>
-        <p-table-cell>93.0-96.0cm<br>36 1/2-37 3/4"</p-table-cell>
-        <p-table-cell>99.0-102.0cm<br>39-40 1/4"</p-table-cell>
-        <p-table-cell>105.0-108.0cm<br>41 1/4-42 1/2"</p-table-cell>
-        <p-table-cell>111.0-114.0cm<br>43 3/4-45"</p-table-cell>
-        <p-table-cell>117.0-120.0cm<br>46-47 1/4"</p-table-cell>
-        <p-table-cell>123.0-126.0cm<br>48 1/2-49 1/2"</p-table-cell>
-      </p-table-row>
-      <p-table-row>
-        <p-table-cell scope="row" role="rowheader">Inside leg length</p-table-cell>
-        <p-table-cell>81.0cm<br>32"</p-table-cell>
-        <p-table-cell>81.5-82.0cm<br>32-32 1/4"</p-table-cell>
-        <p-table-cell>82.5-83.0cm<br>32 1/2-32 3/4"</p-table-cell>
-        <p-table-cell>83.5-84.0cm<br>33"</p-table-cell>
-        <p-table-cell>84.5-85.0cm<br>33 1/4-33 1/2"</p-table-cell>
-        <p-table-cell>85.5-86.0cm<br>33 3/4-34"</p-table-cell>
-        <p-table-cell>86.5-87.0cm<br>34-34 1/4"</p-table-cell>
-      </p-table-row>
-    </p-table-body>
-  </p-table>
-</p-modal>
-
-<script type="module" src="./main.js"></script>
-</body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

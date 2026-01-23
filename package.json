@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "biome format",
+    "format:tailwind": "prettier --plugin=prettier-plugin-tailwindcss",
     "lint": "biome lint",
     "test:e2e": "playwright test --config=tests/e2e/config/playwright.config.ts",
     "test:a11y": "playwright test --config=tests/a11y/config/playwright.config.ts",
@@ -21,12 +22,13 @@
     "npm:clean": "npm cache clean --force"
   },
   "dependencies": {
-    "@porsche-design-system/components-js": "^3.30.0-rc.1",
+    "@porsche-design-system/components-js": "^3.31.0",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
-    "@biomejs/biome": "^2.2.7",
+    "@biomejs/biome": "^2.3.8",
     "@playwright/test": "^1.55.1",
     "@tailwindcss/vite": "^4.1.15",
     "@types/node": "^24.9.1",

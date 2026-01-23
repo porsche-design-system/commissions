@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@porsche-design-system/components-js/tailwindcss";
+
+.grid-template-hero {
+  @apply grid-template;
+  grid-template-rows: minmax(120px, 1fr) repeat(3, auto);
+  grid-row-gap: 0;
+}
+
+.after\:hero-gradient::after {
+  background: linear-gradient(
+    to top,
+    #0e0e12,
+    #0e0e12fc 8.1%,
+    #0e0e12f3 15.5%,
+    #0e0e12e4 22.5%,
+    #0e0e12d2 29%,
+    #0e0e12bd 35.3%,
+    #0e0e12a5,
+    #0e0e128c 47.1%,
+    #0e0e1273 52.9%,
+    #0e0e125a,
+    #0e0e1242 64.7%,
+    #0e0e122d 71%,
+    #0e0e121b 77.5%,
+    #0e0e120c 84.5%,
+    #0e0e1203 91.9%,
+    #0e0e1200
+  );
+}

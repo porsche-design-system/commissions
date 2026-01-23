@@ -1,151 +1,193 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Porsche Drive – Made by Dreamers, for Dreamers."/>
-  <title>Porsche Drive (Template)</title>
-  <script type="module" src="//nav.porsche.com/00BC524/porsche-navigation.esm.js"></script>
-  <link rel="stylesheet" href="https://nav.porsche.com/00BC524/porsche-navigation.css"/>
-</head>
-<body>
-<div id="app">
-  <phn-header locale="de-DE" page-name="home" mode="hero" theme="dark"></phn-header>
-  <main>
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__media">
-          <img src="../../public/assets/hero.webp" alt="Porsche Taycan seen from above"/>
-      </div>
-      <div class="hero__header">
-        <p-display data-animation="fade-in-up" theme="dark" align="center" size="small" tag="h1" id="hero-heading">Drive Gutschein</p-display>
-        <p-text data-animation="fade-in-up" theme="dark" align="center" size="x-large" color="contrast-high">Verschenken Sie pures Adrenalin</p-text>
-      </div>
-    </section>
-
-    <section class="order" aria-labelledby="order-button">
-      <div class="order__section">
-        <div>
-          <p-heading size="large" theme="dark" tag="h2">Gutscheinbetrag</p-heading>
-          <p-text size="small" color="contrast-medium" theme="dark">Der Betrag wird dem Porsche Geschenkgutschein hinzugefügt.</p-text>
-        </div>
-        <div class="voucher box">
-          <div class="voucher__selects">
-            <p-select theme="dark" name="voucher-car" label="Model" value="">
-              <p-select-option value="">Modell auswählen</p-select-option>
-              <p-select-option value="718_boxster">
-                <img src="/assets/718_boxster.webp" />
-                718 Boxter
-              </p-select-option>
-              <p-select-option value="911_cabrio">
-                <img src="/assets/911_cabrio.webp" />
-                911 Cabrio
-              </p-select-option>
-              <p-select-option value="911_coupe">
-                <img src="/assets/911_coupe.webp" />
-                911 Coupe
-              </p-select-option>
-              <p-select-option value="911_gt3">
-                <img src="/assets/911_gt3.webp" />
-                911 GT3
-              </p-select-option>
-              <p-select-option value="911_targa">
-                <img src="/assets/911_targa.webp" />
-                911 Targa
-              </p-select-option>
-              <p-select-option value="taycan">
-                <img src="/assets/taycan.webp" />
-                Taycan
-              </p-select-option>
-              <p-select-option value="macan">
-                <img src="/assets/macan.webp" />
-                Macan
-              </p-select-option>
-              <p-select-option value="cayenne">
-                <img src="/assets/cayenne.webp" />
-                Cayenne
-              </p-select-option>
-            </p-select>
-            <p-select theme="dark" name="voucher-rate" label="Tarif (Stand 10/2024)" value="" disabled>
-              <p-select-option value="">Tarif auswählen</p-select-option>
-              <p-select-option value="349">1 Tag / 349 €</p-select-option>
-              <p-select-option value="642">2 Tage / 642 €</p-select-option>
-              <p-select-option value="864">3 Tage / 864 €</p-select-option>
-              <p-select-option value="1012">4 Tage / 1012 €</p-select-option>
-              <p-select-option value="1265">5 Tage / 1.265 €</p-select-option>
-              <p-select-option value="1518">6 Tage / 1.518 €</p-select-option>
-            </p-select>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porsche Drive – Made by Dreamers, for Dreamers.">
+    <title>Porsche Drive (Template)</title>
+    <script type="module" src="//nav.porsche.com/00BC524/porsche-navigation.esm.js"></script>
+    <link rel="stylesheet" href="https://nav.porsche.com/00BC524/porsche-navigation.css">
+  </head>
+  <body>
+    <div id="app">
+      <phn-header locale="de-DE" page-name="home" mode="hero" theme="dark"></phn-header>
+      <main>
+        <section class="hero" aria-labelledby="hero-heading">
+          <div class="hero__media">
+            <img src="../../public/assets/hero.webp" alt="Porsche Taycan seen from above">
           </div>
-          <div class="voucher__input">
-            <p-text color="contrast-medium" align="center" theme="dark">Wählen Sie einen Gutscheinbetrag</p-text>
-            <label for="voucher-amount" class="sr-only">Amount: </label>
-            <input type="number" name="voucher-amount" id="voucher-amount" placeholder="000" />
-            <p-display size="small" theme="dark">.00 €</p-display>
-            <p-text size="x-small" align="center" color="contrast-medium" theme="dark">Mindestbetrag 30.00€</p-text>
+          <div class="hero__header">
+            <p-display data-animation="fade-in-up" theme="dark" align="center" size="small" tag="h1" id="hero-heading">
+              Drive Gutschein
+            </p-display>
+            <p-text data-animation="fade-in-up" theme="dark" align="center" size="x-large" color="contrast-high">
+              Verschenken Sie pures Adrenalin
+            </p-text>
           </div>
-        </div>
-      </div>
-      <div class="order__section">
-        <div>
-          <p-heading size="large" theme="dark" tag="h2">Personalisierung</p-heading>
-          <p-text size="small" color="contrast-medium" theme="dark">Fügen Sie eine optionale Nachricht zum Geschenkgutschein hinzu. Hier finden Sie ein <a href="/">Beispiel</a></p-text>
-        </div>
-        <div class="box">
-          <p-text-field-wrapper theme="dark" label="Ansprache">
-            <input type="text" name="speech" placeholder="z.B. Happy Birthday" maxlength="70" />
-          </p-text-field-wrapper>
-          <p-textarea theme="dark" name="message" label="Persönliche Nachricht" placeholder="Ich möchte dir dieses besondere Erlebnis schenken." max-length="248"></p-textarea>
-        </div>
-      </div>
-      <ul class="order__section">
-        <li class="condition" data-animation="fade-in-up">
-          <p-icon name="check" theme="dark"></p-icon><p-text theme="dark" tag="span">Der Gutschein wird direkt nach dem Kauf per E-Mail als PDF versendet.</p-text>
-        </li>
-        <li class="condition" data-animation="fade-in-up">
-          <p-icon name="check" theme="dark"></p-icon><p-text theme="dark" tag="span">Der Fahrer muss die Mindestanforderungen erfüllen.</p-text>
-        </li>
-        <li class="condition" data-animation="fade-in-up">
-          <p-icon name="check" theme="dark"></p-icon><p-text theme="dark" tag="span">Gutscheine sind an allen Porsche Drive Rental Standorten in Deutschland einlösbar.</p-text>
-        </li>
-        <li class="condition" data-animation="fade-in-up">
-          <p-icon name="check" theme="dark"></p-icon><p-text theme="dark" tag="span">Der Gutschein ist drei Jahre ab Ende des Kalenderjahres gültig.</p-text>
-        </li>
-      </ul>
-      <div class="order__section submit">
-        <p-button theme="dark" id="order-button">Gutschein bestellen</p-button>
-        <a href="/">Mehr Erfahren</a>
-      </div>
-    </section>
+        </section>
 
-    <section class="redeem" aria-labelledby="redeem-heading">
-      <p-heading size="large" tag="h2" id="redeem-heading" align="center">Gutschein einlösen</p-heading>
-      <div class="redeem__container">
-        <div class="redeem__step" data-animation="fade-in-up">
-          <p-icon name="car" size="large"></p-icon>
-          <p-text align="center">Wunschfahrzeug einfach<br />online reservieren</p-text>
-        </div>
-        <div class="redeem__step" data-animation="fade-in-up">
-          <p-icon name="purchase" size="large"></p-icon>
-          <p-text align="center">Gutscheincode bei<br />Fahrantritt angeben</p-text>
-        </div>
-        <div class="redeem__step" data-animation="fade-in-up">
-          <p-icon name="refresh" size="large"></p-icon>
-          <p-text align="center">Restguthaben für spätere<br />Buchungen verwenden</p-text>
-        </div>
-      </div>
-    </section>
+        <section class="order" aria-labelledby="order-button">
+          <div class="order__section">
+            <div>
+              <p-heading size="large" theme="dark" tag="h2">Gutscheinbetrag</p-heading>
+              <p-text size="small" color="contrast-medium" theme="dark">
+                Der Betrag wird dem Porsche Geschenkgutschein hinzugefügt.
+              </p-text>
+            </div>
+            <div class="voucher box">
+              <div class="voucher__selects">
+                <p-select theme="dark" name="voucher-car" label="Model" value="">
+                  <p-select-option value="">Modell auswählen</p-select-option>
+                  <p-select-option value="718_boxster">
+                    <img src="/assets/718_boxster.webp">
+                    718 Boxter
+                  </p-select-option>
+                  <p-select-option value="911_cabrio">
+                    <img src="/assets/911_cabrio.webp">
+                    911 Cabrio
+                  </p-select-option>
+                  <p-select-option value="911_coupe">
+                    <img src="/assets/911_coupe.webp">
+                    911 Coupe
+                  </p-select-option>
+                  <p-select-option value="911_gt3">
+                    <img src="/assets/911_gt3.webp">
+                    911 GT3
+                  </p-select-option>
+                  <p-select-option value="911_targa">
+                    <img src="/assets/911_targa.webp">
+                    911 Targa
+                  </p-select-option>
+                  <p-select-option value="taycan">
+                    <img src="/assets/taycan.webp">
+                    Taycan
+                  </p-select-option>
+                  <p-select-option value="macan">
+                    <img src="/assets/macan.webp">
+                    Macan
+                  </p-select-option>
+                  <p-select-option value="cayenne">
+                    <img src="/assets/cayenne.webp">
+                    Cayenne
+                  </p-select-option>
+                </p-select>
+                <p-select theme="dark" name="voucher-rate" label="Tarif (Stand 10/2024)" value="" disabled>
+                  <p-select-option value="">Tarif auswählen</p-select-option>
+                  <p-select-option value="349">1 Tag / 349 €</p-select-option>
+                  <p-select-option value="642">2 Tage / 642 €</p-select-option>
+                  <p-select-option value="864">3 Tage / 864 €</p-select-option>
+                  <p-select-option value="1012">4 Tage / 1012 €</p-select-option>
+                  <p-select-option value="1265">5 Tage / 1.265 €</p-select-option>
+                  <p-select-option value="1518">6 Tage / 1.518 €</p-select-option>
+                </p-select>
+              </div>
+              <div class="voucher__input">
+                <p-text color="contrast-medium" align="center" theme="dark">Wählen Sie einen Gutscheinbetrag</p-text>
+                <label for="voucher-amount" class="sr-only">Amount: </label>
+                <input type="number" name="voucher-amount" id="voucher-amount" placeholder="000">
+                <p-display size="small" theme="dark">.00 €</p-display>
+                <p-text size="x-small" align="center" color="contrast-medium" theme="dark">Mindestbetrag 30.00€</p-text>
+              </div>
+            </div>
+          </div>
+          <div class="order__section">
+            <div>
+              <p-heading size="large" theme="dark" tag="h2">Personalisierung</p-heading>
+              <p-text size="small" color="contrast-medium" theme="dark">
+                Fügen Sie eine optionale Nachricht zum Geschenkgutschein hinzu. Hier finden Sie ein
+                <a href="/">Beispiel</a>
+              </p-text>
+            </div>
+            <div class="box">
+              <p-text-field-wrapper theme="dark" label="Ansprache">
+                <input type="text" name="speech" placeholder="z.B. Happy Birthday" maxlength="70">
+              </p-text-field-wrapper>
+              <p-textarea
+                theme="dark"
+                name="message"
+                label="Persönliche Nachricht"
+                placeholder="Ich möchte dir dieses besondere Erlebnis schenken."
+                max-length="248"
+              ></p-textarea>
+            </div>
+          </div>
+          <ul class="order__section">
+            <li class="condition" data-animation="fade-in-up">
+              <p-icon name="check" theme="dark"></p-icon>
+              <p-text theme="dark" tag="span">
+                Der Gutschein wird direkt nach dem Kauf per E-Mail als PDF versendet.
+              </p-text>
+            </li>
+            <li class="condition" data-animation="fade-in-up">
+              <p-icon name="check" theme="dark"></p-icon>
+              <p-text theme="dark" tag="span">Der Fahrer muss die Mindestanforderungen erfüllen.</p-text>
+            </li>
+            <li class="condition" data-animation="fade-in-up">
+              <p-icon name="check" theme="dark"></p-icon>
+              <p-text theme="dark" tag="span">
+                Gutscheine sind an allen Porsche Drive Rental Standorten in Deutschland einlösbar.
+              </p-text>
+            </li>
+            <li class="condition" data-animation="fade-in-up">
+              <p-icon name="check" theme="dark"></p-icon>
+              <p-text theme="dark" tag="span">Der Gutschein ist drei Jahre ab Ende des Kalenderjahres gültig.</p-text>
+            </li>
+          </ul>
+          <div class="order__section submit">
+            <p-button theme="dark" id="order-button">Gutschein bestellen</p-button>
+            <a href="/">Mehr Erfahren</a>
+          </div>
+        </section>
 
-    <section class="fuel" aria-labelledby="fuel-heading">
-      <p-heading size="large" tag="h2" id="fuel-heading" align="center">Kraftstoffverbrauch</p-heading>
-      <p-text size="xx-small" align="center" color="contrast-medium">Fuel consumption and CO? emissions are determined according to the W. TP test cycle. The energy or fuel consumption values and CO? emissions for each model are as. follows: Taycan: 20 - 16 7 kWh/100 km (Class A) Macan BFV: 21.1 - 17.9 kWh/100 km (Class A) 718 Boxster: 9 7 - 8 9 |/ 100 km. 220 - 201 g/km (Class G) 718.
-        Cayman: 9 7 - 8 9 1/100 km 220 - 201 g/km (Class G) 911 Coupé: 10.8 - 10.3 |/100 km 245 - 233 g/km (Class G) 911 Cabriolet: 10.8 - 10.4 |/100 km 245 - 236 g/ km (Class G) 911 Targa: 10 9 - 10.5 |/100 km 247 - 238 g/km (Class G) 911 Turbo Coupé: 12.3 - 12 |/100 km 279 - 271 g/km (Class G), 911 Turho Convertible: 12 5 - 12 1 // 100 km. 284 - 275 g/km (Class G) 911 GT3 RS: 134 I/100 km. 305 g/km (Class G) Panamera: 10.5 - 9 7 // 100 km 239 - 219 g/km (Class G). Macan: 10 7 - 10 1//100 km 243 - 228 g/km (Class G) Cavenne: 12 1 - 10.9 |/100 km 275 - 247 a/km (Class G) Please note that actual consumption and emissions may vary based. on driving conditions and other factors.</p-text>
-    </section>
+        <section class="redeem" aria-labelledby="redeem-heading">
+          <p-heading size="large" tag="h2" id="redeem-heading" align="center">Gutschein einlösen</p-heading>
+          <div class="redeem__container">
+            <div class="redeem__step" data-animation="fade-in-up">
+              <p-icon name="car" size="large"></p-icon>
+              <p-text align="center">
+                Wunschfahrzeug einfach
+                <br>
+                online reservieren
+              </p-text>
+            </div>
+            <div class="redeem__step" data-animation="fade-in-up">
+              <p-icon name="purchase" size="large"></p-icon>
+              <p-text align="center">
+                Gutscheincode bei
+                <br>
+                Fahrantritt angeben
+              </p-text>
+            </div>
+            <div class="redeem__step" data-animation="fade-in-up">
+              <p-icon name="refresh" size="large"></p-icon>
+              <p-text align="center">
+                Restguthaben für spätere
+                <br>
+                Buchungen verwenden
+              </p-text>
+            </div>
+          </div>
+        </section>
 
-  </main>
-  <footer class="footer">
-    # Global footer should be used here
-  </footer>
-</div>
+        <section class="fuel" aria-labelledby="fuel-heading">
+          <p-heading size="large" tag="h2" id="fuel-heading" align="center">Kraftstoffverbrauch</p-heading>
+          <p-text size="xx-small" align="center" color="contrast-medium">
+            Fuel consumption and CO? emissions are determined according to the W. TP test cycle. The energy or fuel
+            consumption values and CO? emissions for each model are as. follows: Taycan: 20 - 16 7 kWh/100 km (Class A)
+            Macan BFV: 21.1 - 17.9 kWh/100 km (Class A) 718 Boxster: 9 7 - 8 9 |/ 100 km. 220 - 201 g/km (Class G) 718.
+            Cayman: 9 7 - 8 9 1/100 km 220 - 201 g/km (Class G) 911 Coupé: 10.8 - 10.3 |/100 km 245 - 233 g/km (Class G)
+            911 Cabriolet: 10.8 - 10.4 |/100 km 245 - 236 g/ km (Class G) 911 Targa: 10 9 - 10.5 |/100 km 247 - 238 g/km
+            (Class G) 911 Turbo Coupé: 12.3 - 12 |/100 km 279 - 271 g/km (Class G), 911 Turho Convertible: 12 5 - 12 1
+            // 100 km. 284 - 275 g/km (Class G) 911 GT3 RS: 134 I/100 km. 305 g/km (Class G) Panamera: 10.5 - 9 7 // 100
+            km 239 - 219 g/km (Class G). Macan: 10 7 - 10 1//100 km 243 - 228 g/km (Class G) Cavenne: 12 1 - 10.9 |/100
+            km 275 - 247 a/km (Class G) Please note that actual consumption and emissions may vary based. on driving
+            conditions and other factors.
+          </p-text>
+        </section>
+      </main>
+      <footer class="footer"># Global footer should be used here</footer>
+    </div>
 
-<script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
